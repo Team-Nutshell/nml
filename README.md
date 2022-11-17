@@ -7,7 +7,7 @@ git clone https://github.com/Team-Nutshell/nml.git
 ```
 
 ## Add nml to a CMake project
-This exemple has nml inside an ``external`` directory:
+This example has nml inside an ``external`` directory:
 ```CMake
 add_subdirectory(external/nml)
 target_include_directories(${PROJECT_NAME} PUBLIC external/nml)
