@@ -2,7 +2,7 @@
 #include "../include/vec2.h"
 #include <cmath>
 
-namespace ntshm {
+namespace nml {
 
 vec3::vec3(): x(0.0f), y(0.0f), z(0.0f) {}
 vec3::vec3(float _xyz): x(_xyz), y(_xyz), z(_xyz) {}
