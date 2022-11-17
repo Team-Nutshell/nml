@@ -15,25 +15,22 @@ vec4::vec4(float _x, vec2 _yz, float _w): x(_x), y(_yz.x), z(_yz.y), w(_w) {}
 vec4::vec4(vec2 _xy, float _z, float _w): x(_xy.x), y(_xy.y), z(_z), w(_w) {}
 vec4::vec4(vec2 _xy, vec2 _zw): x(_xy.x), y(_xy.y), z(_zw.x), w(_zw.y) {}
 
-float vec4::length() {
+float vec4::length() const {
 	return std::sqrt((x * x) + (y * y) + (z * z) + (w * w));
-}
-
-vec4 vec4::normalize() {
-	float l = length();
-
-	return vec4(x / l,
-		y / l,
-		z / l,
-		w / l);
 }
 
 float* vec4::data() {
 	return &x;
 }
 
-std::string vec4::to_string() {
+std::string vec4::to_string() const {
 	return std::to_string(x) + ", " + std::to_string(y) + ", " + std::to_string(z) + ", " + std::to_string(w);
+}
+
+vec4 normalize(const vec4& v) {
+	float l = v.length();
+
+	return (v / l);
 }
 
 float dot(const vec4& a, const vec4& b) {

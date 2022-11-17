@@ -58,12 +58,10 @@ struct vec4 {
 	}
 
 	// Functions
-	float length();
-	vec4 normalize();
-	vec4 reflect(const vec4& n);
+	float length() const;
 
 	float* data();
-	std::string to_string();
+	std::string to_string() const;
 };
 
 // Operators
@@ -77,6 +75,7 @@ inline bool operator==(const vec4& lhs, const vec4& rhs) { return ((lhs.x == rhs
 inline bool operator!=(const vec4& lhs, const vec4& rhs) { return !(lhs == rhs); }
 
 // Functions
+vec4 normalize(const vec4& v);
 float dot(const vec4& a, const vec4& b);
 vec4 reflect(const vec4& i, const vec4& n);
 vec4 refract(const vec4& i, const vec4& n, float eta);
