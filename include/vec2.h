@@ -1,7 +1,7 @@
 #pragma once
 #include <string>
 
-namespace ntshm {
+namespace nml {
 
 struct vec2 {
 	float x;

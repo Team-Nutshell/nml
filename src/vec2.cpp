@@ -1,7 +1,7 @@
 #include "../include/vec2.h"
 #include <cmath>
 
-namespace ntshm {
+namespace nml {
 
 vec2::vec2(): x(0.0f), y(0.0f) {}
 vec2::vec2(float _xy): x(_xy), y(_xy) {}
