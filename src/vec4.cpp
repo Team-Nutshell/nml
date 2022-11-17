@@ -6,6 +6,7 @@
 namespace ntshm {
 
 vec4::vec4(): x(0.0f), y(0.0f), z(0.0f), w(0.0f) {}
+vec4::vec4(float _xyzw): x(_xyzw), y(_xyzw), z(_xyzw), w(_xyzw) {}
 vec4::vec4(float _x, float _y, float _z, float _w): x(_x), y(_y), z(_z), w(_w) {}
 vec4::vec4(float _x, vec3 _yzw): x(_x), y(_yzw.x), z(_yzw.y), w(_yzw.z) {}
 vec4::vec4(vec3 _xyz, float _w): x(_xyz.x), y(_xyz.y), z(_xyz.z), w(_w) {}
@@ -27,12 +28,31 @@ vec4 vec4::normalize() {
 		w / l);
 }
 
+float* vec4::data() {
+	return &x;
+}
+
 std::string vec4::to_string() {
 	return std::to_string(x) + ", " + std::to_string(y) + ", " + std::to_string(z) + ", " + std::to_string(w);
 }
 
 float dot(const vec4& a, const vec4& b) {
 	return ((a.x * b.x) + (a.y * b.y) + (a.z * b.z) + (a.w * b.w));
+}
+
+vec4 reflect(const vec4& i, const vec4& n) {
+	return (i - 2.0f * dot(n, i) * n);
+}
+
+vec4 refract(const vec4& i, const vec4& n, float eta) {
+	float ndoti = dot(n, i);
+	float k = 1.0f - eta * eta * (1.0f - ndoti * ndoti);
+	if (k < 0.0f) {
+		return vec4(0.0f);
+	}
+	else {
+		return eta * i - (eta * ndoti + std::sqrt(k)) * n;
+	}
 }
 
 }
