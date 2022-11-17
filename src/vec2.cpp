@@ -7,23 +7,22 @@ vec2::vec2(): x(0.0f), y(0.0f) {}
 vec2::vec2(float _xy): x(_xy), y(_xy) {}
 vec2::vec2(float _x, float _y): x(_x), y(_y) {}
 
-float vec2::length() {
+float vec2::length() const {
 	return std::sqrt((x * x) + (y * y));
-}
-
-vec2 vec2::normalize() {
-	float l = length();
-
-	return vec2(x / l,
-		y / l);
 }
 
 float* vec2::data() {
 	return &x;
 }
 
-std::string vec2::to_string() {
+std::string vec2::to_string() const {
 	return (std::to_string(x) + ", " + std::to_string(y));
+}
+
+vec2 normalize(const vec2& v) {
+	float l = v.length();
+
+	return (v / l);
 }
 
 float dot(const vec2& a, const vec2& b) {

@@ -48,11 +48,10 @@ struct vec3 {
 	}
 
 	// Functions
-	float length();
-	vec3 normalize();
+	float length() const;
 
 	float* data();
-	std::string to_string();
+	std::string to_string() const;
 };
 
 // Operators
@@ -66,6 +65,7 @@ inline bool operator==(const vec3& lhs, const vec3& rhs) { return ((lhs.x == rhs
 inline bool operator!=(const vec3& lhs, const vec3& rhs) { return !(lhs == rhs); }
 
 // Functions
+vec3 normalize(const vec3& v);
 float dot(const vec3& a, const vec3& b);
 vec3 cross(const vec3& a, const vec3& b);
 vec3 reflect(const vec3& i, const vec3& n);
