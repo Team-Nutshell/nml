@@ -71,7 +71,7 @@ inline vec4 operator+(vec4 lhs, const vec4& rhs) { return vec4(lhs.x + rhs.x, lh
 inline vec4 operator-(vec4 lhs, const vec4& rhs) { return vec4(lhs.x - rhs.x, lhs.y - rhs.y, lhs.z - rhs.z, lhs.w - rhs.w); }
 inline vec4 operator*(vec4 lhs, const float rhs) { return vec4(lhs.x * rhs, lhs.y * rhs, lhs.z * rhs, lhs.w * rhs); }
 inline vec4 operator*(float lhs, const vec4& rhs) { return rhs * lhs; }
-inline vec4 operator/(vec4 lhs, const float rhs) { return vec4(lhs.x / rhs, lhs.y / rhs, lhs.z / rhs, lhs.w + rhs); }
+inline vec4 operator/(vec4 lhs, const float rhs) { return vec4(lhs.x / rhs, lhs.y / rhs, lhs.z / rhs, lhs.w / rhs); }
 inline vec4 operator/(float lhs, const vec4& rhs) { return rhs / lhs; }
 inline bool operator==(const vec4& lhs, const vec4& rhs) { return ((lhs.x == rhs.x) && (lhs.y == rhs.y) && (lhs.z == rhs.z) && (lhs.w == rhs.w)); }
 inline bool operator!=(const vec4& lhs, const vec4& rhs) { return !(lhs == rhs); }
