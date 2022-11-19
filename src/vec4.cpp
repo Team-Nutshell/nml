@@ -24,7 +24,7 @@ float* vec4::data() {
 }
 
 std::string vec4::to_string() const {
-	return std::to_string(x) + ", " + std::to_string(y) + ", " + std::to_string(z) + ", " + std::to_string(w);
+	return ("[" + std::to_string(x) + ", " + std::to_string(y) + ", " + std::to_string(z) + ", " + std::to_string(w) + "]");
 }
 
 vec4 normalize(const vec4& v) {
