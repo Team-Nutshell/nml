@@ -43,7 +43,7 @@ struct vec2 {
 		else if (index == 1) { return y; }
 		else { throw std::out_of_range("vec2::operator[]: index is out of range."); }
 	}
-	const float operator[](size_t index) const {
+	float operator[](size_t index) const {
 		if (index == 0) { return x; }
 		else if (index == 1) { return y; }
 		else { throw std::out_of_range("vec2::operator[]: index is out of range."); }
