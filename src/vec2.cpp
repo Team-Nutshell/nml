@@ -16,7 +16,7 @@ float* vec2::data() {
 }
 
 std::string vec2::to_string() const {
-	return (std::to_string(x) + ", " + std::to_string(y));
+	return ("[" + std::to_string(x) + ", " + std::to_string(y) + "]");
 }
 
 vec2 normalize(const vec2& v) {
