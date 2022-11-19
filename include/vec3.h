@@ -1,5 +1,6 @@
 #pragma once
 #include <string>
+#include <stdexcept>
 
 namespace nml {
 
@@ -45,6 +46,18 @@ struct vec3 {
 		z /= other;
 
 		return *this;
+	}
+	float& operator[](size_t index) {
+		if (index == 0) { return x; }
+		else if (index == 1) { return y; }
+		else if (index == 2) { return z; }
+		else { throw std::out_of_range("vec3::operator[]: index is out of range."); }
+	}
+	const float operator[](size_t index) const {
+		if (index == 0) { return x; }
+		else if (index == 1) { return y; }
+		else if (index == 2) { return z; }
+		else { throw std::out_of_range("vec3::operator[]: index is out of range."); }
 	}
 
 	// Functions
