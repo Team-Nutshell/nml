@@ -68,12 +68,27 @@ struct vec3 {
 };
 
 // Operators
-inline vec3 operator+(vec3 lhs, const vec3& rhs) { return vec3(lhs.x + rhs.x, lhs.y + rhs.y, lhs.z + rhs.z); }
-inline vec3 operator-(vec3 lhs, const vec3& rhs) { return vec3(lhs.x - rhs.x, lhs.y - rhs.y, lhs.z - rhs.z); }
-inline vec3 operator*(vec3 lhs, const float rhs) { return vec3(lhs.x * rhs, lhs.y * rhs, lhs.z * rhs); }
+inline vec3 operator+(vec3 lhs, const vec3& rhs) { 
+	lhs += rhs;
+
+	return lhs;
+}
+inline vec3 operator-(vec3 lhs, const vec3& rhs) {
+	lhs -= rhs;
+
+	return lhs;
+}
+inline vec3 operator*(vec3 lhs, const float rhs) {
+	lhs *= rhs;
+
+	return lhs;
+}
 inline vec3 operator*(float lhs, const vec3& rhs) { return rhs * lhs; }
-inline vec3 operator/(vec3 lhs, const float rhs) { return vec3(lhs.x / rhs, lhs.y / rhs, lhs.z / rhs); }
-inline vec3 operator/(float lhs, const vec3& rhs) { return rhs / lhs; }
+inline vec3 operator/(vec3 lhs, const float rhs) { 
+	lhs /= rhs;
+
+	return lhs;
+}
 inline bool operator==(const vec3& lhs, const vec3& rhs) { return ((lhs.x == rhs.x) && (lhs.y == rhs.y) && (lhs.z == rhs.z)); }
 inline bool operator!=(const vec3& lhs, const vec3& rhs) { return !(lhs == rhs); }
 
