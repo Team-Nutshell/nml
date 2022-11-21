@@ -10,6 +10,52 @@ vec3::vec3(float _x, float _y, float _z): x(_x), y(_y), z(_z) {}
 vec3::vec3(float _x, vec2 _yz): x(_x), y(_yz.x), z(_yz.y) {}
 vec3::vec3(vec2 _xy, float _z): x(_xy.x), y(_xy.y), z(_z) {}
 
+vec3& vec3::operator+=(const vec3& other) { 
+	x += other.x;
+	y += other.y;
+	z += other.z;
+
+	return *this;
+}
+
+vec3& vec3::operator-=(const vec3& other) { 
+	x -= other.x;
+	y -= other.y;
+	z -= other.z;
+
+	return *this;
+}
+
+vec3& vec3::operator*=(const float other) {
+	x *= other;
+	y *= other;
+	z *= other;
+
+	return *this;
+}
+
+vec3& vec3::operator/=(const float other) {
+	x /= other;
+	y /= other;
+	z /= other;
+
+	return *this;
+}
+
+float& vec3::operator[](size_t index) {
+	if (index == 0) { return x; }
+	else if (index == 1) { return y; }
+	else if (index == 2) { return z; }
+	else { throw std::out_of_range("vec3::operator[]: index is out of range."); }
+}
+
+float vec3::operator[](size_t index) const {
+	if (index == 0) { return x; }
+	else if (index == 1) { return y; }
+	else if (index == 2) { return z; }
+	else { throw std::out_of_range("vec3::operator[]: index is out of range."); }
+}
+
 float vec3::length() const {
 	return std::sqrt((x * x) + (y * y) + (z * z));
 }
@@ -20,6 +66,42 @@ float* vec3::data() {
 
 std::string vec3::to_string() const {
 	return ("[" + std::to_string(x) + ", " + std::to_string(y) + ", " + std::to_string(z) + "]");
+}
+
+vec3 operator+(vec3 lhs, const vec3& rhs) { 
+	lhs += rhs;
+
+	return lhs;
+}
+
+vec3 operator-(vec3 lhs, const vec3& rhs) {
+	lhs -= rhs;
+
+	return lhs;
+}
+
+vec3 operator*(vec3 lhs, const float rhs) {
+	lhs *= rhs;
+
+	return lhs;
+}
+
+vec3 operator*(float lhs, const vec3& rhs) {
+	return rhs * lhs;
+}
+
+vec3 operator/(vec3 lhs, const float rhs) { 
+	lhs /= rhs;
+
+	return lhs;
+}
+
+bool operator==(const vec3& lhs, const vec3& rhs) {
+	return ((lhs.x == rhs.x) && (lhs.y == rhs.y) && (lhs.z == rhs.z));
+}
+
+bool operator!=(const vec3& lhs, const vec3& rhs) {
+	return !(lhs == rhs);
 }
 
 vec3 normalize(const vec3& v) {
