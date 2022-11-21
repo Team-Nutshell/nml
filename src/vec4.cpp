@@ -59,7 +59,7 @@ float& vec4::operator[](size_t index) {
 	else { throw std::out_of_range("vec4::operator[]: index is out of range."); }
 }
 
-float vec4::operator[](size_t index) const {
+const float vec4::operator[](size_t index) const {
 	if (index == 0) { return x; }
 	else if (index == 1) { return y; }
 	else if (index == 2) { return z; }
