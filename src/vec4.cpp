@@ -2,6 +2,7 @@
 #include "../include/vec2.h"
 #include "../include/vec3.h"
 #include <cmath>
+#include <stdexcept>
 
 namespace nml {
 
