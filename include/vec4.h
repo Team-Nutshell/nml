@@ -25,52 +25,12 @@ struct vec4 {
 	vec4(vec2 _xy, vec2 _zw);
 
 	// Operators
-	vec4& operator+=(const vec4& other) { 
-		x += other.x;
-		y += other.y;
-		z += other.z;
-		w += other.w;
-
-		return *this;
-	}
-	vec4& operator-=(const vec4& other) { 
-		x -= other.x;
-		y -= other.y;
-		z -= other.z;
-		w -= other.w;
-
-		return *this;
-	}
-	vec4& operator*=(const float other) {
-		x *= other;
-		y *= other;
-		z *= other;
-		w *= other;
-
-		return *this;
-	}
-	vec4& operator/=(const float other) {
-		x /= other;
-		y /= other;
-		z /= other;
-		w /= other;
-
-		return *this;
-	}
-	float& operator[](size_t index) {
-		if (index == 0) { return x; }
-		else if (index == 1) { return y; }
-		else if (index == 2) { return z; }
-		else if (index == 3) { return w; }
-		else { throw std::out_of_range("vec4::operator[]: index is out of range."); }
-	}
-	float operator[](size_t index) const {
-		if (index == 0) { return x; }
-		else if (index == 1) { return y; }
-		else if (index == 2) { return z; }
-		else if (index == 3) { return w; }
-		else { throw std::out_of_range("vec4::operator[]: index is out of range."); }
-	}
+	vec4& operator+=(const vec4& other);
+	vec4& operator-=(const vec4& other);
+	vec4& operator*=(const float other);
+	vec4& operator/=(const float other);
+	float& operator[](size_t index);
+	float operator[](size_t index) const;
 
 	// Functions
 	float length() const;
@@ -80,29 +40,13 @@ struct vec4 {
 };
 
 // Operators
-inline vec4 operator+(vec4 lhs, const vec4& rhs) { 
-	lhs += rhs;
-
-	return lhs;
-}
-inline vec4 operator-(vec4 lhs, const vec4& rhs) {
-	lhs -= rhs;
-
-	return lhs;
-}
-inline vec4 operator*(vec4 lhs, const float rhs) {
-	lhs *= rhs;
-
-	return lhs;
-}
-inline vec4 operator*(float lhs, const vec4& rhs) { return rhs * lhs; }
-inline vec4 operator/(vec4 lhs, const float rhs) { 
-	lhs /= rhs;
-
-	return lhs;
-}
-inline bool operator==(const vec4& lhs, const vec4& rhs) { return ((lhs.x == rhs.x) && (lhs.y == rhs.y) && (lhs.z == rhs.z) && (lhs.w == rhs.w)); }
-inline bool operator!=(const vec4& lhs, const vec4& rhs) { return !(lhs == rhs); }
+vec4 operator+(vec4 lhs, const vec4& rhs);
+vec4 operator-(vec4 lhs, const vec4& rhs);
+vec4 operator*(vec4 lhs, const float rhs);
+vec4 operator*(float lhs, const vec4& rhs);
+vec4 operator/(vec4 lhs, const float rhs);
+bool operator==(const vec4& lhs, const vec4& rhs);
+bool operator!=(const vec4& lhs, const vec4& rhs);
 
 // Functions
 vec4 normalize(const vec4& v);

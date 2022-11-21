@@ -15,6 +15,58 @@ vec4::vec4(float _x, vec2 _yz, float _w): x(_x), y(_yz.x), z(_yz.y), w(_w) {}
 vec4::vec4(vec2 _xy, float _z, float _w): x(_xy.x), y(_xy.y), z(_z), w(_w) {}
 vec4::vec4(vec2 _xy, vec2 _zw): x(_xy.x), y(_xy.y), z(_zw.x), w(_zw.y) {}
 
+vec4& vec4::operator+=(const vec4& other) { 
+	x += other.x;
+	y += other.y;
+	z += other.z;
+	w += other.w;
+
+	return *this;
+}
+
+vec4& vec4::operator-=(const vec4& other) { 
+	x -= other.x;
+	y -= other.y;
+	z -= other.z;
+	w -= other.w;
+
+	return *this;
+}
+
+vec4& vec4::operator*=(const float other) {
+	x *= other;
+	y *= other;
+	z *= other;
+	w *= other;
+
+	return *this;
+}
+
+vec4& vec4::operator/=(const float other) {
+	x /= other;
+	y /= other;
+	z /= other;
+	w /= other;
+
+	return *this;
+}
+
+float& vec4::operator[](size_t index) {
+	if (index == 0) { return x; }
+	else if (index == 1) { return y; }
+	else if (index == 2) { return z; }
+	else if (index == 3) { return w; }
+	else { throw std::out_of_range("vec4::operator[]: index is out of range."); }
+}
+
+float vec4::operator[](size_t index) const {
+	if (index == 0) { return x; }
+	else if (index == 1) { return y; }
+	else if (index == 2) { return z; }
+	else if (index == 3) { return w; }
+	else { throw std::out_of_range("vec4::operator[]: index is out of range."); }
+}
+
 float vec4::length() const {
 	return std::sqrt((x * x) + (y * y) + (z * z) + (w * w));
 }
@@ -25,6 +77,42 @@ float* vec4::data() {
 
 std::string vec4::to_string() const {
 	return ("[" + std::to_string(x) + ", " + std::to_string(y) + ", " + std::to_string(z) + ", " + std::to_string(w) + "]");
+}
+
+vec4 operator+(vec4 lhs, const vec4& rhs) { 
+	lhs += rhs;
+
+	return lhs;
+}
+
+vec4 operator-(vec4 lhs, const vec4& rhs) {
+	lhs -= rhs;
+
+	return lhs;
+}
+
+vec4 operator*(vec4 lhs, const float rhs) {
+	lhs *= rhs;
+
+	return lhs;
+}
+
+vec4 operator*(float lhs, const vec4& rhs) {
+	return rhs * lhs;
+}
+
+vec4 operator/(vec4 lhs, const float rhs) { 
+	lhs /= rhs;
+
+	return lhs;
+}
+
+bool operator==(const vec4& lhs, const vec4& rhs) {
+	return ((lhs.x == rhs.x) && (lhs.y == rhs.y) && (lhs.z == rhs.z) && (lhs.w == rhs.w));
+}
+
+bool operator!=(const vec4& lhs, const vec4& rhs) {
+	return !(lhs == rhs);
 }
 
 vec4 normalize(const vec4& v) {

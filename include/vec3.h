@@ -19,46 +19,12 @@ struct vec3 {
 	vec3(vec2 _xy, float _z);
 
 	// Operators
-	vec3& operator+=(const vec3& other) { 
-		x += other.x;
-		y += other.y;
-		z += other.z;
-
-		return *this;
-	}
-	vec3& operator-=(const vec3& other) { 
-		x -= other.x;
-		y -= other.y;
-		z -= other.z;
-
-		return *this;
-	}
-	vec3& operator*=(const float other) {
-		x *= other;
-		y *= other;
-		z *= other;
-
-		return *this;
-	}
-	vec3& operator/=(const float other) {
-		x /= other;
-		y /= other;
-		z /= other;
-
-		return *this;
-	}
-	float& operator[](size_t index) {
-		if (index == 0) { return x; }
-		else if (index == 1) { return y; }
-		else if (index == 2) { return z; }
-		else { throw std::out_of_range("vec3::operator[]: index is out of range."); }
-	}
-	float operator[](size_t index) const {
-		if (index == 0) { return x; }
-		else if (index == 1) { return y; }
-		else if (index == 2) { return z; }
-		else { throw std::out_of_range("vec3::operator[]: index is out of range."); }
-	}
+	vec3& operator+=(const vec3& other);
+	vec3& operator-=(const vec3& other);
+	vec3& operator*=(const float other);
+	vec3& operator/=(const float other);
+	float& operator[](size_t index);
+	float operator[](size_t index) const;
 
 	// Functions
 	float length() const;
@@ -68,29 +34,13 @@ struct vec3 {
 };
 
 // Operators
-inline vec3 operator+(vec3 lhs, const vec3& rhs) { 
-	lhs += rhs;
-
-	return lhs;
-}
-inline vec3 operator-(vec3 lhs, const vec3& rhs) {
-	lhs -= rhs;
-
-	return lhs;
-}
-inline vec3 operator*(vec3 lhs, const float rhs) {
-	lhs *= rhs;
-
-	return lhs;
-}
-inline vec3 operator*(float lhs, const vec3& rhs) { return rhs * lhs; }
-inline vec3 operator/(vec3 lhs, const float rhs) { 
-	lhs /= rhs;
-
-	return lhs;
-}
-inline bool operator==(const vec3& lhs, const vec3& rhs) { return ((lhs.x == rhs.x) && (lhs.y == rhs.y) && (lhs.z == rhs.z)); }
-inline bool operator!=(const vec3& lhs, const vec3& rhs) { return !(lhs == rhs); }
+vec3 operator+(vec3 lhs, const vec3& rhs);
+vec3 operator-(vec3 lhs, const vec3& rhs);
+vec3 operator*(vec3 lhs, const float rhs);
+vec3 operator*(float lhs, const vec3& rhs);
+vec3 operator/(vec3 lhs, const float rhs);
+bool operator==(const vec3& lhs, const vec3& rhs);
+bool operator!=(const vec3& lhs, const vec3& rhs);
 
 // Functions
 vec3 normalize(const vec3& v);
