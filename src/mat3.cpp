@@ -5,18 +5,18 @@
 
 namespace nml {
 
-mat3::mat3(): x(vec3(1.0f, 0.0f, 0.0f)), y(vec3(0.0f, 1.0f, 0.0f)), z(vec3(0.0f, 0.0f, 1.0f)) {}
-mat3::mat3(float _xxxyxzyxyyyzzxzyzz): x(vec3(_xxxyxzyxyyyzzxzyzz)), y(vec3(_xxxyxzyxyyyzzxzyzz)), z(vec3(_xxxyxzyxyyyzzxzyzz)) {}
-mat3::mat3(float _xx, float _xy, float _xz, float _yx, float _yy, float _yz, float _zx, float _zy, float _zz): x(vec3(_xx, _xy, _xz)), y(vec3(_yx, _yy, _yz)), z(vec3(_zx, _zy, _zz)) {}
-mat3::mat3(float _xx, float _xy, float _xz, float _yx, float _yy, float _yz, vec3 _zxzyzz): x(vec3(_xx, _xy, _xz)), y(vec3(_yx, _yy, _yz)), z(_zxzyzz) {}
-mat3::mat3(float _xx, float _xy, float _xz, vec3 _yxyyyz, float _zx, float _zy, float _zz): x(vec3(_xx, _xy, _xz)), y(_yxyyyz), z(vec3(_zx, _zy, _zz)) {}
-mat3::mat3(vec3 _xxxyxz, float _yx, float _yy, float _yz, float _zx, float _zy, float _zz): x(_xxxyxz), y(vec3(_yx, _yy, _yz)), z(vec3(_zx, _zy, _zz)) {}
-mat3::mat3(float _xx, float _xy, float _xz, vec3 _yxyyyz, vec3 _zxzyzz): x(vec3(_xx, _xy, _xz)), y(_yxyyyz), z(_zxzyzz) {}
-mat3::mat3(vec3 _xxxyxz, vec3 _yxyyyz, float _zx, float _zy, float _zz): x(_xxxyxz), y(_yxyyyz), z(vec3(_zx, _zy, _zz)) {}
-mat3::mat3(vec3 _xxxyxz, float _yx, float _yy, float _yz, vec3 _zxzyzz): x(_xxxyxz), y(vec3(_yx, _yy, _yz)), z(_zxzyzz) {}
+mat3::mat3(): x(1.0f, 0.0f, 0.0f), y(0.0f, 1.0f, 0.0f), z(0.0f, 0.0f, 1.0f) {}
+mat3::mat3(float _xxxyxzyxyyyzzxzyzz): x(_xxxyxzyxyyyzzxzyzz), y(_xxxyxzyxyyyzzxzyzz), z(_xxxyxzyxyyyzzxzyzz) {}
+mat3::mat3(float _xx, float _xy, float _xz, float _yx, float _yy, float _yz, float _zx, float _zy, float _zz): x(_xx, _xy, _xz), y(_yx, _yy, _yz), z(_zx, _zy, _zz) {}
+mat3::mat3(float _xx, float _xy, float _xz, float _yx, float _yy, float _yz, vec3 _zxzyzz): x(_xx, _xy, _xz), y(_yx, _yy, _yz), z(_zxzyzz) {}
+mat3::mat3(float _xx, float _xy, float _xz, vec3 _yxyyyz, float _zx, float _zy, float _zz): x(_xx, _xy, _xz), y(_yxyyyz), z(_zx, _zy, _zz) {}
+mat3::mat3(vec3 _xxxyxz, float _yx, float _yy, float _yz, float _zx, float _zy, float _zz): x(_xxxyxz), y(_yx, _yy, _yz), z(_zx, _zy, _zz) {}
+mat3::mat3(float _xx, float _xy, float _xz, vec3 _yxyyyz, vec3 _zxzyzz): x(_xx, _xy, _xz), y(_yxyyyz), z(_zxzyzz) {}
+mat3::mat3(vec3 _xxxyxz, vec3 _yxyyyz, float _zx, float _zy, float _zz): x(_xxxyxz), y(_yxyyyz), z(_zx, _zy, _zz) {}
+mat3::mat3(vec3 _xxxyxz, float _yx, float _yy, float _yz, vec3 _zxzyzz): x(_xxxyxz), y(_yx, _yy, _yz), z(_zxzyzz) {}
 mat3::mat3(vec3 _xxxyxz, vec3 _yxyyyz, vec3 _zxzyzz): x(_xxxyxz), y(_yxyyyz), z(_zxzyzz) {}
 
-mat3& mat3::operator+=(const mat3& other) { 
+mat3& mat3::operator+=(const mat3& other) {
 	x += other.x;
 	y += other.y;
 	z += other.z;
@@ -24,7 +24,7 @@ mat3& mat3::operator+=(const mat3& other) {
 	return *this;
 }
 
-mat3& mat3::operator-=(const mat3& other) { 
+mat3& mat3::operator-=(const mat3& other) {
 	x -= other.x;
 	y -= other.y;
 	z -= other.z;

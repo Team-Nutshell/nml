@@ -5,21 +5,21 @@
 
 namespace nml {
 
-mat2::mat2(): x(vec2(1.0f, 0.0f)), y(vec2(0.0f, 1.0f)) {}
-mat2::mat2(float _xxxyyxyy): x(vec2(_xxxyyxyy)), y(vec2(_xxxyyxyy)) {}
-mat2::mat2(float _xx, float _xy, float _yx, float _yy): x(vec2(_xx, _xy)), y(vec2(_yx, _yy)) {}
-mat2::mat2(float _xx, float _xy, vec2 _yxyy): x(vec2(_xx, _xy)), y(_yxyy) {}
-mat2::mat2(vec2 _xxxy, float _yx, float _yy): x(_xxxy), y(vec2(_yx, _yy)) {}
+mat2::mat2(): x(1.0f, 0.0f), y(0.0f, 1.0f) {}
+mat2::mat2(float _xxxyyxyy): x(_xxxyyxyy), y(_xxxyyxyy) {}
+mat2::mat2(float _xx, float _xy, float _yx, float _yy): x(_xx, _xy), y(_yx, _yy) {}
+mat2::mat2(float _xx, float _xy, vec2 _yxyy): x(_xx, _xy), y(_yxyy) {}
+mat2::mat2(vec2 _xxxy, float _yx, float _yy): x(_xxxy), y(_yx, _yy) {}
 mat2::mat2(vec2 _xxxy, vec2 _yxyy): x(_xxxy), y(_yxyy) {}
 
-mat2& mat2::operator+=(const mat2& other) { 
+mat2& mat2::operator+=(const mat2& other) {
 	x += other.x;
 	y += other.y;
 
 	return *this;
 }
 
-mat2& mat2::operator-=(const mat2& other) { 
+mat2& mat2::operator-=(const mat2& other) {
 	x -= other.x;
 	y -= other.y;
 
