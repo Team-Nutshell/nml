@@ -191,4 +191,32 @@ mat4 inverse(const mat4& mat) {
 	return ((1.0f / determinant) * adj);
 }
 
+mat4 translate(const vec3& translation) {
+	return mat4(1.0f, 0.0f, 0.0f, translation.x, 0.0f, 1.0f, 0.0f, translation.y, 0.0f, 0.0f, 1.0f, translation.z, 0.0f, 0.0f, 0.0f, 1.0f);
+}
+
+mat4 rotate(float angle, const vec3& axis) {
+	float cosTheta = std::cos(angle);
+	float oMCT = 1.0f - cosTheta;
+	float sinTheta = std::sin(angle);
+
+	return mat4(cosTheta + ((axis.x * axis.x) * oMCT),
+		((axis.y * axis.x) * oMCT) + (axis.z * sinTheta),
+		((axis.z * axis.x) * oMCT) - (axis.y * sinTheta),
+		0.0f,
+		((axis.x * axis.y) * oMCT) - (axis.z * sinTheta),
+		cosTheta + ((axis.y * axis.y) * oMCT),
+		((axis.z * axis.y) * oMCT) + (axis.x * sinTheta),
+		0.0f,
+		((axis.x * axis.z) * oMCT) + (axis.y * sinTheta),
+		((axis.y * axis.z) * oMCT) - (axis.x * sinTheta),
+		cosTheta + ((axis.z * axis.z) * oMCT),
+		0.0f,
+		0.0f, 0.0f, 0.0f, 1.0f);
+}
+
+mat4 scale(const vec3& scaling) {
+	return mat4(scaling.x, 0.0f, 0.0f, 0.0f, 0.0f, scaling.y, 0.0f, 0.0f, 0.0f, 0.0f, scaling.z, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f);
+}
+
 }

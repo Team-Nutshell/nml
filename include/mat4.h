@@ -67,5 +67,8 @@ bool operator!=(const mat4& lhs, const mat4& rhs);
 // Functions
 mat4 transpose(const mat4& mat);
 mat4 inverse(const mat4& mat);
+mat4 translate(const vec3& translation);
+mat4 rotate(float angle, const vec3& axis);
+mat4 scale(const vec3& scaling);
 
 }

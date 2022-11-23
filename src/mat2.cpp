@@ -1,6 +1,5 @@
 #include "../include/mat2.h"
 #include "../include/vec2.h"
-#include <cmath>
 #include <stdexcept>
 
 namespace nml {
