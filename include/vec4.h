@@ -48,7 +48,7 @@ bool operator==(const vec4& lhs, const vec4& rhs);
 bool operator!=(const vec4& lhs, const vec4& rhs);
 
 // Functions
-vec4 normalize(const vec4& v);
+vec4 normalize(const vec4& vec);
 float dot(const vec4& a, const vec4& b);
 vec4 reflect(const vec4& i, const vec4& n);
 vec4 refract(const vec4& i, const vec4& n, float eta);

@@ -37,7 +37,7 @@ bool operator==(const vec2& lhs, const vec2& rhs);
 bool operator!=(const vec2& lhs, const vec2& rhs);
 
 // Functions
-vec2 normalize(const vec2& v);
+vec2 normalize(const vec2& vec);
 float dot(const vec2& a, const vec2& b);
 vec2 reflect(const vec2& i, const vec2& n);
 vec2 refract(const vec2& i, const vec2& n, float eta);

@@ -42,7 +42,7 @@ bool operator==(const vec3& lhs, const vec3& rhs);
 bool operator!=(const vec3& lhs, const vec3& rhs);
 
 // Functions
-vec3 normalize(const vec3& v);
+vec3 normalize(const vec3& vec);
 float dot(const vec3& a, const vec3& b);
 vec3 cross(const vec3& a, const vec3& b);
 vec3 reflect(const vec3& i, const vec3& n);
