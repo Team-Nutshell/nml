@@ -22,6 +22,8 @@ set(NML_HEADERS
 	include/mat2.h
 	include/mat3.h
 	include/mat4.h
+
+	include/nlm.h
 )
 
 set(SOURCES ${NML_SOURCES})
