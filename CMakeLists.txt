@@ -9,11 +9,19 @@ set(NML_SOURCES
 	src/vec2.cpp
 	src/vec3.cpp
 	src/vec4.cpp
+	
+	src/mat2.cpp
+	src/mat3.cpp
+	src/mat4.cpp
 )
 set(NML_HEADERS
 	include/vec2.h
 	include/vec3.h
 	include/vec4.h
+
+	include/mat2.h
+	include/mat3.h
+	include/mat4.h
 )
 
 set(SOURCES ${NML_SOURCES})
