@@ -3,6 +3,7 @@
 
 namespace nml {
 
+// x | y
 struct vec2 {
 	float x;
 	float y;

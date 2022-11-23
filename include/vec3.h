@@ -5,6 +5,7 @@ namespace nml {
 
 struct vec2;
 
+// x | y | z
 struct vec3 {
 	float x;
 	float y;
