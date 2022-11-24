@@ -30,8 +30,8 @@ struct mat3 {
 	// Operators
 	mat3& operator+=(const mat3& other);
 	mat3& operator-=(const mat3& other);
-	mat3& operator*=(const float other);
 	mat3& operator*=(const mat3& other);
+	mat3& operator*=(const float other);
 	mat3& operator/=(const float other);
 	vec3& operator[](size_t index);
 	const vec3& operator[](size_t index) const;
@@ -45,9 +45,9 @@ struct mat3 {
 // Operators
 mat3 operator+(mat3 lhs, const mat3& rhs);
 mat3 operator-(mat3 lhs, const mat3& rhs);
+mat3 operator*(mat3 lhs, const mat3& rhs);
 mat3 operator*(mat3 lhs, const float rhs);
 mat3 operator*(float lhs, const mat3& rhs);
-mat3 operator*(mat3 lhs, const mat3& rhs);
 mat3 operator/(mat3 lhs, const float rhs);
 bool operator==(const mat3& lhs, const mat3& rhs);
 bool operator!=(const mat3& lhs, const mat3& rhs);

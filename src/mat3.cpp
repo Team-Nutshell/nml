@@ -32,14 +32,6 @@ mat3& mat3::operator-=(const mat3& other) {
 	return *this;
 }
 
-mat3& mat3::operator*=(const float other) {
-	x *= other;
-	y *= other;
-	z *= other;
-
-	return *this;
-}
-
 mat3& mat3::operator*=(const mat3& other) {
 	mat3 tmp;
 	tmp.x = vec3(x.x * other.x.x + y.x * other.x.y + z.x * other.x.z,
@@ -55,6 +47,14 @@ mat3& mat3::operator*=(const mat3& other) {
 	x = tmp.x;
 	y = tmp.y;
 	z = tmp.z;
+
+	return *this;
+}
+
+mat3& mat3::operator*=(const float other) {
+	x *= other;
+	y *= other;
+	z *= other;
 
 	return *this;
 }
@@ -103,6 +103,12 @@ mat3 operator-(mat3 lhs, const mat3& rhs) {
 	return lhs;
 }
 
+mat3 operator*(mat3 lhs, const mat3& rhs) { 
+	lhs *= rhs;
+
+	return lhs;
+}
+
 mat3 operator*(mat3 lhs, const float rhs) {
 	lhs *= rhs;
 
@@ -110,13 +116,7 @@ mat3 operator*(mat3 lhs, const float rhs) {
 }
 
 mat3 operator*(float lhs, const mat3& rhs) {
-	return rhs * lhs;
-}
-
-mat3 operator*(mat3 lhs, const mat3& rhs) { 
-	lhs *= rhs;
-
-	return lhs;
+	return (rhs * lhs);
 }
 
 mat3 operator/(mat3 lhs, const float rhs) {

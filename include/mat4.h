@@ -41,8 +41,8 @@ struct mat4 {
 	// Operators
 	mat4& operator+=(const mat4& other);
 	mat4& operator-=(const mat4& other);
-	mat4& operator*=(const float other);
 	mat4& operator*=(const mat4& other);
+	mat4& operator*=(const float other);
 	mat4& operator/=(const float other);
 	vec4& operator[](size_t index);
 	const vec4& operator[](size_t index) const;
@@ -56,9 +56,9 @@ struct mat4 {
 // Operators
 mat4 operator+(mat4 lhs, const mat4& rhs);
 mat4 operator-(mat4 lhs, const mat4& rhs);
+mat4 operator*(mat4 lhs, const mat4& rhs);
 mat4 operator*(mat4 lhs, const float rhs);
 mat4 operator*(float lhs, const mat4& rhs);
-mat4 operator*(mat4 lhs, const mat4& rhs);
 mat4 operator/(mat4 lhs, const float rhs);
 bool operator==(const mat4& lhs, const mat4& rhs);
 bool operator!=(const mat4& lhs, const mat4& rhs);

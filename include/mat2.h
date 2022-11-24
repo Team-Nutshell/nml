@@ -22,8 +22,8 @@ struct mat2 {
 	// Operators
 	mat2& operator+=(const mat2& other);
 	mat2& operator-=(const mat2& other);
-	mat2& operator*=(const float other);
 	mat2& operator*=(const mat2& other);
+	mat2& operator*=(const float other);
 	mat2& operator/=(const float other);
 	vec2& operator[](size_t index);
 	const vec2& operator[](size_t index) const;
@@ -37,9 +37,9 @@ struct mat2 {
 // Operators
 mat2 operator+(mat2 lhs, const mat2& rhs);
 mat2 operator-(mat2 lhs, const mat2& rhs);
+mat2 operator*(mat2 lhs, const mat2& rhs);
 mat2 operator*(mat2 lhs, const float rhs);
 mat2 operator*(float lhs, const mat2& rhs);
-mat2 operator*(mat2 lhs, const mat2& rhs);
 mat2 operator/(mat2 lhs, const float rhs);
 bool operator==(const mat2& lhs, const mat2& rhs);
 bool operator!=(const mat2& lhs, const mat2& rhs);

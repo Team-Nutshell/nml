@@ -84,7 +84,7 @@ vec3 operator*(vec3 lhs, const float rhs) {
 }
 
 vec3 operator*(float lhs, const vec3& rhs) {
-	return rhs * lhs;
+	return (rhs * lhs);
 }
 
 vec3 operator/(vec3 lhs, const float rhs) { 
