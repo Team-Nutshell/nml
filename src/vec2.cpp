@@ -92,10 +92,10 @@ bool operator!=(const vec2& lhs, const vec2& rhs) {
 	return !(lhs == rhs);
 }
 
-vec2 normalize(const vec2& v) {
-	float l = v.length();
+vec2 normalize(const vec2& vec) {
+	float l = vec.length();
 
-	return (v / l);
+	return (vec / l);
 }
 
 float dot(const vec2& a, const vec2& b) {
