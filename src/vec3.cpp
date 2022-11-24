@@ -65,10 +65,6 @@ float* vec3::data() {
 	return &x;
 }
 
-std::string vec3::to_string() const {
-	return ("[" + std::to_string(x) + ", " + std::to_string(y) + ", " + std::to_string(z) + "]");
-}
-
 vec3 operator+(vec3 lhs, const vec3& rhs) { 
 	lhs += rhs;
 
@@ -134,6 +130,10 @@ vec3 refract(const vec3& i, const vec3& n, float eta) {
 	else {
 		return eta * i - (eta * ndoti + std::sqrt(k)) * n;
 	}
+}
+
+std::string to_string(const vec3& vec) {
+	return ("[" + std::to_string(vec.x) + ", " + std::to_string(vec.y) + ", " + std::to_string(vec.z) + "]");
 }
 
 }
