@@ -36,7 +36,6 @@ struct vec4 {
 	float length() const;
 
 	float* data();
-	std::string to_string() const;
 };
 
 // Operators
@@ -54,4 +53,5 @@ float dot(const vec4& a, const vec4& b);
 vec4 reflect(const vec4& i, const vec4& n);
 vec4 refract(const vec4& i, const vec4& n, float eta);
 
+std::string to_string(const vec4& vec);
 }

@@ -91,10 +91,6 @@ float* mat3::data() {
 	return x.data();
 }
 
-std::string mat3::to_string() const {
-	return ("[" + x.to_string() + ", " + y.to_string() + ", " + z.to_string() + "]");
-}
-
 mat3 operator+(mat3 lhs, const mat3& rhs) {
 	lhs += rhs;
 
@@ -175,6 +171,10 @@ mat3 rotate(float angle) {
 
 mat3 scale(const vec2& scaling) {
 	return mat3(scaling.x, 0.0f, 0.0f, 0.0f, scaling.y, 0.0f, 0.0f, 0.0f, 1.0f);
+}
+
+std::string to_string(const mat3& mat) {
+	return ("[" + to_string(mat.x) + ", " + to_string(mat.y) + ", " + to_string(mat.z) + "]");
 }
 
 }

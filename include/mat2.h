@@ -32,7 +32,6 @@ struct mat2 {
 	float det() const;
 
 	float* data();
-	std::string to_string() const;
 };
 
 // Operators
@@ -49,4 +48,5 @@ bool operator!=(const mat2& lhs, const mat2& rhs);
 mat2 transpose(const mat2& mat);
 mat2 inverse(const mat2& mat);
 
+std::string to_string(const mat2& mat);
 }

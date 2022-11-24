@@ -40,7 +40,6 @@ struct mat3 {
 	float det() const;
 
 	float* data();
-	std::string to_string() const;
 };
 
 // Operators
@@ -60,4 +59,5 @@ mat3 translate(const vec2& translation);
 mat3 rotate(float angle);
 mat3 scale(const vec2& scaling);
 
+std::string to_string(const mat3& mat);
 }

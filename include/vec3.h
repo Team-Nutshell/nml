@@ -30,7 +30,6 @@ struct vec3 {
 	float length() const;
 
 	float* data();
-	std::string to_string() const;
 };
 
 // Operators
@@ -49,4 +48,5 @@ vec3 cross(const vec3& a, const vec3& b);
 vec3 reflect(const vec3& i, const vec3& n);
 vec3 refract(const vec3& i, const vec3& n, float eta);
 
+std::string to_string(const vec3& vec);
 }

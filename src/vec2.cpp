@@ -56,10 +56,6 @@ float* vec2::data() {
 	return &x;
 }
 
-std::string vec2::to_string() const {
-	return ("[" + std::to_string(x) + ", " + std::to_string(y) + "]");
-}
-
 vec2 operator+(vec2 lhs, const vec2& rhs) { 
 	lhs += rhs;
 
@@ -119,6 +115,10 @@ vec2 refract(const vec2& i, const vec2& n, float eta) {
 	else {
 		return eta * i - (eta * ndoti + std::sqrt(k)) * n;
 	}
+}
+
+std::string to_string(const vec2& vec) {
+	return ("[" + std::to_string(vec.x) + ", " + std::to_string(vec.y) + "]");
 }
 
 }

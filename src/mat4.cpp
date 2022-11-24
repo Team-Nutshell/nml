@@ -112,10 +112,6 @@ float* mat4::data() {
 	return x.data();
 }
 
-std::string mat4::to_string() const {
-	return ("[" + x.to_string() + ", " + y.to_string() + ", " + z.to_string() + ", " + w.to_string() + "]");
-}
-
 mat4 operator+(mat4 lhs, const mat4& rhs) {
 	lhs += rhs;
 
@@ -217,6 +213,10 @@ mat4 rotate(float angle, const vec3& axis) {
 
 mat4 scale(const vec3& scaling) {
 	return mat4(scaling.x, 0.0f, 0.0f, 0.0f, 0.0f, scaling.y, 0.0f, 0.0f, 0.0f, 0.0f, scaling.z, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f);
+}
+
+std::string to_string(const mat4& mat) {
+	return ("[" + to_string(mat.x) + ", " + to_string(mat.y) + ", " + to_string(mat.z) + ", " + to_string(mat.w) + "]");
 }
 
 }

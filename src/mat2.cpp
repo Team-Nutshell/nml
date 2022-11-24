@@ -73,10 +73,6 @@ float* mat2::data() {
 	return x.data();
 }
 
-std::string mat2::to_string() const {
-	return ("[" + x.to_string() + ", " + y.to_string() + "]");
-}
-
 mat2 operator+(mat2 lhs, const mat2& rhs) {
 	lhs += rhs;
 
@@ -130,6 +126,10 @@ mat2 inverse(const mat2& mat) {
 	}
 
 	return ((1.0f / determinant) * mat2(mat.y.y, -mat.x.y, -mat.y.x, mat.x.x));
+}
+
+std::string to_string(const mat2& mat) {
+	return ("[" + to_string(mat.x) + ", " + to_string(mat.y) + "]");
 }
 
 }
