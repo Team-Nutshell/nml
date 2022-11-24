@@ -42,15 +42,6 @@ mat4& mat4::operator-=(const mat4& other) {
 	return *this;
 }
 
-mat4& mat4::operator*=(const float other) {
-	x *= other;
-	y *= other;
-	z *= other;
-	w *= other;
-
-	return *this;
-}
-
 mat4& mat4::operator*=(const mat4& other) {
 	mat4 tmp;
 	tmp.x = vec4(x.x * other.x.x + y.x * other.x.y + z.x * other.x.z + w.x * other.x.w,
@@ -74,6 +65,15 @@ mat4& mat4::operator*=(const mat4& other) {
 	y = tmp.y;
 	z = tmp.z;
 	w = tmp.w;
+
+	return *this;
+}
+
+mat4& mat4::operator*=(const float other) {
+	x *= other;
+	y *= other;
+	z *= other;
+	w *= other;
 
 	return *this;
 }
@@ -124,6 +124,12 @@ mat4 operator-(mat4 lhs, const mat4& rhs) {
 	return lhs;
 }
 
+mat4 operator*(mat4 lhs, const mat4& rhs) { 
+	lhs *= rhs;
+
+	return lhs;
+}
+
 mat4 operator*(mat4 lhs, const float rhs) {
 	lhs *= rhs;
 
@@ -131,13 +137,7 @@ mat4 operator*(mat4 lhs, const float rhs) {
 }
 
 mat4 operator*(float lhs, const mat4& rhs) {
-	return rhs * lhs;
-}
-
-mat4 operator*(mat4 lhs, const mat4& rhs) { 
-	lhs *= rhs;
-
-	return lhs;
+	return (rhs * lhs);
 }
 
 mat4 operator/(mat4 lhs, const float rhs) {

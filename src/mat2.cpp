@@ -25,13 +25,6 @@ mat2& mat2::operator-=(const mat2& other) {
 	return *this;
 }
 
-mat2& mat2::operator*=(const float other) {
-	x *= other;
-	y *= other;
-
-	return *this;
-}
-
 mat2& mat2::operator*=(const mat2& other) {
 	mat2 tmp;
 	tmp.x = vec2(x.x * other.x.x + y.x * other.x.y,
@@ -41,6 +34,13 @@ mat2& mat2::operator*=(const mat2& other) {
 
 	x = tmp.x;
 	y = tmp.y;
+
+	return *this;
+}
+
+mat2& mat2::operator*=(const float other) {
+	x *= other;
+	y *= other;
 
 	return *this;
 }
@@ -85,6 +85,12 @@ mat2 operator-(mat2 lhs, const mat2& rhs) {
 	return lhs;
 }
 
+mat2 operator*(mat2 lhs, const mat2& rhs) { 
+	lhs *= rhs;
+
+	return lhs;
+}
+
 mat2 operator*(mat2 lhs, const float rhs) {
 	lhs *= rhs;
 
@@ -92,13 +98,7 @@ mat2 operator*(mat2 lhs, const float rhs) {
 }
 
 mat2 operator*(float lhs, const mat2& rhs) {
-	return rhs * lhs;
-}
-
-mat2 operator*(mat2 lhs, const mat2& rhs) { 
-	lhs *= rhs;
-
-	return lhs;
+	return (rhs * lhs);
 }
 
 mat2 operator/(mat2 lhs, const float rhs) {

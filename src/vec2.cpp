@@ -75,7 +75,7 @@ vec2 operator*(vec2 lhs, const float rhs) {
 }
 
 vec2 operator*(float lhs, const vec2& rhs) {
-	return rhs * lhs;
+	return (rhs * lhs);
 }
 
 vec2 operator/(vec2 lhs, const float rhs) { 

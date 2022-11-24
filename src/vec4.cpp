@@ -95,7 +95,7 @@ vec4 operator*(vec4 lhs, const float rhs) {
 }
 
 vec4 operator*(float lhs, const vec4& rhs) {
-	return rhs * lhs;
+	return (rhs * lhs);
 }
 
 vec4 operator/(vec4 lhs, const float rhs) { 
