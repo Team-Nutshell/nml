@@ -49,4 +49,5 @@ mat2 transpose(const mat2& mat);
 mat2 inverse(const mat2& mat);
 
 std::string to_string(const mat2& mat);
+
 }

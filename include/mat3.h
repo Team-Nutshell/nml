@@ -60,4 +60,5 @@ mat3 rotate(float angle);
 mat3 scale(const vec2& scaling);
 
 std::string to_string(const mat3& mat);
+
 }

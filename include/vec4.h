@@ -54,4 +54,5 @@ vec4 reflect(const vec4& i, const vec4& n);
 vec4 refract(const vec4& i, const vec4& n, float eta);
 
 std::string to_string(const vec4& vec);
+
 }

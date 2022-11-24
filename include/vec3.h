@@ -49,4 +49,5 @@ vec3 reflect(const vec3& i, const vec3& n);
 vec3 refract(const vec3& i, const vec3& n, float eta);
 
 std::string to_string(const vec3& vec);
+
 }
