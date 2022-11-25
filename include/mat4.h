@@ -5,6 +5,8 @@
 
 namespace nml {
 
+struct quat;
+
 //  xx | yx | zx | wx
 // ----|----|----|----
 //  xy | yy | zy | wy
@@ -70,6 +72,7 @@ mat4 translate(const vec3& translation);
 mat4 rotate(float angle, const vec3& axis);
 mat4 scale(const vec3& scaling);
 
+mat4 to_mat4(const quat& qua);
 std::string to_string(const mat4& mat);
 
 }

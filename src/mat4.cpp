@@ -1,5 +1,6 @@
 #include "../include/mat4.h"
 #include "../include/mat3.h"
+#include "../include/quat.h"
 #include <cmath>
 #include <stdexcept>
 
@@ -213,6 +214,33 @@ mat4 rotate(float angle, const vec3& axis) {
 
 mat4 scale(const vec3& scaling) {
 	return mat4(scaling.x, 0.0f, 0.0f, 0.0f, 0.0f, scaling.y, 0.0f, 0.0f, 0.0f, 0.0f, scaling.z, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f);
+}
+
+mat4 to_mat4(const quat& qua) {
+	float aa = qua.a * qua.a;
+	float ab = qua.a * qua.b;
+	float ac = qua.a * qua.c;
+	float ad = qua.a * qua.d;
+	float bb = qua.b * qua.b;
+	float bc = qua.b * qua.c;
+	float bd = qua.b * qua.d;
+	float cc = qua.c * qua.c;
+	float cd = qua.c * qua.d;
+	float dd = qua.d * qua.d;
+
+	return mat4(1.0f - 2.0f * (cc + dd),
+		2.0f * (bc + ad),
+		2.0f * (bd - ac),
+		0.0f,
+		2.0f * (bc - ad),
+		1.0f - 2.0f * (bb + dd),
+		2.0f * (cd + ab),
+		0.0f,
+		2.0f * (bd + ac),
+		2.0f * (cd - ab),
+		1.0f - 2.0 * (bb + cc),
+		0.0f,
+		0.0f, 0.0f, 0.0f, 1.0f);
 }
 
 std::string to_string(const mat4& mat) {
