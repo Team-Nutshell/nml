@@ -3,6 +3,8 @@
 
 namespace nml {
 
+struct vec3;
+
 // a + bi + cj + dk
 struct quat {
     float a;
@@ -43,6 +45,7 @@ bool operator!=(const quat& lhs, const quat& rhs);
 quat conjugate(const quat& qua);
 quat normalize(const quat& qua);
 
+quat to_quat(const vec3& vec);
 std::string to_string(const quat& qua);
 
 }

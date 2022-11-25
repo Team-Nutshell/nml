@@ -1,4 +1,5 @@
 #include "../include/quat.h"
+#include "../include/vec3.h"
 #include <cmath>
 #include <stdexcept>
 
@@ -132,6 +133,20 @@ quat normalize(const quat& qua) {
 	float l = qua.length();
 
 	return (qua / l);
+}
+
+quat to_quat(const vec3& vec) {
+	float cosHalfPhi = std::cos(vec.x / 2.0f);
+	float sinHalfPhi = std::sin(vec.x / 2.0f);
+	float cosHalfTheta = std::cos(vec.y / 2.0f);
+	float sinHalfTheta = std::sin(vec.y / 2.0f);
+	float cosHalfPsi = std::cos(vec.z / 2.0f);
+	float sinHalfPsi = std::sin(vec.z / 2.0f);
+
+	return quat(cosHalfPhi * cosHalfTheta * cosHalfPsi + sinHalfPhi * sinHalfTheta * sinHalfPsi,
+		sinHalfPhi * cosHalfTheta * cosHalfPsi - cosHalfPhi * sinHalfTheta * sinHalfPsi,
+		cosHalfPhi * sinHalfTheta * cosHalfPsi + sinHalfPhi * cosHalfTheta * sinHalfPsi,
+		cosHalfPhi * cosHalfTheta * sinHalfPsi - sinHalfPhi * sinHalfTheta * cosHalfPsi);
 }
 
 std::string to_string(const quat& qua) {
