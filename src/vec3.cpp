@@ -1,5 +1,6 @@
 #include "../include/vec3.h"
 #include "../include/vec2.h"
+#include "../include/quat.h"
 #include <cmath>
 #include <stdexcept>
 
@@ -130,6 +131,12 @@ vec3 refract(const vec3& i, const vec3& n, float eta) {
 	else {
 		return eta * i - (eta * ndoti + std::sqrt(k)) * n;
 	}
+}
+
+vec3 to_vec3(const quat& qua) {
+	return vec3(std::atan2(2.0f * ((qua.a * qua.b) + (qua.c * qua.d)), 1.0f - (2.0f * ((qua.b * qua.b) + (qua.c * qua.c)))),
+		std::asin(2.0f * ((qua.a * qua.c) - (qua.d * qua.b))),
+		std::atan2(2.0f * ((qua.a * qua.d) + (qua.b * qua.c)), 1.0f - (2.0f * ((qua.c * qua.c) + (qua.d * qua.d)))));
 }
 
 std::string to_string(const vec3& vec) {

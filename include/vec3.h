@@ -4,6 +4,7 @@
 namespace nml {
 
 struct vec2;
+struct quat;
 
 // x | y | z
 struct vec3 {
@@ -48,6 +49,7 @@ vec3 cross(const vec3& a, const vec3& b);
 vec3 reflect(const vec3& i, const vec3& n);
 vec3 refract(const vec3& i, const vec3& n, float eta);
 
+vec3 to_vec3(const quat& qua);
 std::string to_string(const vec3& vec);
 
 }
