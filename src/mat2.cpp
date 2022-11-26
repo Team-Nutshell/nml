@@ -121,9 +121,6 @@ mat2 transpose(const mat2& mat) {
 
 mat2 inverse(const mat2& mat) {
 	float determinant = mat.det();
-	if (determinant == 0.0f) {
-		throw std::runtime_error("nml::inverse(mat2): matrix is not invertible.");
-	}
 
 	return ((1.0f / determinant) * mat2(mat.y.y, -mat.x.y, -mat.y.x, mat.x.x));
 }
