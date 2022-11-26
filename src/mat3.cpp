@@ -139,9 +139,6 @@ mat3 transpose(const mat3& mat) {
 
 mat3 inverse(const mat3& mat) {
 	float determinant = mat.det();
-	if (determinant == 0.0f) {
-		throw std::runtime_error("nml::inverse(mat3): matrix is not invertible.");
-	}
 
 	mat3 t = transpose(mat);
 	float a = mat2(t.y.y, t.y.z, t.z.y, t.z.z).det();
