@@ -52,7 +52,7 @@ mat4& mat4::operator*=(const mat4& other) {
 	tmp.y = vec4(x.x * other.y.x + y.x * other.y.y + z.x * other.y.z + w.x * other.y.w,
 		x.y * other.y.x + y.y * other.y.y + z.y * other.y.z + w.y * other.y.w,
 		x.z * other.y.x + y.z * other.y.y + z.z * other.y.z + w.z * other.y.w,
-		x.z * other.y.x + y.z * other.y.y + z.z * other.y.z + w.w * other.y.w);
+		x.w * other.y.x + y.w * other.y.y + z.w * other.y.z + w.w * other.y.w);
 	tmp.z = vec4(x.x * other.z.x + y.x * other.z.y + z.x * other.z.z + w.x * other.z.w,
 		x.y * other.z.x + y.y * other.z.y + z.y * other.z.z + w.y * other.z.w,
 		x.z * other.z.x + y.z * other.z.y + z.z * other.z.z + w.z * other.z.w,
@@ -171,8 +171,8 @@ mat4 inverse(const mat4& mat) {
 	float d = mat3(t.y.x, t.y.y, t.y.z, t.z.x, t.z.y, t.z.z, t.w.x, t.w.y, t.w.z).det() * -1.0f;
 	float e = mat3(t.x.y, t.x.z, t.x.w, t.z.y, t.z.z, t.z.w, t.w.y, t.w.z, t.w.w).det() * -1.0f;
 	float f = mat3(t.x.x, t.x.z, t.x.w, t.z.x, t.z.z, t.z.w, t.w.x, t.w.z, t.w.w).det();
-	float g = mat3(t.x.x, t.x.y, t.z.w, t.z.x, t.z.y, t.z.w, t.w.x, t.w.y, t.w.w).det() * -1.0f;
-	float h = mat3(t.x.x, t.x.y, t.z.z, t.z.x, t.z.y, t.z.z, t.w.x, t.w.y, t.w.z).det();
+	float g = mat3(t.x.x, t.x.y, t.x.w, t.z.x, t.z.y, t.z.w, t.w.x, t.w.y, t.w.w).det() * -1.0f;
+	float h = mat3(t.x.x, t.x.y, t.x.z, t.z.x, t.z.y, t.z.z, t.w.x, t.w.y, t.w.z).det();
 	float i = mat3(t.x.y, t.x.z, t.x.w, t.y.y, t.y.z, t.y.w, t.w.y, t.w.z, t.w.w).det();
 	float j = mat3(t.x.x, t.x.z, t.x.w, t.y.x, t.y.z, t.y.w, t.w.x, t.w.z, t.w.w).det() * -1.0f;
 	float k = mat3(t.x.x, t.x.y, t.x.w, t.y.x, t.y.y, t.y.w, t.w.x, t.w.y, t.w.w).det();
