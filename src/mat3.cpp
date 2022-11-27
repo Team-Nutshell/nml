@@ -33,16 +33,15 @@ mat3& mat3::operator-=(const mat3& other) {
 }
 
 mat3& mat3::operator*=(const mat3& other) {
-	mat3 tmp;
-	tmp.x = vec3(x.x * other.x.x + y.x * other.x.y + z.x * other.x.z,
-		x.y * other.x.x + y.y * other.x.y + z.y * other.x.z,
-		x.z * other.x.x + y.z * other.x.y + z.z * other.x.z);
-	tmp.y = vec3(x.x * other.y.x + y.x * other.y.y + z.x * other.y.z,
-		x.y * other.y.x + y.y * other.y.y + z.y * other.y.z,
-		x.z * other.y.x + y.z * other.y.y + z.z * other.y.z);
-	tmp.z = vec3(x.x * other.z.x + y.x * other.z.y + z.x * other.z.z,
-		x.y * other.z.x + y.y * other.z.y + z.y * other.z.z,
-		x.z * other.z.x + y.z * other.z.y + z.z * other.z.z);
+	mat3 tmp(vec3(x.x * other.x.x + y.x * other.x.y + z.x * other.x.z,
+			x.y * other.x.x + y.y * other.x.y + z.y * other.x.z,
+			x.z * other.x.x + y.z * other.x.y + z.z * other.x.z),
+		vec3(x.x * other.y.x + y.x * other.y.y + z.x * other.y.z,
+			x.y * other.y.x + y.y * other.y.y + z.y * other.y.z,
+			x.z * other.y.x + y.z * other.y.y + z.z * other.y.z),
+		vec3(x.x * other.z.x + y.x * other.z.y + z.x * other.z.z,
+			x.y * other.z.x + y.y * other.z.y + z.y * other.z.z,
+			x.z * other.z.x + y.z * other.z.y + z.z * other.z.z));
 
 	x = tmp.x;
 	y = tmp.y;

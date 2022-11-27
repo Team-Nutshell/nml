@@ -44,23 +44,22 @@ mat4& mat4::operator-=(const mat4& other) {
 }
 
 mat4& mat4::operator*=(const mat4& other) {
-	mat4 tmp;
-	tmp.x = vec4(x.x * other.x.x + y.x * other.x.y + z.x * other.x.z + w.x * other.x.w,
-		x.y * other.x.x + y.y * other.x.y + z.y * other.x.z + w.y * other.x.w,
-		x.z * other.x.x + y.z * other.x.y + z.z * other.x.z + w.z * other.x.w,
-		x.w * other.x.x + y.w * other.x.y + z.w * other.x.z + w.w * other.x.w);
-	tmp.y = vec4(x.x * other.y.x + y.x * other.y.y + z.x * other.y.z + w.x * other.y.w,
-		x.y * other.y.x + y.y * other.y.y + z.y * other.y.z + w.y * other.y.w,
-		x.z * other.y.x + y.z * other.y.y + z.z * other.y.z + w.z * other.y.w,
-		x.w * other.y.x + y.w * other.y.y + z.w * other.y.z + w.w * other.y.w);
-	tmp.z = vec4(x.x * other.z.x + y.x * other.z.y + z.x * other.z.z + w.x * other.z.w,
-		x.y * other.z.x + y.y * other.z.y + z.y * other.z.z + w.y * other.z.w,
-		x.z * other.z.x + y.z * other.z.y + z.z * other.z.z + w.z * other.z.w,
-		x.w * other.z.x + y.w * other.z.y + z.w * other.z.z + w.w * other.z.w);
-	tmp.w = vec4(x.x * other.w.x + y.x * other.w.y + z.x * other.w.z + w.x * other.w.w,
-		x.y * other.w.x + y.y * other.w.y + z.y * other.w.z + w.y * other.w.w,
-		x.z * other.w.x + y.z * other.w.y + z.z * other.w.z + w.z * other.w.w,
-		x.w * other.w.x + y.w * other.w.y + z.w * other.w.z + w.w * other.w.w);
+	mat4 tmp(vec4(x.x * other.x.x + y.x * other.x.y + z.x * other.x.z + w.x * other.x.w,
+			x.y * other.x.x + y.y * other.x.y + z.y * other.x.z + w.y * other.x.w,
+			x.z * other.x.x + y.z * other.x.y + z.z * other.x.z + w.z * other.x.w,
+			x.w * other.x.x + y.w * other.x.y + z.w * other.x.z + w.w * other.x.w),
+		vec4(x.x * other.y.x + y.x * other.y.y + z.x * other.y.z + w.x * other.y.w,
+			x.y * other.y.x + y.y * other.y.y + z.y * other.y.z + w.y * other.y.w,
+			x.z * other.y.x + y.z * other.y.y + z.z * other.y.z + w.z * other.y.w,
+			x.w * other.y.x + y.w * other.y.y + z.w * other.y.z + w.w * other.y.w),
+		vec4(x.x * other.z.x + y.x * other.z.y + z.x * other.z.z + w.x * other.z.w,
+			x.y * other.z.x + y.y * other.z.y + z.y * other.z.z + w.y * other.z.w,
+			x.z * other.z.x + y.z * other.z.y + z.z * other.z.z + w.z * other.z.w,
+			x.w * other.z.x + y.w * other.z.y + z.w * other.z.z + w.w * other.z.w),
+		vec4(x.x * other.w.x + y.x * other.w.y + z.x * other.w.z + w.x * other.w.w,
+			x.y * other.w.x + y.y * other.w.y + z.y * other.w.z + w.y * other.w.w,
+			x.z * other.w.x + y.z * other.w.y + z.z * other.w.z + w.z * other.w.w,
+			x.w * other.w.x + y.w * other.w.y + z.w * other.w.z + w.w * other.w.w));
 
 	x = tmp.x;
 	y = tmp.y;
