@@ -13,7 +13,7 @@ struct mat2 {
 	
 	// Constructors
 	mat2();
-	mat2(float value);
+	mat2(float _xxxyyxyy);
 	mat2(float _xx, float _xy, float _yx, float _yy);
 	mat2(float _xx, float _xy, vec2 _yxyy);
 	mat2(vec2 _xxxy, float _yx, float _yy);

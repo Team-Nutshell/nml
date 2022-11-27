@@ -189,7 +189,7 @@ mat4 translate(const vec3& translation) {
 	return mat4(1.0f, 0.0f, 0.0f, translation.x, 0.0f, 1.0f, 0.0f, translation.y, 0.0f, 0.0f, 1.0f, translation.z, 0.0f, 0.0f, 0.0f, 1.0f);
 }
 
-mat4 rotate(float angle, const vec3& axis) {
+mat4 rotate(const float angle, const vec3& axis) {
 	float cosTheta = std::cos(angle);
 	float oMCT = 1.0f - cosTheta;
 	float sinTheta = std::sin(angle);

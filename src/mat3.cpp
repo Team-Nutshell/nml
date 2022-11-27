@@ -160,7 +160,7 @@ mat3 translate(const vec2& translation) {
 	return mat3(1.0f, 0.0f, translation.x, 0.0f, 1.0f, translation.y, 0.0f, 0.0f, 1.0f);
 }
 
-mat3 rotate(float angle) {
+mat3 rotate(const float angle) {
 	float cosTheta = std::cos(angle);
 	float sinTheta = std::sin(angle);
 	return mat3(cosTheta, sinTheta, 0.0f, -sinTheta, cosTheta, 0.0f, 0.0f, 0.0f, 1.0f);
