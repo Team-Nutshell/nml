@@ -56,7 +56,7 @@ bool operator!=(const mat3& lhs, const mat3& rhs);
 mat3 transpose(const mat3& mat);
 mat3 inverse(const mat3& mat);
 mat3 translate(const vec2& translation);
-mat3 rotate(float angle);
+mat3 rotate(const float angle);
 mat3 scale(const vec2& scaling);
 
 std::string to_string(const mat3& mat);
