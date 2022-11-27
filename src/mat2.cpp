@@ -26,11 +26,10 @@ mat2& mat2::operator-=(const mat2& other) {
 }
 
 mat2& mat2::operator*=(const mat2& other) {
-	mat2 tmp;
-	tmp.x = vec2(x.x * other.x.x + y.x * other.x.y,
-		x.y * other.x.x + y.y * other.x.y);
-	tmp.y = vec2(x.x * other.y.x + y.x * other.y.y,
-		x.y * other.y.x + y.y * other.y.y);
+	mat2 tmp(vec2(x.x * other.x.x + y.x * other.x.y,
+			x.y * other.x.x + y.y * other.x.y),
+		vec2(x.x * other.y.x + y.x * other.y.y,
+			x.y * other.y.x + y.y * other.y.y));
 
 	x = tmp.x;
 	y = tmp.y;
