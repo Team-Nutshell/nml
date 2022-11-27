@@ -215,7 +215,6 @@ mat4 scale(const vec3& scaling) {
 }
 
 mat4 to_mat4(const quat& qua) {
-	float aa = qua.a * qua.a;
 	float ab = qua.a * qua.b;
 	float ac = qua.a * qua.c;
 	float ad = qua.a * qua.d;
