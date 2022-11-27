@@ -92,6 +92,7 @@ vec4& mat4::operator[](size_t index) {
 	if (index == 0) { return x; }
 	else if (index == 1) { return y; }
 	else if (index == 2) { return z; }
+	else if (index == 3) { return w; }
 	else { throw std::out_of_range("mat4::operator[]: index is out of range."); }
 }
 
@@ -99,6 +100,7 @@ const vec4& mat4::operator[](size_t index) const {
 	if (index == 0) { return x; }
 	else if (index == 1) { return y; }
 	else if (index == 2) { return z; }
+	else if (index == 3) { return w; }
 	else { throw std::out_of_range("mat4::operator[]: index is out of range."); }
 }
 
