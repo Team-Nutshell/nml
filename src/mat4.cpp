@@ -58,9 +58,9 @@ mat4& mat4::operator*=(const mat4& other) {
 		x.z * other.z.x + y.z * other.z.y + z.z * other.z.z + w.z * other.z.w,
 		x.w * other.z.x + y.w * other.z.y + z.w * other.z.z + w.w * other.z.w);
 	tmp.w = vec4(x.x * other.w.x + y.x * other.w.y + z.x * other.w.z + w.x * other.w.w,
-		x.y * other.w.x + y.y * other.w.y + w.y * other.w.z + w.y * other.w.w,
-		x.z * other.w.x + y.z * other.w.y + w.z * other.w.z + w.z * other.w.w,
-		x.w * other.w.x + y.w * other.w.y + w.w * other.w.z + w.w * other.w.w);
+		x.y * other.w.x + y.y * other.w.y + z.y * other.w.z + w.y * other.w.w,
+		x.z * other.w.x + y.z * other.w.y + z.z * other.w.z + w.z * other.w.w,
+		x.w * other.w.x + y.w * other.w.y + z.w * other.w.z + w.w * other.w.w);
 
 	x = tmp.x;
 	y = tmp.y;
