@@ -5,6 +5,8 @@ mat3: mat3(nml::vec3 _xxxyxz, float _yx, float _yy, float _yz, nml::vec3 _zxzyzz
 
 Construct a ([*_xxxyxz.x*, *_xxxyxz.y*, *_xxxyxz.z*], [*_yx*, *_yy*, *_yz*], [*_zxzyzz.x*, *_zxzyzz.y*, *_zxzyzz.z*]) matrix.
 
+:math:`\begin{bmatrix} \_xxxyxz.x & \_yx & \_zxzyzz.x \\ \_xxxyxz.y & \_yy & \_zxzyzz.y \\ \_xxxyxz.z & \_yz & \_zxzyzz.z \end{bmatrix}`
+
 Example
 -------
 

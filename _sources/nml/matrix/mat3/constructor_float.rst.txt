@@ -5,6 +5,8 @@ mat3: mat3(float _xxxyxzyxyyyzzxzyzz)
 
 Construct a ([*_xxxyxzyxyyyzzxzyzz*, *_xxxyxzyxyyyzzxzyzz*, *_xxxyxzyxyyyzzxzyzz*], [*_xxxyxzyxyyyzzxzyzz*, *_xxxyxzyxyyyzzxzyzz*, *_xxxyxzyxyyyzzxzyzz*], [*_xxxyxzyxyyyzzxzyzz*, *_xxxyxzyxyyyzzxzyzz*, *_xxxyxzyxyyyzzxzyzz*]) matrix.
 
+:math:`\begin{bmatrix} \_xxxyxzyxyyyzzxzyzz & \_xxxyxzyxyyyzzxzyzz & \_xxxyxzyxyyyzzxzyzz \\ \_xxxyxzyxyyyzzxzyzz & \_xxxyxzyxyyyzzxzyzz & \_xxxyxzyxyyyzzxzyzz \\ \_xxxyxzyxyyyzzxzyzz & \_xxxyxzyxyyyzzxzyzz & \_xxxyxzyxyyyzzxzyzz \end{bmatrix}`
+
 Example
 -------
 

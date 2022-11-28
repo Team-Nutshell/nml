@@ -5,6 +5,8 @@ mat4: mat4(nml::vec4 _xxxyxzxw, nml::vec4 _yxyyyzyw, nml::vec4 _zxzyzzzw, nml::v
 
 Construct a ([*_xxxyxzxw.x*, *_xxxyxzxw.y*, *_xxxyxzxw.z*, *_xxxyxzxw.w*], [*_yxyyyzyw.x*, *_yxyyyzyw.y*, *_yxyyyzyw.z*, *_yxyyyzyw.w*], [*_zxzyzzzw.x*, *_zxzyzzzw.y*, *_zxzyzzzw.z*, *_zxzyzzzw.w*], [*_wxwywzww.x*, *_wxwywzww.y*, *_wxwywzww.z*, *_wxwywzww.w*]) matrix.
 
+:math:`\begin{bmatrix} \_xxxyxzxw.x & \_yxyyyzyw.x & \_zxzyzzzw.x & \_wxwywzww.x \\ \_xxxyxzxw.y & \_yxyyyzyw.y & \_zxzyzzzw.y & \_wxwywzww.y \\ \_xxxyxzxw.z & \_yxyyyzyw.z & \_zxzyzzzw.z & \_wxwywzww.z \\ \_xxxyxzxw.w & \_yxyyyzyw.w & \_zxzyzzzw.w & \_wxwywzww.w \end{bmatrix}`
+
 Example
 -------
 
