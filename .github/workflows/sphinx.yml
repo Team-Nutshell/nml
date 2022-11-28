@@ -12,6 +12,7 @@ jobs:
         python-version: '3.10'
     - name: Install dependencies
       run: |
+        sudo apt-get update
         pip install sphinx sphinx_rtd_theme
     - name: Build HTML
       uses: ammaraskar/sphinx-action@master
