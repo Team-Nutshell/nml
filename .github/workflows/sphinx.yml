@@ -15,7 +15,8 @@ jobs:
         sudo apt-get update
         pip install sphinx sphinx_rtd_theme
     - name: Build HTML
-      uses: ammaraskar/sphinx-action@master
+      run: |
+        sphinx-build source build
     - name: Upload artifacts
       uses: actions/upload-artifact@v3
       with:
@@ -25,5 +26,6 @@ jobs:
       uses: peaceiris/actions-gh-pages@v3
       if: github.ref == 'refs/heads/main'
       with:
+        publish-branch: gh-pages
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: docs/build/html
