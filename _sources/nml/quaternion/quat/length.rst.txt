@@ -7,7 +7,7 @@ Return the length of the quaternion.
 
 The length of a *quat* is calculated this way:
 	
-:math:`length = \sqrt{a * a + b * b + c * c + d * d}`
+:math:`length = \sqrt{a^2 + b^2 + c^2 + d^2}`
 
 Example
 -------

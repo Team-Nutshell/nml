@@ -7,7 +7,7 @@ Return a *vec2* with the same direction as *vec* but with length 1.
 
 The normalization of a *vec2* is calculated this way:
 	
-:math:`norm(\begin{bmatrix} vec.x \\ vec.y \end{bmatrix}) = \begin{bmatrix} \frac{vec.x}{length(vec)} \\ \frac{vec.y}{length(vec)} \end{bmatrix}`
+:math:`norm(\begin{bmatrix} vec.x \\ vec.y \end{bmatrix}) = \begin{bmatrix} \frac{vec.x}{\left \| vec \right \|} \\ \frac{vec.y}{\left \| vec \right \|} \end{bmatrix}`
 
 Example
 -------

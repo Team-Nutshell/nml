@@ -7,7 +7,7 @@ Return a *vec3* representing euler angles in radians from a quaternion.
 
 The conversion from quaternion to euler angles is calculated this way:
 
-:math:`\small \begin{bmatrix} atan2(2.0 * (qua.a * qua.b + qua.c * qua.d), 1.0 - (2.0 * (qua.b * qua.b + qua.c * qua.c))) \\ asin(2.0 * (qua.a * qua.c - qua.d * qua.b)) \\ atan2(2.0 * (qua.a * qua.d + qua.b * qua.c), 1.0 - (2.0 * (qua.c * qua.c + qua.d * qua.d))) \end{bmatrix}`
+:math:`\small \begin{bmatrix} atan2(2.0 * (qua.a * qua.b + qua.c * qua.d), 1.0 - (2.0 * (qua.b^2 + qua.c^2))) \\ asin(2.0 * (qua.a * qua.c - qua.d * qua.b)) \\ atan2(2.0 * (qua.a * qua.d + qua.b * qua.c), 1.0 - (2.0 * (qua.c^2 + qua.d^2))) \end{bmatrix}`
 
 Example
 -------

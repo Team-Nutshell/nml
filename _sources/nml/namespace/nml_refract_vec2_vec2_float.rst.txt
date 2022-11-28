@@ -1,15 +1,15 @@
 :orphan:
 
-nml::vec2 nml::refract(const nml::vec2& i, const nml::vec2& n, float eta)
+nml::vec2 nml::refract(const nml::vec2& i, const nml::vec2& n, float ior)
 =========================================================================
 
-Return the refracted direction between the incident vector *i*, the normal *n* and the ratio of indices of refraction *eta*. *n* should be normalized.
+Return the refracted direction between the incident vector *i*, the normal *n* and the ratio of indices of refraction *ior*. *n* should be normalized.
 
-The refracted direction between the incident vector *i*, the normal *n* and the ratio of indices of refraction *eta* is calculated this way:
+The refracted direction between the incident vector *i*, the normal *n* and the ratio of indices of refraction *ior* is calculated this way:
 
-:math:`k = 1.0 - eta * eta * (1.0 - dot(\begin{bmatrix} n.x \\ n.y \end{bmatrix}, \begin{bmatrix} i.x \\ i.y \end{bmatrix}) * dot(\begin{bmatrix} n.x \\ n.y \end{bmatrix}, \begin{bmatrix} i.x \\ i.y \end{bmatrix}))`
+:math:`k = 1.0 - ior^2 * (1.0 - (\begin{bmatrix} n.x \\ n.y \end{bmatrix} \cdot \begin{bmatrix} i.x \\ i.y \end{bmatrix})^2)`
 
-:math:`\begin{cases} \begin{bmatrix} 0.0 \\ 0.0 \end{bmatrix}, & \text{if } k < 0.0 \\ eta * \begin{bmatrix} i.x \\ i.y \end{bmatrix} - (eta * dot(\begin{bmatrix} n.x \\ n.y \end{bmatrix}, \begin{bmatrix} i.x \\ i.y \end{bmatrix}) + \sqrt{k}) * \begin{bmatrix} n.x \\ n.y \end{bmatrix}, & \text{otherwise} \end{cases}`
+:math:`\begin{cases} \begin{bmatrix} 0.0 \\ 0.0 \end{bmatrix}, & \text{if } k < 0.0 \\ ior * \begin{bmatrix} i.x \\ i.y \end{bmatrix} - (ior * \begin{bmatrix} n.x \\ n.y \end{bmatrix} \cdot \begin{bmatrix} i.x \\ i.y \end{bmatrix}) + \sqrt{k} * \begin{bmatrix} n.x \\ n.y \end{bmatrix}, & \text{otherwise} \end{cases}`
 
 **The refract function does not normalize the vector n.**
 

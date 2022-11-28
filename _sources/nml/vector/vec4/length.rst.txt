@@ -7,7 +7,7 @@ Return the length of the vector.
 
 The length of a *vec4* is calculated this way:
 	
-:math:`length = \sqrt{x * x + y * y + z * z + w * w}`
+:math:`length = \sqrt{x^2 + y^2 + z^2 + w^2}`
 
 Example
 -------

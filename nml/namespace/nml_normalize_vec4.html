@@ -73,7 +73,7 @@
 <h1>nml::vec4 nml::normalize(const nml::vec4&amp; vec)<a class="headerlink" href="#nml-vec4-nml-normalize-const-nml-vec4-vec" title="Permalink to this heading"></a></h1>
 <p>Return a <em>vec4</em> with the same direction as <em>vec</em> but with length 1.</p>
 <p>The normalization of a <em>vec4</em> is calculated this way:</p>
-<p><span class="math notranslate nohighlight">\(norm(\begin{bmatrix} vec.x \\ vec.y \\ vec.z \\ vec.w \end{bmatrix}) = \begin{bmatrix} \frac{vec.x}{length(vec)} \\ \frac{vec.y}{length(vec)} \\ \frac{vec.z}{length(vec)} \\ \frac{vec.w}{length(vec)} \end{bmatrix}\)</span></p>
+<p><span class="math notranslate nohighlight">\(norm(\begin{bmatrix} vec.x \\ vec.y \\ vec.z \\ vec.w \end{bmatrix}) = \begin{bmatrix} \frac{vec.x}{\left \| vec \right \|} \\ \frac{vec.y}{\left \| vec \right \|} \\ \frac{vec.z}{\left \| vec \right \|} \\ \frac{vec.w}{\left \| vec \right \|} \end{bmatrix}\)</span></p>
 <section id="example">
 <h2>Example<a class="headerlink" href="#example" title="Permalink to this heading"></a></h2>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;include/vec4.h&quot;</span><span class="cp"></span>
