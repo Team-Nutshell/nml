@@ -7,7 +7,7 @@ Return the length of the vector.
 
 The length of a *vec2* is calculated this way:
 	
-:math:`length = \sqrt{x * x + y * y}`
+:math:`length = \sqrt{x^2 + y^2}`
 
 Example
 -------

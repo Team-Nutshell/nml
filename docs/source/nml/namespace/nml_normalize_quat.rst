@@ -9,7 +9,7 @@ The normalization of a *quat* is calculated this way:
 	
 :math:`norm(qua.a + qua.bi + qua.cj + qua.dk) =`
 
-:math:`(\frac{qua.a}{length(qua)}) + (\frac{qua.b}{length(qua)})i + (\frac{qua.c}{length(qua)})j + (\frac{qua.d}{length(qua)})k`
+:math:`(\frac{qua.a}{\left \| qua \right \|}) + (\frac{qua.b}{\left \| qua \right \|})i + (\frac{qua.c}{\left \| qua \right \|})j + (\frac{qua.d}{\left \| qua \right \|})k`
 
 Example
 -------
