@@ -5,6 +5,8 @@ mat2: mat2(nlm::vec2 _xxxy, float _yx, float _yy)
 
 Construct a ([*_xxxy.x*, *_xxxy.y*], [*_yx*, *_yy*]) matrix.
 
+:math:`\begin{bmatrix} \_xxxy.x & \_yx \\ \_xxxy.y & \_yy \end{bmatrix}`
+
 Example
 -------
 

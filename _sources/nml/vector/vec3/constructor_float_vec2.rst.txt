@@ -5,6 +5,8 @@ vec3: vec3(float _x, nml::vec2 _yz)
 
 Construct a (*_x*, *_yz.x*, *_yz.y*) vector.
 
+:math:`\begin{bmatrix} \_x \\ \_yz.x \\ \_yz.y \end{bmatrix}`
+
 Example
 -------
 

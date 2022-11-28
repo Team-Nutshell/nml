@@ -5,6 +5,8 @@ mat2: mat2(float _xxxyyxyy)
 
 Construct a ([*_xxxyyxyy*, *_xxxyyxyy*], [*_xxxyyxyy*, *_xxxyyxyy*]) matrix.
 
+:math:`\begin{bmatrix} \_xxxyyxyy & \_xxxyyxyy \\ \_xxxyyxyy & \_xxxyyxyy \end{bmatrix}`
+
 Example
 -------
 

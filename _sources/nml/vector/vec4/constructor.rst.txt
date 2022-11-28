@@ -5,6 +5,8 @@ vec4: vec4()
 
 Construct a (0.0, 0.0, 0.0, 0.0) vector.
 
+:math:`\begin{bmatrix} 0.0 \\ 0.0 \\ 0.0 \\ 0.0 \end{bmatrix}`
+
 Example
 -------
 

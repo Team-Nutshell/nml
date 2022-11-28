@@ -5,6 +5,8 @@ quat: quat(float _a, float _b, float _c, float _d)
 
 Construct a (*_a*, *_b*, *_c*, *_d*) quaternion.
 
+:math:`\_a + \_bi + \_cj + \_dk`
+
 Example
 -------
 

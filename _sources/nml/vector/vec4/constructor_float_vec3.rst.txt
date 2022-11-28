@@ -5,6 +5,8 @@ vec4: vec4(float _x, nlm::vec3 _yzw)
 
 Construct a (*_x*, *_yzw.x*, *_yzw.y*, *_yzw.z*) vector.
 
+:math:`\begin{bmatrix} \_x \\ \_yzw.x \\ \_yzw.y \\ \_yzw.z \end{bmatrix}`
+
 Example
 -------
 

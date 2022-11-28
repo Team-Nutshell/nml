@@ -5,6 +5,8 @@ mat4: mat4(float _xx, float _xy, float _xz, float _xw, nml::vec4 _yxyyyzyw, floa
 
 Construct a ([*_xx*, *_xy*, *_xz*, *_xw*], [*_yxyyyzyw.x*, *_yxyyyzyw.y*, *_yxyyyzyw.z*, *_yxyyyzyw.w*], [*_zx*, *_zy*, *_zz*, *_zw*], [*_wxwywzww.x*, *_wxwywzww.y*, *_wxwywzww.z*, *_wxwywzww.w*]) matrix.
 
+:math:`\begin{bmatrix} \_xx & \_yxyyyzyw.x & \_zx & \_wxwywzww.x \\ \_xy & \_yxyyyzyw.y & \_zy & \_wxwywzww.y \\ \_xz & \_yxyyyzyw.z & \_zz & \_wxwywzww.z \\ \_xw & \_yxyyyzyw.w & \_zw & \_wxwywzww.w \end{bmatrix}`
+
 Example
 -------
 

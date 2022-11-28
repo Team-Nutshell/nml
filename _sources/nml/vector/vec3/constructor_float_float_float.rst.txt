@@ -5,6 +5,8 @@ vec3: vec3(float _x, float _y, float _z)
 
 Construct a (*_x*, *_y*, *_z*) vector.
 
+:math:`\begin{bmatrix} \_x \\ \_y \\ \_z \end{bmatrix}`
+
 Example
 -------
 

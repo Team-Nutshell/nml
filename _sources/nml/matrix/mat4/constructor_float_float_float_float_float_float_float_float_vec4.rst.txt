@@ -5,6 +5,8 @@ mat4: mat4(float _xx, float _xy, float _xz, float _xw, float _yx, float _yy, flo
 
 Construct a ([*_xx*, *_xy*, *_xz*, *_xw*], [*_yx*, *_yy*, *_yz*, *_yw*], [*_zx*, *_zy*, *_zz*, *_zw*], [*_wxwywzww.x*, *_wxwywzww.y*, *_wxwywzww.z*, *_wxwywzww.w*]) matrix.
 
+:math:`\begin{bmatrix} \_xx & \_yx & \_zx & \_wxwywzww.x \\ \_xy & \_yy & \_zy & \_wxwywzww.y \\ \_xz & \_yz & \_zz & \_wxwywzww.z \\ \_xw & \_yw & \_zw & \_wxwywzww.w \end{bmatrix}`
+
 Example
 -------
 

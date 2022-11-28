@@ -5,6 +5,8 @@ mat2: mat2(float _xx, float _xy, float _yx, float _yy)
 
 Construct a ([*_xx*, *_xy*], [*_yx*, *_yy*]) matrix.
 
+:math:`\begin{bmatrix} \_xx & \_yx \\ \_xy & \_yy \end{bmatrix}`
+
 Example
 -------
 
