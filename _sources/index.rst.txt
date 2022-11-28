@@ -1,7 +1,7 @@
 nml - Nutshell Mathematics Library
 ==================================
 
-nml is a C++ Mathematics library for Computer Graphics.
+nml is a C++ Mathematics library for Computer Graphics available on `GitHub <https://github.com/Team-Nutshell/nml>`_.
 
 .. toctree::
 	:maxdepth: 3
