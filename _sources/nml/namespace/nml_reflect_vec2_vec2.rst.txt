@@ -7,7 +7,7 @@ Return the reflected direction between the incident vector *i* and the normal *n
 
 The reflected direction between the incident vector *i* and the normal *n* is calculated this way:
 
-:math:`\begin{bmatrix} i.x \\ i.y \end{bmatrix} - 2.0 * \begin{bmatrix} n.x \\ n.y \end{bmatrix} \cdot \begin{bmatrix} i.x \\ i.y \end{bmatrix} * \begin{bmatrix} n.x \\ n.y \end{bmatrix}`
+:math:`\begin{bmatrix} i.x \\ i.y \end{bmatrix} - 2.0 * (\begin{bmatrix} n.x \\ n.y \end{bmatrix} \cdot \begin{bmatrix} i.x \\ i.y \end{bmatrix}) * \begin{bmatrix} n.x \\ n.y \end{bmatrix}`
 
 **The reflect function does not normalize the vector n.**
 
