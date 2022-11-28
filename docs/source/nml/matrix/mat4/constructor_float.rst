@@ -5,6 +5,8 @@ mat4: mat4(float _xxxyxzxwyxyyyzywzxzyzzzwwxwywzww)
 
 Construct a ([*_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww*, *_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww*, *_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww*, *_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww*], [*_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww*, *_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww*, *_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww*, *_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww*], [*_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww*, *_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww*, *_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww*, *_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww*]) matrix.
 
+:math:`\tiny \begin{bmatrix} \_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww & \_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww & \_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww & \_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww \\ \_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww & \_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww & \_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww & \_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww \\ \_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww & \_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww & \_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww & \_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww \\ \_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww & \_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww & \_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww & \_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww \end{bmatrix}`
+
 Example
 -------
 
