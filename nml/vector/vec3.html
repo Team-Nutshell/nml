@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>vec3 &mdash; nml - Nutshell Mathematics Library 1.0.0 documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="vec4" href="vec4.html" />
+    <link rel="prev" title="vec2" href="vec2.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> nml - Nutshell Mathematics Library
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Getting started</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">nml</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Vector</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="vec2.html">vec2</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">vec3</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#class-variables">Class variables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#class-functions">Class functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#namespace-functions">Namespace functions</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="vec4.html">vec4</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../matrix/index.html">Matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quaternion/index.html">Quaternion</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">nml - Nutshell Mathematics Library</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">nml</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Vector</a></li>
+      <li class="breadcrumb-item active">vec3</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/nml/vector/vec3.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="vec3">
+<h1>vec3<a class="headerlink" href="#vec3" title="Permalink to this heading"></a></h1>
+<p>Header file: <code class="docutils literal notranslate"><span class="pre">include/vec3.h</span></code></p>
+<p><strong>vec3</strong> is a vector with <strong>3 scalars</strong>, <strong>x</strong>, <strong>y</strong> and <strong>z</strong>.</p>
+<p><span class="math notranslate nohighlight">\(vec3 = \begin{bmatrix} x \\ y \\ z \end{bmatrix}\)</span></p>
+<section id="class-variables">
+<h2>Class variables<a class="headerlink" href="#class-variables" title="Permalink to this heading"></a></h2>
+<table class="code-table colwidths-given docutils align-default" style="width: 100%">
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 70%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Type</p></th>
+<th class="head"><p>Name</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>float</p></td>
+<td><p>x</p></td>
+<td><p>The first element of the <em>vec3</em>.</p></td>
+</tr>
+<tr class="row-odd"><td><p>float</p></td>
+<td><p>y</p></td>
+<td><p>The second element of the <em>vec3</em>.</p></td>
+</tr>
+<tr class="row-even"><td><p>float</p></td>
+<td><p>z</p></td>
+<td><p>The third element of the <em>vec3</em>.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="class-functions">
+<h2>Class functions<a class="headerlink" href="#class-functions" title="Permalink to this heading"></a></h2>
+<section id="constructors">
+<h3>Constructors<a class="headerlink" href="#constructors" title="Permalink to this heading"></a></h3>
+<table class="code-table colwidths-given docutils align-default" style="width: 100%">
+<colgroup>
+<col style="width: 35%" />
+<col style="width: 65%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="vec3/constructor.html"><span class="doc">vec3()</span></a></p></td>
+<td><p>Construct a (0.0, 0.0, 0.0) vector.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="vec3/constructor_float.html"><span class="doc">vec3(float _xyz)</span></a></p></td>
+<td><p>Construct a (<em>_xyz</em>, <em>_xyz</em>, <em>_xyz</em>) vector.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="vec3/constructor_float_float_float.html"><span class="doc">vec3(float _x, float _y, float _z)</span></a></p></td>
+<td><p>Construct a (<em>_x</em>, <em>_y</em>, <em>_z</em>) vector.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="vec3/constructor_float_vec2.html"><span class="doc">vec3(float _x, nml::vec2 _yz)</span></a></p></td>
+<td><p>Construct a (<em>_x</em>, <em>_yz.x</em>, <em>_yz.y</em>) vector.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="vec3/constructor_vec2_float.html"><span class="doc">vec3(nml::vec2 _xy, float _z)</span></a></p></td>
+<td><p>Construct a (<em>_xy.x, *_xy.y</em>, <em>_z</em>) vector.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="operators">
+<h3>Operators<a class="headerlink" href="#operators" title="Permalink to this heading"></a></h3>
+<table class="code-table colwidths-given docutils align-default" style="width: 100%">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="vec3/operator_plus_equal_vec3.html"><span class="doc">nml::vec3&amp; operator+=(const nml::vec3&amp; other)</span></a></p></td>
+<td><p>Add a <em>vec3</em> to the current <em>vec3</em>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="vec3/operator_minus_equal_vec3.html"><span class="doc">nml::vec3&amp; operator-=(const nml::vec3&amp; other)</span></a></p></td>
+<td><p>Substract a <em>vec3</em> from the current <em>vec3</em>.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="vec3/operator_times_equal_float.html"><span class="doc">nml::vec3&amp; operator*=(const float other)</span></a></p></td>
+<td><p>Multiply the current <em>vec3</em> by a scalar.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="vec3/operator_divide_equal_float.html"><span class="doc">nml::vec3&amp; operator/=(const float other)</span></a></p></td>
+<td><p>Divide the current <em>vec3</em> by a scalar.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="vec3/operator_brackets_ref.html"><span class="doc">float&amp; operator[](size_t index)</span></a></p></td>
+<td><p>Return a reference to <em>x</em> if index is 0, a reference to <em>y</em> if index is 1 or a reference to <em>z</em> if index is 2, else, throw an exception.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="vec3/operator_brackets_value.html"><span class="doc">const float operator[](size_t index) const</span></a></p></td>
+<td><p>Return the value of <em>x</em> if index is 0, the value of <em>y</em> if index is 1 or the value to <em>z</em> if index is 2, else, throw an exception.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this heading"></a></h3>
+<table class="code-table colwidths-given docutils align-default" style="width: 100%">
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 70%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="vec3/length.html"><span class="doc">float length()</span></a></p></td>
+<td><p>Return the length of the vector.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="vec3/data.html"><span class="doc">float* data()</span></a></p></td>
+<td><p>Return a pointer to the vector’s elements.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="namespace-functions">
+<h2>Namespace functions<a class="headerlink" href="#namespace-functions" title="Permalink to this heading"></a></h2>
+<section id="id1">
+<h3>Operators<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h3>
+<table class="code-table colwidths-given docutils align-default" style="width: 100%">
+<colgroup>
+<col style="width: 40%" />
+<col style="width: 60%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="../namespace/nml_operator_plus_vec3_vec3.html"><span class="doc">nml::vec3 operator+(nml::vec3 lhs, const nml::vec3&amp; rhs)</span></a></p></td>
+<td><p>Return a <em>vec3</em> that is the sum between two <em>vec3</em>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../namespace/nml_operator_minus_vec3_vec3.html"><span class="doc">nml::vec3 operator-(nml::vec3 lhs, const nml::vec3&amp; rhs)</span></a></p></td>
+<td><p>Return a <em>vec3</em> that is the difference between two <em>vec3</em>.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../namespace/nml_operator_times_vec3_float.html"><span class="doc">nml::vec3 operator*(nml::vec3 lhs, const float rhs)</span></a></p></td>
+<td><p>Return a <em>vec3</em> that is the product between a <em>vec3</em> and a scalar.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../namespace/nml_operator_times_float_vec3.html"><span class="doc">nml::vec3 operator*(float lhs, const nml::vec3&amp; rhs)</span></a></p></td>
+<td><p>Return a <em>vec3</em> that is the product between a scalar and a <em>vec3</em>.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../namespace/nml_operator_divide_vec3_float.html"><span class="doc">nml::vec3 operator/(nml::vec3 lhs, const float rhs)</span></a></p></td>
+<td><p>Return a <em>vec3</em> that is the quotient between a <em>vec3</em> and a scalar.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../namespace/nml_operator_is_equal_vec3_vec3.html"><span class="doc">bool operator==(const nml::vec3&amp; lhs, const nml::vec3&amp; rhs)</span></a></p></td>
+<td><p>Return true if the two <em>vec3</em> are identical, else, return false.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../namespace/nml_operator_is_not_equal_vec3_vec3.html"><span class="doc">bool operator!=(const nml::vec3&amp; lhs, const nml::vec3&amp; rhs)</span></a></p></td>
+<td><p>Return true if the two <em>vec3</em> are different, else, return false.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id2">
+<h3>Functions<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h3>
+<table class="code-table colwidths-given docutils align-default" style="width: 100%">
+<colgroup>
+<col style="width: 40%" />
+<col style="width: 60%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="../namespace/nml_normalize_vec3.html"><span class="doc">nml::vec3 nml::normalize(const nml::vec3&amp; vec)</span></a></p></td>
+<td><p>Return a <em>vec3</em> with the same direction as <em>vec</em> but with length 1.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../namespace/nml_dot_vec3_vec3.html"><span class="doc">float nml::dot(const nml::vec3&amp; a, const nml::vec3&amp; b)</span></a></p></td>
+<td><p>Return the dot product between two <em>vec3</em>.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../namespace/nml_cross_vec3_vec3.html"><span class="doc">nml::vec3 nml::cross(const nml::vec3&amp; a, const nml::vec3&amp; b)</span></a></p></td>
+<td><p>Return the cross product between two <em>vec3</em>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../namespace/nml_reflect_vec3_vec3.html"><span class="doc">nml::vec3 nml::reflect(const nml::vec3&amp; i, const nml::vec3&amp; n)</span></a></p></td>
+<td><p>Return the reflected direction between the incident vector <em>i</em> and the normal <em>n</em>. <em>n</em> should be normalized.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../namespace/nml_refract_vec3_vec3_float.html"><span class="doc">nml::vec3 nml::refract(const nml::vec3&amp; i, const nml::vec3&amp; n, float eta)</span></a></p></td>
+<td><p>Return the refracted direction between the incident vector <em>i</em>, the normal <em>n</em> and the ratio of indices of refraction <em>eta</em>. <em>n</em> should be normalized.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../namespace/nml_to_vec3_quat.html"><span class="doc">nml::vec3 nml::to_vec3(const nml::quat&amp; qua)</span></a></p></td>
+<td><p>Return a <em>vec3</em> representing euler angles in radians from a quaternion.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../namespace/nml_to_string_vec3.html"><span class="doc">std::string nml::to_string(const nml::vec3&amp; vec)</span></a></p></td>
+<td><p>Return a <em>vec3</em> as a string under the format “[<em>x</em>, <em>y</em>, <em>z</em>]”.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="vec2.html" class="btn btn-neutral float-left" title="vec2" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="vec4.html" class="btn btn-neutral float-right" title="vec4" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Team Nutshell.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
