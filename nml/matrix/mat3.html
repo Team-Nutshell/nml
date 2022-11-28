@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>mat3 &mdash; nml - Nutshell Mathematics Library 1.0.0 documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="mat4" href="mat4.html" />
+    <link rel="prev" title="mat2" href="mat2.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> nml - Nutshell Mathematics Library
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Getting started</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">nml</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../vector/index.html">Vector</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Matrix</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="mat2.html">mat2</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">mat3</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#class-variables">Class variables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#class-functions">Class functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#namespace-functions">Namespace functions</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="mat4.html">mat4</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../quaternion/index.html">Quaternion</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">nml - Nutshell Mathematics Library</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">nml</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Matrix</a></li>
+      <li class="breadcrumb-item active">mat3</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/nml/matrix/mat3.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="mat3">
+<h1>mat3<a class="headerlink" href="#mat3" title="Permalink to this heading"></a></h1>
+<p>Header file: <code class="docutils literal notranslate"><span class="pre">include/mat3.h</span></code></p>
+<p><strong>mat3</strong> is a <strong>column-major</strong> matrix with <strong>3 columns</strong> and <strong>3 rows</strong>.</p>
+<p><span class="math notranslate nohighlight">\(mat3 = \begin{bmatrix} x.x &amp; y.x &amp; z.x \\ x.y &amp; y.y &amp; z.y \\ x.z &amp; y.z &amp; z.z \end{bmatrix}\)</span></p>
+<section id="class-variables">
+<h2>Class variables<a class="headerlink" href="#class-variables" title="Permalink to this heading"></a></h2>
+<table class="code-table colwidths-given docutils align-default" style="width: 100%">
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 70%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Type</p></th>
+<th class="head"><p>Name</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="../vector/vec3.html"><span class="doc">nml::vec3</span></a></p></td>
+<td><p>x</p></td>
+<td><p>The first column of the <em>mat3</em>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../vector/vec3.html"><span class="doc">nml::vec3</span></a></p></td>
+<td><p>y</p></td>
+<td><p>The second column of the <em>mat3</em>.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../vector/vec3.html"><span class="doc">nml::vec3</span></a></p></td>
+<td><p>z</p></td>
+<td><p>The third column of the <em>mat3</em>.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="class-functions">
+<h2>Class functions<a class="headerlink" href="#class-functions" title="Permalink to this heading"></a></h2>
+<section id="constructors">
+<h3>Constructors<a class="headerlink" href="#constructors" title="Permalink to this heading"></a></h3>
+<table class="code-table colwidths-given docutils align-default" style="width: 100%">
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 70%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="mat3/constructor.html"><span class="doc">mat3()</span></a></p></td>
+<td><p>Construct a ([1.0, 0.0, 0.0], [0.0, 1.0, 0.0], [0.0, 0.0, 1.0]) identity matrix.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="mat3/constructor_float.html"><span class="doc">mat3(float _xxxyxzyxyyyzzxzyzz)</span></a></p></td>
+<td><p>Construct a ([<em>_xxxyxzyxyyyzzxzyzz</em>, <em>_xxxyxzyxyyyzzxzyzz</em>, <em>_xxxyxzyxyyyzzxzyzz</em>], [<em>_xxxyxzyxyyyzzxzyzz</em>, <em>_xxxyxzyxyyyzzxzyzz</em>, <em>_xxxyxzyxyyyzzxzyzz</em>], [<em>_xxxyxzyxyyyzzxzyzz</em>, <em>_xxxyxzyxyyyzzxzyzz</em>, <em>_xxxyxzyxyyyzzxzyzz</em>]) matrix.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="mat3/constructor_float_float_float_float_float_float_float_float_float.html"><span class="doc">mat3(float _xx, float _xy, float _xz, float _yx, float _yy, float _yz, float _zx, float _zy, float _zz)</span></a></p></td>
+<td><p>Construct a ([<em>_xx</em>, <em>_xy</em>, <em>_xz</em>], [<em>_yx</em>, <em>_yy</em>, <em>_yz</em>], [<em>_zx</em>, <em>_zy</em>, <em>_zz</em>]) matrix.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="mat3/constructor_float_float_float_float_float_float_vec3.html"><span class="doc">mat3(float _xx, float _xy, float _xz, float _yx, float _yy, float _yz, nml::vec3 _zxzyzz)</span></a></p></td>
+<td><p>Construct a ([<em>_xx</em>, <em>_xy</em>, <em>_xz</em>], [<em>_yx</em>, <em>_yy</em>, <em>_yz</em>], [<em>_zxzyzz.x</em>, <em>_zxzyzz.y</em>, <em>_zxzyzz.z</em>]) matrix.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="mat3/constructor_float_float_float_vec3_float_float_float.html"><span class="doc">mat3(float _xx, float _xy, float _xz, nml::vec3 _yxyyyz, float _zx, float _zy, float _zz)</span></a></p></td>
+<td><p>Construct a ([<em>_xx</em>, <em>_xy</em>, <em>_xz</em>], [<em>_yxyyyz.x</em>, <em>_yxyyyz.y</em>, <em>_yxyyyz.z</em>], [<em>_zx</em>, <em>_zy</em>, <em>_zz</em>]) matrix.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="mat3/constructor_vec3_float_float_float_float_float_float.html"><span class="doc">mat3(nml::vec3 _xxxyxz, float _yy, float _yz, float _zx, float _zy, float _zz)</span></a></p></td>
+<td><p>Construct a ([<em>_xxxyxz.x</em>, <em>_xxxyxz.y</em>, <em>_xxxyxz.z</em>], [<em>_yx</em>, <em>_yy</em>, <em>_yz</em>], [<em>_zx</em>, <em>_zy</em>, <em>_zz</em>]) matrix.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="mat3/constructor_float_float_float_vec3_vec3.html"><span class="doc">mat3(float _xx, float _xy, float _xz, nml::vec3 _yxyyyz, nml::vec3 _zxzyzz)</span></a></p></td>
+<td><p>Construct a ([<em>_xx</em>, <em>_xy</em>, <em>_xz</em>], [<em>_yxyyyz.x</em>, <em>_yxyyyz.y</em>, <em>_yxyyyz.z</em>], [<em>_zxzyzz.x</em>, <em>_zxzyzz.y</em>, <em>_zxzyzz.z</em>]) matrix.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="mat3/constructor_vec3_vec3_float_float_float.html"><span class="doc">mat3(nml::vec3 _xxxyxz, nml::vec3 _yxyyyz, float _zx, float _zy, float _zz)</span></a></p></td>
+<td><p>Construct a ([<em>_xxxyxz.x</em>, <em>_xxxyxz.y</em>, <em>_xxxyxz.z</em>], [<em>_yxyyyz.x</em>, <em>_yxyyyz.y</em>, <em>_yxyyyz.z</em>], [<em>_zx</em>, <em>_zy</em>, <em>_zz</em>]) matrix.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="mat3/constructor_vec3_float_float_float_vec3.html"><span class="doc">mat3(nml::vec3 _xxxyxz, float _yx, float _yy, float _yz, nml::vec3 _zxzyzz)</span></a></p></td>
+<td><p>Construct a ([<em>_xxxyxz.x</em>, <em>_xxxyxz.y</em>, <em>_xxxyxz.z</em>], [<em>_yx</em>, <em>_yy</em>, <em>_yz</em>], [<em>_zxzyzz.x</em>, <em>_zxzyzz.y</em>, <em>_zxzyzz.z</em>]) matrix.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="mat3/constructor_vec3_vec3_vec3.html"><span class="doc">mat3(nml::vec3 _xxxyxz, nml::vec3 _yxyyyz, nml::vec3 _zxzyzz)</span></a></p></td>
+<td><p>Construct a ([<em>_xxxyxz.x</em>, <em>_xxxyxz.y</em>, <em>_xxxyxz.z</em>], [<em>_yxyyyz.x</em>, <em>_yxyyyz.y</em>, <em>_yxyyyz.z</em>], [<em>_zxzyzz.x</em>, <em>_zxzyzz.y</em>, <em>_zxzyzz.z</em>]) matrix.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="operators">
+<h3>Operators<a class="headerlink" href="#operators" title="Permalink to this heading"></a></h3>
+<table class="code-table colwidths-given docutils align-default" style="width: 100%">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="mat3/operator_plus_equal_mat3.html"><span class="doc">nml::mat3&amp; operator+=(const nml::mat3&amp; other)</span></a></p></td>
+<td><p>Add a <em>mat3</em> to the current <em>mat3</em>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="mat3/operator_minus_equal_mat3.html"><span class="doc">nml::mat3&amp; operator-=(const nml::mat3&amp; other)</span></a></p></td>
+<td><p>Substract a <em>mat3</em> from the current <em>mat3</em>.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="mat3/operator_times_equal_mat3.html"><span class="doc">nml::mat3&amp; operator*=(const nlm::mat3&amp; other)</span></a></p></td>
+<td><p>Multiply the current <em>mat3</em> by a <em>mat3</em>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="mat3/operator_times_equal_float.html"><span class="doc">nml::mat3&amp; operator*=(const float other)</span></a></p></td>
+<td><p>Multiply the current <em>mat3</em> by a scalar.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="mat3/operator_divide_equal_float.html"><span class="doc">nml::mat3&amp; operator/=(const float other)</span></a></p></td>
+<td><p>Divide the current <em>mat3</em> by a scalar.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="mat3/operator_brackets_ref.html"><span class="doc">nlm::vec3&amp; operator[](size_t index)</span></a></p></td>
+<td><p>Return a reference to <em>x</em> if index is 0, a reference to <em>y</em> if index is 1 or a reference to <em>z</em> if index is 2, else, throw an exception.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="mat3/operator_brackets_value.html"><span class="doc">const nlm::vec3&amp; operator[](size_t index) const</span></a></p></td>
+<td><p>Return a const reference to <em>x</em> if index is 0, a const reference to <em>y</em> if index is 1 or a const reference to <em>z</em> if index is 2, else, throw an exception.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this heading"></a></h3>
+<table class="code-table colwidths-given docutils align-default" style="width: 100%">
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 70%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="mat3/det.html"><span class="doc">float det() const</span></a></p></td>
+<td><p>Return the determinant of the matrix.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="mat3/data.html"><span class="doc">float* data()</span></a></p></td>
+<td><p>Return a pointer to the matrix’s elements.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="namespace-functions">
+<h2>Namespace functions<a class="headerlink" href="#namespace-functions" title="Permalink to this heading"></a></h2>
+<section id="id1">
+<h3>Operators<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h3>
+<table class="code-table colwidths-given docutils align-default" style="width: 100%">
+<colgroup>
+<col style="width: 40%" />
+<col style="width: 60%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="../namespace/nml_operator_plus_mat3_mat3.html"><span class="doc">nml::mat3 operator+(nml::mat3 lhs, const nml::mat3&amp; rhs)</span></a></p></td>
+<td><p>Return a <em>mat3</em> that is the sum between two <em>mat3</em>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../namespace/nml_operator_minus_mat3_mat3.html"><span class="doc">nml::mat3 operator-(nml::mat3 lhs, const nml::mat3&amp; rhs)</span></a></p></td>
+<td><p>Return a <em>mat3</em> that is the difference between two <em>mat3</em>.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../namespace/nml_operator_times_mat3_mat3.html"><span class="doc">nml::mat3 operator*(nml::mat3 lhs, const nml::mat3&amp; rhs)</span></a></p></td>
+<td><p>Return a <em>mat3</em> that is the product between two <em>mat3</em>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../namespace/nml_operator_times_mat3_float.html"><span class="doc">nml::mat3 operator*(nml::mat3 lhs, const float rhs)</span></a></p></td>
+<td><p>Return a <em>mat3</em> that is the product between a <em>mat3</em> and a scalar.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../namespace/nml_operator_times_float_mat3.html"><span class="doc">nml::mat3 operator*(float lhs, const nml::mat3&amp; rhs)</span></a></p></td>
+<td><p>Return a <em>mat3</em> that is the product between a scalar and a <em>mat3</em>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../namespace/nml_operator_divide_mat3_float.html"><span class="doc">nml::mat3 operator/(nml::mat3 lhs, const float rhs)</span></a></p></td>
+<td><p>Return a <em>mat3</em> that is the quotient between a <em>mat3</em> and a scalar.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../namespace/nml_operator_is_equal_mat3_mat3.html"><span class="doc">bool operator==(const nml::mat3&amp; lhs, const nml::mat3&amp; rhs)</span></a></p></td>
+<td><p>Return true if the two <em>mat3</em> are identical, else, return false.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../namespace/nml_operator_is_not_equal_mat3_mat3.html"><span class="doc">bool operator!=(const nml::mat3&amp; lhs, const nml::mat3&amp; rhs)</span></a></p></td>
+<td><p>Return true if the two <em>mat3</em> are different, else, return false.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id2">
+<h3>Functions<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h3>
+<table class="code-table colwidths-given docutils align-default" style="width: 100%">
+<colgroup>
+<col style="width: 40%" />
+<col style="width: 60%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="../namespace/nml_transpose_mat3.html"><span class="doc">nml::mat3 transpose(const nml::mat3&amp; mat)</span></a></p></td>
+<td><p>Return a <em>mat3</em> where the columns of <em>mat</em> are the rows and the rows of <em>mat</em> are the columns.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../namespace/nml_inverse_mat3.html"><span class="doc">nml::mat3 inverse(const nml::mat3&amp; mat)</span></a></p></td>
+<td><p>Return the inverse of a <em>mat3</em>.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../namespace/nml_translate_vec2.html"><span class="doc">nml::mat3 translate(const nml::vec2&amp; translation)</span></a></p></td>
+<td><p>Return a 2D translation matrix according to the translation vector.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../namespace/nml_rotate_float.html"><span class="doc">nml::mat3 rotate(const float angle)</span></a></p></td>
+<td><p>Return a 2D rotation matrix according to the angle (in radians).</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../namespace/nml_scale_vec2.html"><span class="doc">nml::mat3 scale(const nml::vec2&amp; scaling)</span></a></p></td>
+<td><p>Return a 2D scaling matrix according to the scaling factors.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../namespace/nml_to_string_mat3.html"><span class="doc">std::string nml::to_string(const nml::mat3&amp; mat)</span></a></p></td>
+<td><p>Return a <em>mat3</em> as a string under the format “[[<em>x.x</em>, <em>x.y</em>, <em>x.z</em>], [<em>y.x</em>, <em>y.y</em>, <em>y.z</em>], [<em>z.x</em>, <em>z.y</em>, <em>z.z</em>]]”.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="mat2.html" class="btn btn-neutral float-left" title="mat2" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="mat4.html" class="btn btn-neutral float-right" title="mat4" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Team Nutshell.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
