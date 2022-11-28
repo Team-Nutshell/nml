@@ -7,7 +7,7 @@ Return the length of the vector.
 
 The length of a *vec3* is calculated this way:
 	
-:math:`length = \sqrt{x * x + y * y + z * z}`
+:math:`length = \sqrt{x^2 + y^2 + z^2}`
 
 Example
 -------

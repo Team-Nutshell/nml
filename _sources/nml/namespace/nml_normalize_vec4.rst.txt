@@ -7,7 +7,7 @@ Return a *vec4* with the same direction as *vec* but with length 1.
 
 The normalization of a *vec4* is calculated this way:
 	
-:math:`norm(\begin{bmatrix} vec.x \\ vec.y \\ vec.z \\ vec.w \end{bmatrix}) = \begin{bmatrix} \frac{vec.x}{length(vec)} \\ \frac{vec.y}{length(vec)} \\ \frac{vec.z}{length(vec)} \\ \frac{vec.w}{length(vec)} \end{bmatrix}`
+:math:`norm(\begin{bmatrix} vec.x \\ vec.y \\ vec.z \\ vec.w \end{bmatrix}) = \begin{bmatrix} \frac{vec.x}{\left \| vec \right \|} \\ \frac{vec.y}{\left \| vec \right \|} \\ \frac{vec.z}{\left \| vec \right \|} \\ \frac{vec.w}{\left \| vec \right \|} \end{bmatrix}`
 
 Example
 -------

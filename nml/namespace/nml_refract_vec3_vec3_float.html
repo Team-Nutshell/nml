@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>nml::vec3 nml::refract(const nml::vec3&amp; i, const nml::vec3&amp; n, float eta) &mdash; nml - Nutshell Mathematics Library 1.0.0 documentation</title>
+  <title>nml::vec3 nml::refract(const nml::vec3&amp; i, const nml::vec3&amp; n, float ior) &mdash; nml - Nutshell Mathematics Library 1.0.0 documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
@@ -59,7 +59,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home"></a></li>
-      <li class="breadcrumb-item active">nml::vec3 nml::refract(const nml::vec3&amp; i, const nml::vec3&amp; n, float eta)</li>
+      <li class="breadcrumb-item active">nml::vec3 nml::refract(const nml::vec3&amp; i, const nml::vec3&amp; n, float ior)</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../_sources/nml/namespace/nml_refract_vec3_vec3_float.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -69,12 +69,12 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="nml-vec3-nml-refract-const-nml-vec3-i-const-nml-vec3-n-float-eta">
-<h1>nml::vec3 nml::refract(const nml::vec3&amp; i, const nml::vec3&amp; n, float eta)<a class="headerlink" href="#nml-vec3-nml-refract-const-nml-vec3-i-const-nml-vec3-n-float-eta" title="Permalink to this heading"></a></h1>
-<p>Return the refracted direction between the incident vector <em>i</em>, the normal <em>n</em> and the ratio of indices of refraction <em>eta</em>. <em>n</em> should be normalized.</p>
-<p>The refracted direction between the incident vector <em>i</em>, the normal <em>n</em> and the ratio of indices of refraction <em>eta</em> is calculated this way:</p>
-<p><span class="math notranslate nohighlight">\(k = 1.0 - eta * eta * (1.0 - dot(\begin{bmatrix} n.x \\ n.y \\ n.z \end{bmatrix}, \begin{bmatrix} i.x \\ i.y \\ i.z \end{bmatrix}) * dot(\begin{bmatrix} n.x \\ n.y \\ n.z \end{bmatrix}, \begin{bmatrix} i.x \\ i.y \\ i.z \end{bmatrix}))\)</span></p>
-<p><span class="math notranslate nohighlight">\(\begin{cases} \begin{bmatrix} 0.0 \\ 0.0 \\ 0.0 \end{bmatrix}, &amp; \text{if } k &lt; 0.0 \\ eta * \begin{bmatrix} i.x \\ i.y \\ i.z \end{bmatrix} - (eta * dot(\begin{bmatrix} n.x \\ n.y \\ n.z \end{bmatrix}, \begin{bmatrix} i.x \\ i.y \\ i.z \end{bmatrix}) + \sqrt{k}) * \begin{bmatrix} n.x \\ n.y \\ n.z \end{bmatrix}, &amp; \text{otherwise} \end{cases}\)</span></p>
+  <section id="nml-vec3-nml-refract-const-nml-vec3-i-const-nml-vec3-n-float-ior">
+<h1>nml::vec3 nml::refract(const nml::vec3&amp; i, const nml::vec3&amp; n, float ior)<a class="headerlink" href="#nml-vec3-nml-refract-const-nml-vec3-i-const-nml-vec3-n-float-ior" title="Permalink to this heading"></a></h1>
+<p>Return the refracted direction between the incident vector <em>i</em>, the normal <em>n</em> and the ratio of indices of refraction <em>ior</em>. <em>n</em> should be normalized.</p>
+<p>The refracted direction between the incident vector <em>i</em>, the normal <em>n</em> and the ratio of indices of refraction <em>ior</em> is calculated this way:</p>
+<p><span class="math notranslate nohighlight">\(k = 1.0 - ior^2 * (1.0 - (\begin{bmatrix} n.x \\ n.y \\ n.z \end{bmatrix} \cdot \begin{bmatrix} i.x \\ i.y \\ i.z \end{bmatrix})^2)\)</span></p>
+<p><span class="math notranslate nohighlight">\(\begin{cases} \begin{bmatrix} 0.0 \\ 0.0 \\ 0.0 \end{bmatrix}, &amp; \text{if } k &lt; 0.0 \\ ior * \begin{bmatrix} i.x \\ i.y \\ i.z \end{bmatrix} - (ior * \begin{bmatrix} n.x \\ n.y \\ n.z \end{bmatrix} \cdot \begin{bmatrix} i.x \\ i.y \\ i.z \end{bmatrix} + \sqrt{k}) * \begin{bmatrix} n.x \\ n.y \\ n.z \end{bmatrix}, &amp; \text{otherwise} \end{cases}\)</span></p>
 <p><strong>The refract function does not normalize the vector n.</strong></p>
 <section id="example">
 <h2>Example<a class="headerlink" href="#example" title="Permalink to this heading"></a></h2>
