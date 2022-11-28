@@ -73,7 +73,7 @@
 <h1>nml::vec2 nml::reflect(const nml::vec2&amp; i, const nml::vec2&amp; n)<a class="headerlink" href="#nml-vec2-nml-reflect-const-nml-vec2-i-const-nml-vec2-n" title="Permalink to this heading"></a></h1>
 <p>Return the reflected direction between the incident vector <em>i</em> and the normal <em>n</em>. <em>n</em> should be normalized.</p>
 <p>The reflected direction between the incident vector <em>i</em> and the normal <em>n</em> is calculated this way:</p>
-<p><span class="math notranslate nohighlight">\(\begin{bmatrix} i.x \\ i.y \end{bmatrix} - 2.0 * \begin{bmatrix} n.x \\ n.y \end{bmatrix} \cdot \begin{bmatrix} i.x \\ i.y \end{bmatrix} * \begin{bmatrix} n.x \\ n.y \end{bmatrix}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\begin{bmatrix} i.x \\ i.y \end{bmatrix} - 2.0 * (\begin{bmatrix} n.x \\ n.y \end{bmatrix} \cdot \begin{bmatrix} i.x \\ i.y \end{bmatrix}) * \begin{bmatrix} n.x \\ n.y \end{bmatrix}\)</span></p>
 <p><strong>The reflect function does not normalize the vector n.</strong></p>
 <section id="example">
 <h2>Example<a class="headerlink" href="#example" title="Permalink to this heading"></a></h2>
