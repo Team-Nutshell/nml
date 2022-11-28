@@ -10,6 +10,7 @@ project = 'nml - Nutshell Mathematics Library'
 copyright = '2022, Team Nutshell'
 author = 'Team Nutshell'
 release = '1.0.0'
+version = '1.0.0'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration

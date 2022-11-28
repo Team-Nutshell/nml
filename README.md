@@ -1,6 +1,9 @@
 # nml - Nutshell Mathematics Library
 C++ Mathematics library for Computer Graphics.
 
+## Documentation
+Documentation for nml is available [here](https://team-nutshell.github.io/nml/).
+
 ## Get nml
 ```
 git clone https://github.com/Team-Nutshell/nml.git
