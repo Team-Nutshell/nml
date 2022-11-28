@@ -5,6 +5,8 @@ mat3: mat3()
 
 Construct a ([1.0, 0.0, 0.0], [0.0, 1.0, 0.0], [0.0, 0.0, 1.0]) identity matrix.
 
+:math:`\begin{bmatrix} 1.0 & 0.0 & 0.0 \\ 0.0 & 1.0 & 0.0 \\ 0.0 & 0.0 & 1.0 \end{bmatrix}`
+
 Example
 -------
 

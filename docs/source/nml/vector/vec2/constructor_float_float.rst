@@ -5,6 +5,8 @@ vec2: vec2(float _x, float _y)
 
 Construct a (*_x*, *_y*) vector.
 
+:math:`\begin{bmatrix} \_x \\ \_y \end{bmatrix}`
+
 Example
 -------
 

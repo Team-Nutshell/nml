@@ -5,6 +5,8 @@ vec4: vec4(float _xyzw)
 
 Construct a (*_xyzw*, *_xyzw*, *_xyzw*, *_xyzw*) vector.
 
+:math:`\begin{bmatrix} \_xyzw \\ \_xyzw \\ \_xyzw \\ \_xyzw \end{bmatrix}`
+
 Example
 -------
 
