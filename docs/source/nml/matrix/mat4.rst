@@ -140,6 +140,8 @@ Operators
 	+-------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------+
 	| :doc:`nml::mat4 operator*(nml::mat4 lhs, const nml::mat4& rhs) </nml/namespace/nml_operator_times_mat4_mat4>`           | Return a *mat4* that is the product between two *mat4*.             |
 	+-------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------+
+	| :doc:`nml::vec4 operator*(nml::mat4 lhs, const nml::vec4& rhs) </nml/namespace/nml_operator_times_mat4_vec4>`           | Return a *vec4* that is the product between a *mat4* and a *vec4*.  |
+	+-------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------+
 	| :doc:`nml::mat4 operator*(nml::mat4 lhs, const float rhs) </nml/namespace/nml_operator_times_mat4_float>`               | Return a *mat4* that is the product between a *mat4* and a scalar.  |
 	+-------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------+
 	| :doc:`nml::mat4 operator*(float lhs, const nml::mat4& rhs) </nml/namespace/nml_operator_times_float_mat4>`              | Return a *mat4* that is the product between a scalar and a *mat4*.  |

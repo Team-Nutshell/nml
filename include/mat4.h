@@ -59,6 +59,7 @@ struct mat4 {
 mat4 operator+(mat4 lhs, const mat4& rhs);
 mat4 operator-(mat4 lhs, const mat4& rhs);
 mat4 operator*(mat4 lhs, const mat4& rhs);
+vec4 operator*(mat4 lhs, const vec4& rhs);
 mat4 operator*(mat4 lhs, const float rhs);
 mat4 operator*(float lhs, const mat4& rhs);
 mat4 operator/(mat4 lhs, const float rhs);

@@ -132,6 +132,13 @@ mat4 operator*(mat4 lhs, const mat4& rhs) {
 	return lhs;
 }
 
+vec4 operator*(mat4 lhs, const vec4& rhs) {
+	return vec4(lhs.x.x * rhs.x + lhs.y.x * rhs.y + lhs.z.x * rhs.z + lhs.w.x * rhs.w,
+		lhs.x.y * rhs.x + lhs.y.y * rhs.y + lhs.z.y * rhs.z + lhs.w.y * rhs.w,
+		lhs.x.z * rhs.x + lhs.y.z * rhs.y + lhs.z.z * rhs.z + lhs.w.z * rhs.w,
+		lhs.x.w * rhs.x + lhs.y.w * rhs.y + lhs.z.w * rhs.z + lhs.w.w * rhs.w);
+}
+
 mat4 operator*(mat4 lhs, const float rhs) {
 	lhs *= rhs;
 

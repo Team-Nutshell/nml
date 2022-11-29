@@ -108,6 +108,12 @@ mat3 operator*(mat3 lhs, const mat3& rhs) {
 	return lhs;
 }
 
+vec3 operator*(mat3 lhs, const vec3& rhs) {
+	return vec3(lhs.x.x * rhs.x + lhs.y.x * rhs.y + lhs.z.x * rhs.z,
+		lhs.x.y * rhs.x + lhs.y.y * rhs.y + lhs.z.y * rhs.z,
+		lhs.x.z * rhs.x + lhs.y.z * rhs.y + lhs.z.z * rhs.z);
+}
+
 mat3 operator*(mat3 lhs, const float rhs) {
 	lhs *= rhs;
 

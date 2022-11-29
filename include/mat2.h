@@ -38,6 +38,7 @@ struct mat2 {
 mat2 operator+(mat2 lhs, const mat2& rhs);
 mat2 operator-(mat2 lhs, const mat2& rhs);
 mat2 operator*(mat2 lhs, const mat2& rhs);
+vec2 operator*(mat2 lhs, const vec2& rhs);
 mat2 operator*(mat2 lhs, const float rhs);
 mat2 operator*(float lhs, const mat2& rhs);
 mat2 operator/(mat2 lhs, const float rhs);
