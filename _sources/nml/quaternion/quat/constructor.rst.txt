@@ -3,7 +3,7 @@
 quat: quat()
 ============
 
-Construct a (1.0f, 0.0f, 0.0f, 0.0) identity quaternion.
+Construct a (1.0, 0.0, 0.0, 0.0) identity quaternion.
 
 :math:`1.0 + 0.0i + 0.0j + 0.0k`
 
