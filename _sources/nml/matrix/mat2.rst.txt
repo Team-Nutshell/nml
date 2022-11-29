@@ -112,6 +112,8 @@ Operators
 	+-------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------+
 	| :doc:`nml::mat2 operator*(nml::mat2 lhs, const nml::mat2& rhs) </nml/namespace/nml_operator_times_mat2_mat2>`           | Return a *mat2* that is the product between two *mat2*.             |
 	+-------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------+
+	| :doc:`nml::vec2 operator*(nml::mat2 lhs, const nml::vec2& rhs) </nml/namespace/nml_operator_times_mat2_vec2>`           | Return a *vec2* that is the product between a *mat2* and a *vec2*.  |
+	+-------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------+
 	| :doc:`nml::mat2 operator*(nml::mat2 lhs, const float rhs) </nml/namespace/nml_operator_times_mat2_float>`               | Return a *mat2* that is the product between a *mat2* and a scalar.  |
 	+-------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------+
 	| :doc:`nml::mat2 operator*(float lhs, const nml::mat2& rhs) </nml/namespace/nml_operator_times_float_mat2>`              | Return a *mat2* that is the product between a scalar and a *mat2*.  |

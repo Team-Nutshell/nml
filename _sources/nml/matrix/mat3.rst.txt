@@ -122,6 +122,8 @@ Operators
 	+-------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------+
 	| :doc:`nml::mat3 operator*(nml::mat3 lhs, const nml::mat3& rhs) </nml/namespace/nml_operator_times_mat3_mat3>`           | Return a *mat3* that is the product between two *mat3*.             |
 	+-------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------+
+	| :doc:`nml::vec3 operator*(nml::mat3 lhs, const nml::vec3& rhs) </nml/namespace/nml_operator_times_mat3_vec3>`           | Return a *vec3* that is the product between a *mat3* and a *vec3*.  |
+	+-------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------+
 	| :doc:`nml::mat3 operator*(nml::mat3 lhs, const float rhs) </nml/namespace/nml_operator_times_mat3_float>`               | Return a *mat3* that is the product between a *mat3* and a scalar.  |
 	+-------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------+
 	| :doc:`nml::mat3 operator*(float lhs, const nml::mat3& rhs) </nml/namespace/nml_operator_times_float_mat3>`              | Return a *mat3* that is the product between a scalar and a *mat3*.  |
