@@ -90,6 +90,11 @@ mat2 operator*(mat2 lhs, const mat2& rhs) {
 	return lhs;
 }
 
+vec2 operator*(mat2 lhs, const vec2& rhs) {
+	return vec2(lhs.x.x * rhs.x + lhs.y.x * rhs.y,
+		lhs.x.y * rhs.x + lhs.y.y * rhs.y);
+}
+
 mat2 operator*(mat2 lhs, const float rhs) {
 	lhs *= rhs;
 

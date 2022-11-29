@@ -46,6 +46,7 @@ struct mat3 {
 mat3 operator+(mat3 lhs, const mat3& rhs);
 mat3 operator-(mat3 lhs, const mat3& rhs);
 mat3 operator*(mat3 lhs, const mat3& rhs);
+vec3 operator*(mat3 lhs, const vec3& rhs);
 mat3 operator*(mat3 lhs, const float rhs);
 mat3 operator*(float lhs, const mat3& rhs);
 mat3 operator/(mat3 lhs, const float rhs);
