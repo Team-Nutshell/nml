@@ -132,7 +132,7 @@
              
   <section id="nml-mat4-rotate-const-float-angle-const-nml-vec3-axis">
 <h1>nml::mat4 rotate(const float angle, const nml::vec3&amp; axis)<a class="headerlink" href="#nml-mat4-rotate-const-float-angle-const-nml-vec3-axis" title="Permalink to this heading"></a></h1>
-<p>Return a 3D rotation matrix according to the angle (in radians) and the axis.</p>
+<p>Return a 3D rotation matrix according to the angle (in radians) and the axis. <em>axis</em> should be normalized.</p>
 <p>The 3D rotation matrix is calculated this way:</p>
 <p><span class="math notranslate nohighlight">\(\begin{bmatrix} a &amp; d &amp; g &amp; 0.0 \\ b &amp; e &amp; h &amp; 0.0 \\ c &amp; f &amp; i &amp; 0.0 \\ 0.0 &amp; 0.0 &amp; 0.0 &amp; 1.0 \end{bmatrix}\)</span></p>
 <p><span class="math notranslate nohighlight">\(a = \cos(angle) + (axis.x * axis.x * (1.0 - \cos(angle)))\)</span>
@@ -144,6 +144,7 @@
 <span class="math notranslate nohighlight">\(g = (axis.x * axis.z * (1.0 - \cos(angle))) + axis.y * \sin(angle)\)</span>
 <span class="math notranslate nohighlight">\(h = (axis.y * axis.z * (1.0 - \cos(angle))) - axis.x * \sin(angle)\)</span>
 <span class="math notranslate nohighlight">\(i = \cos(angle) + (axis.z * axis.z * (1.0 - \cos(angle)))\)</span></p>
+<p><strong>The rotate function does not normalize the vector axis.</strong></p>
 <section id="example">
 <h2>Example<a class="headerlink" href="#example" title="Permalink to this heading"></a></h2>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;include/mat4.h&quot;</span><span class="cp"></span>

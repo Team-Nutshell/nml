@@ -3,7 +3,7 @@
 nml::mat4 rotate(const float angle, const nml::vec3& axis)
 ==========================================================
 
-Return a 3D rotation matrix according to the angle (in radians) and the axis.
+Return a 3D rotation matrix according to the angle (in radians) and the axis. *axis* should be normalized.
 
 The 3D rotation matrix is calculated this way:
 
@@ -18,6 +18,8 @@ The 3D rotation matrix is calculated this way:
 :math:`g = (axis.x * axis.z * (1.0 - \cos(angle))) + axis.y * \sin(angle)`
 :math:`h = (axis.y * axis.z * (1.0 - \cos(angle))) - axis.x * \sin(angle)`
 :math:`i = \cos(angle) + (axis.z * axis.z * (1.0 - \cos(angle)))`
+
+**The rotate function does not normalize the vector axis.**
 
 Example
 -------
