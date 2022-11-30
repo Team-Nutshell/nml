@@ -40,7 +40,7 @@ bool operator!=(const vec2& lhs, const vec2& rhs);
 vec2 normalize(const vec2& vec);
 float dot(const vec2& a, const vec2& b);
 vec2 reflect(const vec2& i, const vec2& n);
-vec2 refract(const vec2& i, const vec2& n, float eta);
+vec2 refract(const vec2& i, const vec2& n, float ior);
 
 std::string to_string(const vec2& vec);
 

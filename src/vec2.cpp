@@ -106,14 +106,14 @@ vec2 reflect(const vec2& i, const vec2& n) {
 	return (i - 2.0f * dot(n, i) * n);
 }
 
-vec2 refract(const vec2& i, const vec2& n, float eta) {
+vec2 refract(const vec2& i, const vec2& n, float ior) {
 	float ndoti = dot(n, i);
-	float k = 1.0f - eta * eta * (1.0f - ndoti * ndoti);
+	float k = 1.0f - ior * ior * (1.0f - ndoti * ndoti);
 	if (k < 0.0f) {
 		return vec2(0.0f);
 	}
 	else {
-		return eta * i - (eta * ndoti + std::sqrt(k)) * n;
+		return ior * i - (ior * ndoti + std::sqrt(k)) * n;
 	}
 }
 

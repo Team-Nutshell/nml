@@ -122,14 +122,14 @@ vec3 reflect(const vec3& i, const vec3& n) {
 	return (i - 2.0f * dot(n, i) * n);
 }
 
-vec3 refract(const vec3& i, const vec3& n, float eta) {
+vec3 refract(const vec3& i, const vec3& n, float ior) {
 	float ndoti = dot(n, i);
-	float k = 1.0f - eta * eta * (1.0f - ndoti * ndoti);
+	float k = 1.0f - ior * ior * (1.0f - ndoti * ndoti);
 	if (k < 0.0f) {
 		return vec3(0.0f);
 	}
 	else {
-		return eta * i - (eta * ndoti + std::sqrt(k)) * n;
+		return ior * i - (ior * ndoti + std::sqrt(k)) * n;
 	}
 }
 
