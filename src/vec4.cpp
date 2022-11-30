@@ -126,14 +126,14 @@ vec4 reflect(const vec4& i, const vec4& n) {
 	return (i - 2.0f * dot(n, i) * n);
 }
 
-vec4 refract(const vec4& i, const vec4& n, float eta) {
+vec4 refract(const vec4& i, const vec4& n, float ior) {
 	float ndoti = dot(n, i);
-	float k = 1.0f - eta * eta * (1.0f - ndoti * ndoti);
+	float k = 1.0f - ior * ior * (1.0f - ndoti * ndoti);
 	if (k < 0.0f) {
 		return vec4(0.0f);
 	}
 	else {
-		return eta * i - (eta * ndoti + std::sqrt(k)) * n;
+		return ior * i - (ior * ndoti + std::sqrt(k)) * n;
 	}
 }
 
