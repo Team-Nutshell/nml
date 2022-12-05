@@ -103,7 +103,7 @@ bool operator!=(const vec3& lhs, const vec3& rhs) {
 }
 
 vec3 normalize(const vec3& vec) {
-	float l = vec.length();
+	const float l = vec.length();
 
 	return (vec / l);
 }
@@ -123,8 +123,8 @@ vec3 reflect(const vec3& i, const vec3& n) {
 }
 
 vec3 refract(const vec3& i, const vec3& n, float ior) {
-	float ndoti = dot(n, i);
-	float k = 1.0f - ior * ior * (1.0f - ndoti * ndoti);
+	const float ndoti = dot(n, i);
+	const float k = 1.0f - ior * ior * (1.0f - ndoti * ndoti);
 	if (k < 0.0f) {
 		return vec3(0.0f);
 	}

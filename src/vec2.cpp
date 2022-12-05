@@ -93,7 +93,7 @@ bool operator!=(const vec2& lhs, const vec2& rhs) {
 }
 
 vec2 normalize(const vec2& vec) {
-	float l = vec.length();
+	const float l = vec.length();
 
 	return (vec / l);
 }
@@ -107,8 +107,8 @@ vec2 reflect(const vec2& i, const vec2& n) {
 }
 
 vec2 refract(const vec2& i, const vec2& n, float ior) {
-	float ndoti = dot(n, i);
-	float k = 1.0f - ior * ior * (1.0f - ndoti * ndoti);
+	const float ndoti = dot(n, i);
+	const float k = 1.0f - ior * ior * (1.0f - ndoti * ndoti);
 	if (k < 0.0f) {
 		return vec2(0.0f);
 	}

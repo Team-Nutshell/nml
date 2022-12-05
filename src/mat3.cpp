@@ -143,20 +143,20 @@ mat3 transpose(const mat3& mat) {
 }
 
 mat3 inverse(const mat3& mat) {
-	float determinant = mat.det();
+	const float determinant = mat.det();
 
-	mat3 t = transpose(mat);
-	float a = mat2(t.y.y, t.y.z, t.z.y, t.z.z).det();
-	float b = mat2(t.y.x, t.y.z, t.z.x, t.z.z).det() * -1.0f;
-	float c = mat2(t.y.x, t.y.y, t.z.x, t.z.y).det();
-	float d = mat2(t.x.y, t.x.z, t.z.y, t.z.z).det() * -1.0f;
-	float e = mat2(t.x.x, t.x.z, t.z.x, t.z.z).det();
-	float f = mat2(t.x.x, t.x.y, t.z.x, t.z.y).det() * -1.0f;
-	float g = mat2(t.x.y, t.x.z, t.y.y, t.y.z).det();
-	float h = mat2(t.x.x, t.x.z, t.y.x, t.y.z).det() * -1.0f;
-	float i = mat2(t.x.x, t.x.y, t.y.x, t.y.y).det();
+	const mat3 t = transpose(mat);
+	const float a = mat2(t.y.y, t.y.z, t.z.y, t.z.z).det();
+	const float b = mat2(t.y.x, t.y.z, t.z.x, t.z.z).det() * -1.0f;
+	const float c = mat2(t.y.x, t.y.y, t.z.x, t.z.y).det();
+	const float d = mat2(t.x.y, t.x.z, t.z.y, t.z.z).det() * -1.0f;
+	const float e = mat2(t.x.x, t.x.z, t.z.x, t.z.z).det();
+	const float f = mat2(t.x.x, t.x.y, t.z.x, t.z.y).det() * -1.0f;
+	const float g = mat2(t.x.y, t.x.z, t.y.y, t.y.z).det();
+	const float h = mat2(t.x.x, t.x.z, t.y.x, t.y.z).det() * -1.0f;
+	const float i = mat2(t.x.x, t.x.y, t.y.x, t.y.y).det();
 
-	mat3 adj = mat3(a, b, c, d, e, f, g, h, i);
+	const mat3 adj = mat3(a, b, c, d, e, f, g, h, i);
 
 	return ((1.0f / determinant) * adj);
 }
@@ -166,8 +166,9 @@ mat3 translate(const vec2& translation) {
 }
 
 mat3 rotate(const float angle) {
-	float cosTheta = std::cos(angle);
-	float sinTheta = std::sin(angle);
+	const float cosTheta = std::cos(angle);
+	const float sinTheta = std::sin(angle);
+	
 	return mat3(cosTheta, sinTheta, 0.0f, -sinTheta, cosTheta, 0.0f, 0.0f, 0.0f, 1.0f);
 }
 
