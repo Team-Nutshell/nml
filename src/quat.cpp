@@ -27,11 +27,10 @@ quat& quat::operator-=(const quat& other) {
 }
 
 quat& quat::operator*=(const quat& other) {
-	quat tmp;
-	tmp.a = (a * other.a) - (b * other.b) - (c * other.c) - (d * other.d);
-	tmp.b = (a * other.b) + (b * other.a) + (c * other.d) - (d * other.c);
-	tmp.c = (a * other.c) - (b * other.d) + (c * other.a) + (d * other.b);
-	tmp.d = (a * other.d) + (b * other.c) - (c * other.b) + (d * other.a);
+	const quat tmp((a * other.a) - (b * other.b) - (c * other.c) - (d * other.d),
+	(a * other.b) + (b * other.a) + (c * other.d) - (d * other.c),
+	(a * other.c) - (b * other.d) + (c * other.a) + (d * other.b),
+	(a * other.d) + (b * other.c) - (c * other.b) + (d * other.a));
 
 	a = tmp.a;
 	b = tmp.b;
@@ -130,18 +129,18 @@ quat conjugate(const quat& qua) {
 }
 
 quat normalize(const quat& qua) {
-	float l = qua.length();
+	const float l = qua.length();
 
 	return (qua / l);
 }
 
 quat to_quat(const vec3& vec) {
-	float cosHalfPhi = std::cos(vec.x / 2.0f);
-	float sinHalfPhi = std::sin(vec.x / 2.0f);
-	float cosHalfTheta = std::cos(vec.y / 2.0f);
-	float sinHalfTheta = std::sin(vec.y / 2.0f);
-	float cosHalfPsi = std::cos(vec.z / 2.0f);
-	float sinHalfPsi = std::sin(vec.z / 2.0f);
+	const float cosHalfPhi = std::cos(vec.x / 2.0f);
+	const float sinHalfPhi = std::sin(vec.x / 2.0f);
+	const float cosHalfTheta = std::cos(vec.y / 2.0f);
+	const float sinHalfTheta = std::sin(vec.y / 2.0f);
+	const float cosHalfPsi = std::cos(vec.z / 2.0f);
+	const float sinHalfPsi = std::sin(vec.z / 2.0f);
 
 	return quat(cosHalfPhi * cosHalfTheta * cosHalfPsi + sinHalfPhi * sinHalfTheta * sinHalfPsi,
 		sinHalfPhi * cosHalfTheta * cosHalfPsi - cosHalfPhi * sinHalfTheta * sinHalfPsi,

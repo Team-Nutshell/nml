@@ -44,7 +44,7 @@ mat4& mat4::operator-=(const mat4& other) {
 }
 
 mat4& mat4::operator*=(const mat4& other) {
-	mat4 tmp(vec4(x.x * other.x.x + y.x * other.x.y + z.x * other.x.z + w.x * other.x.w,
+	const mat4 tmp(vec4(x.x * other.x.x + y.x * other.x.y + z.x * other.x.z + w.x * other.x.w,
 			x.y * other.x.x + y.y * other.x.y + z.y * other.x.z + w.y * other.x.w,
 			x.z * other.x.x + y.z * other.x.y + z.z * other.x.z + w.z * other.x.w,
 			x.w * other.x.x + y.w * other.x.y + z.w * other.x.z + w.w * other.x.w),
@@ -168,27 +168,27 @@ mat4 transpose(const mat4& mat) {
 }
 
 mat4 inverse(const mat4& mat) {
-	float determinant = mat.det();
+	const float determinant = mat.det();
 
-	mat4 t = transpose(mat);
-	float a = mat3(t.y.y, t.y.z, t.y.w, t.z.y, t.z.z, t.z.w, t.w.y, t.w.z, t.w.w).det();
-	float b = mat3(t.y.x, t.y.z, t.y.w, t.z.x, t.z.z, t.z.w, t.w.x, t.w.z, t.w.w).det() * -1.0f;
-	float c = mat3(t.y.x, t.y.y, t.y.w, t.z.x, t.z.y, t.z.w, t.w.x, t.w.y, t.w.w).det();
-	float d = mat3(t.y.x, t.y.y, t.y.z, t.z.x, t.z.y, t.z.z, t.w.x, t.w.y, t.w.z).det() * -1.0f;
-	float e = mat3(t.x.y, t.x.z, t.x.w, t.z.y, t.z.z, t.z.w, t.w.y, t.w.z, t.w.w).det() * -1.0f;
-	float f = mat3(t.x.x, t.x.z, t.x.w, t.z.x, t.z.z, t.z.w, t.w.x, t.w.z, t.w.w).det();
-	float g = mat3(t.x.x, t.x.y, t.x.w, t.z.x, t.z.y, t.z.w, t.w.x, t.w.y, t.w.w).det() * -1.0f;
-	float h = mat3(t.x.x, t.x.y, t.x.z, t.z.x, t.z.y, t.z.z, t.w.x, t.w.y, t.w.z).det();
-	float i = mat3(t.x.y, t.x.z, t.x.w, t.y.y, t.y.z, t.y.w, t.w.y, t.w.z, t.w.w).det();
-	float j = mat3(t.x.x, t.x.z, t.x.w, t.y.x, t.y.z, t.y.w, t.w.x, t.w.z, t.w.w).det() * -1.0f;
-	float k = mat3(t.x.x, t.x.y, t.x.w, t.y.x, t.y.y, t.y.w, t.w.x, t.w.y, t.w.w).det();
-	float l = mat3(t.x.x, t.x.y, t.x.z, t.y.x, t.y.y, t.y.z, t.w.x, t.w.y, t.w.z).det() * -1.0f;
-	float m = mat3(t.x.y, t.x.z, t.x.w, t.y.y, t.y.z, t.y.w, t.z.y, t.z.z, t.z.w).det() * -1.0f;
-	float n = mat3(t.x.x, t.x.z, t.x.w, t.y.x, t.y.z, t.y.w, t.z.x, t.z.z, t.z.w).det();
-	float o = mat3(t.x.x, t.x.y, t.x.w, t.y.x, t.y.y, t.y.w, t.z.x, t.z.y, t.z.w).det() * -1.0f;
-	float p = mat3(t.x.x, t.x.y, t.x.z, t.y.x, t.y.y, t.y.z, t.z.x, t.z.y, t.z.z).det();
+	const mat4 t = transpose(mat);
+	const float a = mat3(t.y.y, t.y.z, t.y.w, t.z.y, t.z.z, t.z.w, t.w.y, t.w.z, t.w.w).det();
+	const float b = mat3(t.y.x, t.y.z, t.y.w, t.z.x, t.z.z, t.z.w, t.w.x, t.w.z, t.w.w).det() * -1.0f;
+	const float c = mat3(t.y.x, t.y.y, t.y.w, t.z.x, t.z.y, t.z.w, t.w.x, t.w.y, t.w.w).det();
+	const float d = mat3(t.y.x, t.y.y, t.y.z, t.z.x, t.z.y, t.z.z, t.w.x, t.w.y, t.w.z).det() * -1.0f;
+	const float e = mat3(t.x.y, t.x.z, t.x.w, t.z.y, t.z.z, t.z.w, t.w.y, t.w.z, t.w.w).det() * -1.0f;
+	const float f = mat3(t.x.x, t.x.z, t.x.w, t.z.x, t.z.z, t.z.w, t.w.x, t.w.z, t.w.w).det();
+	const float g = mat3(t.x.x, t.x.y, t.x.w, t.z.x, t.z.y, t.z.w, t.w.x, t.w.y, t.w.w).det() * -1.0f;
+	const float h = mat3(t.x.x, t.x.y, t.x.z, t.z.x, t.z.y, t.z.z, t.w.x, t.w.y, t.w.z).det();
+	const float i = mat3(t.x.y, t.x.z, t.x.w, t.y.y, t.y.z, t.y.w, t.w.y, t.w.z, t.w.w).det();
+	const float j = mat3(t.x.x, t.x.z, t.x.w, t.y.x, t.y.z, t.y.w, t.w.x, t.w.z, t.w.w).det() * -1.0f;
+	const float k = mat3(t.x.x, t.x.y, t.x.w, t.y.x, t.y.y, t.y.w, t.w.x, t.w.y, t.w.w).det();
+	const float l = mat3(t.x.x, t.x.y, t.x.z, t.y.x, t.y.y, t.y.z, t.w.x, t.w.y, t.w.z).det() * -1.0f;
+	const float m = mat3(t.x.y, t.x.z, t.x.w, t.y.y, t.y.z, t.y.w, t.z.y, t.z.z, t.z.w).det() * -1.0f;
+	const float n = mat3(t.x.x, t.x.z, t.x.w, t.y.x, t.y.z, t.y.w, t.z.x, t.z.z, t.z.w).det();
+	const float o = mat3(t.x.x, t.x.y, t.x.w, t.y.x, t.y.y, t.y.w, t.z.x, t.z.y, t.z.w).det() * -1.0f;
+	const float p = mat3(t.x.x, t.x.y, t.x.z, t.y.x, t.y.y, t.y.z, t.z.x, t.z.y, t.z.z).det();
 
-	mat4 adj = mat4(a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p);
+	const mat4 adj = mat4(a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p);
 
 	return ((1.0f / determinant) * adj);
 }
@@ -198,9 +198,9 @@ mat4 translate(const vec3& translation) {
 }
 
 mat4 rotate(const float angle, const vec3& axis) {
-	float cosTheta = std::cos(angle);
-	float oMCT = 1.0f - cosTheta;
-	float sinTheta = std::sin(angle);
+	const float cosTheta = std::cos(angle);
+	const float oMCT = 1.0f - cosTheta;
+	const float sinTheta = std::sin(angle);
 
 	return mat4(cosTheta + ((axis.x * axis.x) * oMCT),
 		((axis.y * axis.x) * oMCT) + (axis.z * sinTheta),
@@ -222,15 +222,15 @@ mat4 scale(const vec3& scaling) {
 }
 
 mat4 to_mat4(const quat& qua) {
-	float ab = qua.a * qua.b;
-	float ac = qua.a * qua.c;
-	float ad = qua.a * qua.d;
-	float bb = qua.b * qua.b;
-	float bc = qua.b * qua.c;
-	float bd = qua.b * qua.d;
-	float cc = qua.c * qua.c;
-	float cd = qua.c * qua.d;
-	float dd = qua.d * qua.d;
+	const float ab = qua.a * qua.b;
+	const float ac = qua.a * qua.c;
+	const float ad = qua.a * qua.d;
+	const float bb = qua.b * qua.b;
+	const float bc = qua.b * qua.c;
+	const float bd = qua.b * qua.d;
+	const float cc = qua.c * qua.c;
+	const float cd = qua.c * qua.d;
+	const float dd = qua.d * qua.d;
 
 	return mat4(1.0f - 2.0f * (cc + dd),
 		2.0f * (bc + ad),

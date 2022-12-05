@@ -26,7 +26,7 @@ mat2& mat2::operator-=(const mat2& other) {
 }
 
 mat2& mat2::operator*=(const mat2& other) {
-	mat2 tmp(vec2(x.x * other.x.x + y.x * other.x.y,
+	const mat2 tmp(vec2(x.x * other.x.x + y.x * other.x.y,
 			x.y * other.x.x + y.y * other.x.y),
 		vec2(x.x * other.y.x + y.x * other.y.y,
 			x.y * other.y.x + y.y * other.y.y));
@@ -124,7 +124,7 @@ mat2 transpose(const mat2& mat) {
 }
 
 mat2 inverse(const mat2& mat) {
-	float determinant = mat.det();
+	const float determinant = mat.det();
 
 	return ((1.0f / determinant) * mat2(mat.y.y, -mat.x.y, -mat.y.x, mat.x.x));
 }
