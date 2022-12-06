@@ -194,7 +194,7 @@ mat4 inverse(const mat4& mat) {
 }
 
 mat4 translate(const vec3& translation) {
-	return mat4(1.0f, 0.0f, 0.0f, translation.x, 0.0f, 1.0f, 0.0f, translation.y, 0.0f, 0.0f, 1.0f, translation.z, 0.0f, 0.0f, 0.0f, 1.0f);
+	return mat4(1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f, translation.x, translation.y, translation.z, 1.0f);
 }
 
 mat4 rotate(const float angle, const vec3& axis) {
