@@ -162,7 +162,7 @@ mat3 inverse(const mat3& mat) {
 }
 
 mat3 translate(const vec2& translation) {
-	return mat3(1.0f, 0.0f, translation.x, 0.0f, 1.0f, translation.y, 0.0f, 0.0f, 1.0f);
+	return mat3(1.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f, translation.x, translation.y, 1.0f);
 }
 
 mat3 rotate(const float angle) {
