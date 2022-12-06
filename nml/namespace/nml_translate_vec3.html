@@ -134,7 +134,7 @@
 <h1>nml::mat4 translate(const nml::vec3&amp; translation)<a class="headerlink" href="#nml-mat4-translate-const-nml-vec3-translation" title="Permalink to this heading"></a></h1>
 <p>Return a 3D translation matrix according to the translation vector.</p>
 <p>The 3D translation matrix is calculated this way:</p>
-<p><span class="math notranslate nohighlight">\(\begin{bmatrix} 1.0 &amp; 0.0 &amp; 0.0 &amp; 0.0 \\ 0.0 &amp; 1.0 &amp; 0.0 &amp; 0.0 \\ 0.0 &amp; 0.0 &amp; 1.0 &amp; 0.0 \\ translation.x &amp; translation.y &amp; translation.z &amp; 1.0 \end{bmatrix}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\begin{bmatrix} 1.0 &amp; 0.0 &amp; 0.0 &amp; translation.x \\ 0.0 &amp; 1.0 &amp; 0.0 &amp; translation.y \\ 0.0 &amp; 0.0 &amp; 1.0 &amp; translation.z \\ 0.0 &amp; 0.0 &amp; 0.0 &amp; 1.0 \end{bmatrix}\)</span></p>
 <section id="example">
 <h2>Example<a class="headerlink" href="#example" title="Permalink to this heading"></a></h2>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;include/mat4.h&quot;</span><span class="cp"></span>
@@ -151,7 +151,7 @@
 </pre></div>
 </div>
 <p>Result:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[[</span><span class="mf">1.000000</span><span class="p">,</span> <span class="mf">0.000000</span><span class="p">,</span> <span class="mf">0.000000</span><span class="p">,</span> <span class="mf">1.000000</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.000000</span><span class="p">,</span> <span class="mf">1.000000</span><span class="p">,</span> <span class="mf">0.000000</span><span class="p">,</span> <span class="mf">2.000000</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.000000</span><span class="p">,</span> <span class="mf">0.000000</span><span class="p">,</span> <span class="mf">1.000000</span><span class="p">,</span> <span class="mf">3.000000</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.000000</span><span class="p">,</span> <span class="mf">0.000000</span><span class="p">,</span> <span class="mf">0.000000</span><span class="p">,</span> <span class="mf">1.000000</span><span class="p">]]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[[</span><span class="mf">1.000000</span><span class="p">,</span> <span class="mf">0.000000</span><span class="p">,</span> <span class="mf">0.000000</span><span class="p">,</span> <span class="mf">0.000000</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.000000</span><span class="p">,</span> <span class="mf">1.000000</span><span class="p">,</span> <span class="mf">0.000000</span><span class="p">,</span> <span class="mf">0.000000</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.000000</span><span class="p">,</span> <span class="mf">0.000000</span><span class="p">,</span> <span class="mf">1.000000</span><span class="p">,</span> <span class="mf">0.000000</span><span class="p">],</span> <span class="p">[</span><span class="mf">1.000000</span><span class="p">,</span> <span class="mf">2.000000</span><span class="p">,</span> <span class="mf">3.000000</span><span class="p">,</span> <span class="mf">1.000000</span><span class="p">]]</span>
 </pre></div>
 </div>
 </section>
