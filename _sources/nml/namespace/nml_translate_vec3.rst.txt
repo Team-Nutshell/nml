@@ -7,7 +7,7 @@ Return a 3D translation matrix according to the translation vector.
 
 The 3D translation matrix is calculated this way:
 
-:math:`\begin{bmatrix} 1.0 & 0.0 & 0.0 & 0.0 \\ 0.0 & 1.0 & 0.0 & 0.0 \\ 0.0 & 0.0 & 1.0 & 0.0 \\ translation.x & translation.y & translation.z & 1.0 \end{bmatrix}`
+:math:`\begin{bmatrix} 1.0 & 0.0 & 0.0 & translation.x \\ 0.0 & 1.0 & 0.0 & translation.y \\ 0.0 & 0.0 & 1.0 & translation.z \\ 0.0 & 0.0 & 0.0 & 1.0 \end{bmatrix}`
 
 Example
 -------
@@ -30,4 +30,4 @@ Result:
 
 .. code-block::
 
-	[[1.000000, 0.000000, 0.000000, 1.000000], [0.000000, 1.000000, 0.000000, 2.000000], [0.000000, 0.000000, 1.000000, 3.000000], [0.000000, 0.000000, 0.000000, 1.000000]]
+	[[1.000000, 0.000000, 0.000000, 0.000000], [0.000000, 1.000000, 0.000000, 0.000000], [0.000000, 0.000000, 1.000000, 0.000000], [1.000000, 2.000000, 3.000000, 1.000000]]
