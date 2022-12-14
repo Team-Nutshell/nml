@@ -221,6 +221,28 @@ mat4 scale(const vec3& scaling) {
 	return mat4(scaling.x, 0.0f, 0.0f, 0.0f, 0.0f, scaling.y, 0.0f, 0.0f, 0.0f, 0.0f, scaling.z, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f);
 }
 
+mat4 lookAtLH(const vec3& from, const vec3& to, const vec3& up) {
+	const vec3 forward = normalize(to - from);
+	const vec3 right = normalize(cross(up, forward));
+	const vec3 realUp = cross(forward, right);
+
+	return mat4(right.x, realUp.x, forward.x, 0.0,
+		right.y, realUp.y, forward.y, 0.0,
+		right.z, realUp.z, forward.z, 0.0,
+		-dot(right, from), -dot(realUp, from), -dot(forward, from), 1.0);
+}
+
+mat4 lookAtRH(const vec3& from, const vec3& to, const vec3& up) {
+	const vec3 forward = normalize(to - from);
+	const vec3 right = normalize(cross(forward, up));
+	const vec3 realUp = cross(right, forward);
+
+	return mat4(right.x, realUp.x, -forward.x, 0.0f,
+		right.y, realUp.y, -forward.y, 0.0f,
+		right.z, realUp.z, -forward.z, 0.0f,
+		-dot(right, from), -dot(realUp, from), dot(forward, from), 1.0f);
+}
+
 mat4 to_mat4(const quat& qua) {
 	const float ab = qua.a * qua.b;
 	const float ac = qua.a * qua.c;

@@ -72,6 +72,8 @@ mat4 inverse(const mat4& mat);
 mat4 translate(const vec3& translation);
 mat4 rotate(const float angle, const vec3& axis);
 mat4 scale(const vec3& scaling);
+mat4 lookAtLH(const vec3& position, const vec3& to, const vec3& up);
+mat4 lookAtRH(const vec3& position, const vec3& to, const vec3& up);
 
 mat4 to_mat4(const quat& qua);
 std::string to_string(const mat4& mat);
