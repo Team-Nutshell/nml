@@ -313,7 +313,7 @@ mat4 to_mat4(const quat& qua) {
 		0.0f,
 		2.0f * (bd + ac),
 		2.0f * (cd - ab),
-		1.0f - 2.0 * (bb + cc),
+		1.0f - 2.0f * (bb + cc),
 		0.0f,
 		0.0f, 0.0f, 0.0f, 1.0f);
 }
