@@ -3,9 +3,9 @@
 nml::mat4 lookAtLH(const nml::vec3& from, const nml::vec3& to, const nml::vec3& up)
 ===================================================================================
 
-Return a left-hand look at matrix.
+Return a left-hand look at view matrix.
 
-The left-hand look at matrix is calculated this way:
+The left-hand look at view matrix is calculated this way:
 
 :math:`\begin{bmatrix} right.x & right.y & right.z & -(right \cdot from) \\ realUp.x & realUp.y & realUp.z & -(realUp \cdot from) \\ forward.x & forward.y & forward.z & -(forward \cdot from) \\ 0.0 & 0.0 & 0.0 & 1.0 \end{bmatrix}`
 

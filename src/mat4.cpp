@@ -243,6 +243,55 @@ mat4 lookAtRH(const vec3& from, const vec3& to, const vec3& up) {
 		-dot(right, from), -dot(realUp, from), dot(forward, from), 1.0f);
 }
 
+mat4 orthoLH(const float left, const float right, const float bottom, const float top, const float near, const float far) {
+	const float rightPlusLeft = right + left;
+	const float rightMinusLeft = right - left;
+	const float topPlusBottom = top + bottom;
+	const float topMinusBottom = top - bottom;
+	const float farPlusNear = far + near;
+	const float farMinusNear = far - near;
+
+	return mat4(2.0f / rightMinusLeft, 0.0f, 0.0f, 0.0f,
+		0.0f, 2.0f / topMinusBottom, 0.0f, 0.0f,
+		0.0f, 0.0f, 1.0f / farMinusNear, 0.0f,
+		-(rightPlusLeft / rightMinusLeft), -(topPlusBottom / topMinusBottom), -near / farMinusNear, 1.0f);
+}
+
+mat4 orthoRH(const float left, const float right, const float bottom, const float top, const float near, const float far) {
+	const float rightPlusLeft = right + left;
+	const float rightMinusLeft = right - left;
+	const float topPlusBottom = top + bottom;
+	const float topMinusBottom = top - bottom;
+	const float farPlusNear = far + near;
+	const float farMinusNear = far - near;
+
+	return mat4(2.0f / rightMinusLeft, 0.0f, 0.0f, 0.0f,
+		0.0f, 2.0f / topMinusBottom, 0.0f, 0.0f,
+		0.0f, 0.0f, -1.0f / farMinusNear, 0.0f,
+		-(rightPlusLeft / rightMinusLeft), -(topPlusBottom / topMinusBottom), -near / farMinusNear, 1.0f);
+}
+
+mat4 perspectiveLH(const float fovY, const float aspectRatio, const float near, const float far) {
+	const float tanHalfFovY = std::tan(fovY / 2.0f);
+	const float farMinusNear = far - near;
+
+	return mat4(1.0f / (aspectRatio * tanHalfFovY), 0.0f, 0.0f, 0.0f,
+		0.0f, 1.0f / tanHalfFovY, 0.0f, 0.0f,
+		0.0f, 0.0f, far / farMinusNear, 1.0f,
+		0.0f, 0.0f, -(far * near) / farMinusNear, 0.0f);
+}
+
+mat4 perspectiveRH(const float fovY, const float aspectRatio, const float near, const float far) {
+	const float tanHalfFovY = std::tan(fovY / 2.0f);
+	const float farMinusNear = far - near;
+	const float nearMinusFar = near - far;
+
+	return mat4(1.0f / (aspectRatio * tanHalfFovY), 0.0f, 0.0f, 0.0f,
+		0.0f, 1.0f / tanHalfFovY, 0.0f, 0.0f,
+		0.0f, 0.0f, far / nearMinusFar, -1.0f,
+		0.0f, 0.0f, -(far * near) / farMinusNear, 0.0f);
+}
+
 mat4 to_mat4(const quat& qua) {
 	const float ab = qua.a * qua.b;
 	const float ac = qua.a * qua.c;
