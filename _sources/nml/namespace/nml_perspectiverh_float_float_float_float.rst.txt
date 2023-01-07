@@ -1,7 +1,7 @@
 :orphan:
 
-perspectiveRH(const float fovY, const float aspectRatio, const float near, const float far)
-===========================================================================================
+nml::mat4 perspectiveRH(const float fovY, const float aspectRatio, const float near, const float far)
+=====================================================================================================
 
 Return a right-hand perspective projection matrix.
 
