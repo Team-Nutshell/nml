@@ -1,7 +1,7 @@
 :orphan:
 
-perspectiveLH(const float fovY, const float aspectRatio, const float near, const float far)
-===========================================================================================
+nml::mat4 perspectiveLH(const float fovY, const float aspectRatio, const float near, const float far)
+=====================================================================================================
 
 Return a left-hand perspective projection matrix.
 
