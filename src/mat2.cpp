@@ -1,5 +1,6 @@
 #include "../include/mat2.h"
-#include "../include/vec2.h"
+#include "../include/mat3.h"
+#include "../include/mat4.h"
 #include <stdexcept>
 
 namespace nml {
@@ -10,6 +11,9 @@ mat2::mat2(float _xx, float _xy, float _yx, float _yy): x(_xx, _xy), y(_yx, _yy)
 mat2::mat2(float _xx, float _xy, vec2 _yxyy): x(_xx, _xy), y(_yxyy) {}
 mat2::mat2(vec2 _xxxy, float _yx, float _yy): x(_xxxy), y(_yx, _yy) {}
 mat2::mat2(vec2 _xxxy, vec2 _yxyy): x(_xxxy), y(_yxyy) {}
+mat2::mat2(float* _xxxyyxyy): x(_xxxyyxyy), y(_xxxyyxyy + 2) {}
+mat2::mat2(mat3 _xxxyxzyxyyyzzxzyzz): x(_xxxyxzyxyyyzzxzyzz.x), y(_xxxyxzyxyyyzzxzyzz.y) {}
+mat2::mat2(mat4 _xxxyxzxwyxyyyzywzxzyzzzwwxwywzww): x(_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww.x), y(_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww.y) {}
 
 mat2& mat2::operator+=(const mat2& other) {
 	x += other.x;

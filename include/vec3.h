@@ -4,6 +4,7 @@
 namespace nml {
 
 struct vec2;
+struct vec4;
 struct quat;
 
 // x | y | z
@@ -18,6 +19,8 @@ struct vec3 {
 	vec3(float _x, float _y, float _z);
 	vec3(float _x, vec2 _yz);
 	vec3(vec2 _xy, float _z);
+	vec3(float* _xyz);
+	vec3(vec4 _xyzw);
 
 	// Operators
 	vec3& operator+=(const vec3& other);
