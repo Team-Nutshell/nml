@@ -5,6 +5,8 @@
 
 namespace nml {
 
+struct mat4;
+
 //  xx | yx | zx
 // ----|----|----
 //  xy | yy | zy
@@ -26,6 +28,8 @@ struct mat3 {
 	mat3(vec3 _xxxyxz, vec3 _yxyyyz, float _zx, float _zy, float _zz);
 	mat3(vec3 _xxxyxz, float _yx, float _yy, float _yz, vec3 _zxzyzz);
 	mat3(vec3 _xxxyxz, vec3 _yxyyyz, vec3 _zxzyzz);
+	mat3(float* _xxxyxzyxyyyzzxzyzz);
+	mat3(mat4 _xxxyxzxwyxyyyzywzxzyzzzwwxwywzww);
 
 	// Operators
 	mat3& operator+=(const mat3& other);

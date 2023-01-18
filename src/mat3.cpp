@@ -1,5 +1,6 @@
 #include "../include/mat3.h"
 #include "../include/mat2.h"
+#include "../include/mat4.h"
 #include <cmath>
 #include <stdexcept>
 
@@ -15,6 +16,8 @@ mat3::mat3(float _xx, float _xy, float _xz, vec3 _yxyyyz, vec3 _zxzyzz): x(_xx, 
 mat3::mat3(vec3 _xxxyxz, vec3 _yxyyyz, float _zx, float _zy, float _zz): x(_xxxyxz), y(_yxyyyz), z(_zx, _zy, _zz) {}
 mat3::mat3(vec3 _xxxyxz, float _yx, float _yy, float _yz, vec3 _zxzyzz): x(_xxxyxz), y(_yx, _yy, _yz), z(_zxzyzz) {}
 mat3::mat3(vec3 _xxxyxz, vec3 _yxyyyz, vec3 _zxzyzz): x(_xxxyxz), y(_yxyyyz), z(_zxzyzz) {}
+mat3::mat3(float* _xxxyxzyxyyyzzxzyzz): x(_xxxyxzyxyyyzzxzyzz), y(_xxxyxzyxyyyzzxzyzz + 3), z(_xxxyxzyxyyyzzxzyzz + 6) {}
+mat3::mat3(mat4 _xxxyxzxwyxyyyzywzxzyzzzwwxwywzww): x(_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww.x), y(_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww.y), z(_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww.z) {}
 
 mat3& mat3::operator+=(const mat3& other) {
 	x += other.x;

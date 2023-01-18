@@ -39,6 +39,7 @@ struct mat4 {
 	mat4(vec4 _xxxyxzxw, vec4 _yxyyyzyw, float _zx, float _zy, float _zz, float _zw, vec4 _wxwywzww);
 	mat4(vec4 _xxxyxzxw, vec4 _yxyyyzyw, vec4 _zxzyzzzw, float _wx, float _wy, float _wz, float _ww);
 	mat4(vec4 _xxxyxzxw, vec4 _yxyyyzyw, vec4 _zxzyzzzw, vec4 _wxwywzww);
+	mat4(float* _xxxyxzxwyxyyyzywzxzyzzzwwxwywzww);
 
 	// Operators
 	mat4& operator+=(const mat4& other);

@@ -1,5 +1,6 @@
 #include "../include/vec3.h"
 #include "../include/vec2.h"
+#include "../include/vec4.h"
 #include "../include/quat.h"
 #include <cmath>
 #include <stdexcept>
@@ -11,6 +12,8 @@ vec3::vec3(float _xyz): x(_xyz), y(_xyz), z(_xyz) {}
 vec3::vec3(float _x, float _y, float _z): x(_x), y(_y), z(_z) {}
 vec3::vec3(float _x, vec2 _yz): x(_x), y(_yz.x), z(_yz.y) {}
 vec3::vec3(vec2 _xy, float _z): x(_xy.x), y(_xy.y), z(_z) {}
+vec3::vec3(float* _xyz): x(*_xyz), y(*(_xyz + 1)), z(*(_xyz + 2)) {}
+vec3::vec3(vec4 _xyzw): x(_xyzw.x), y(_xyzw.y), z(_xyzw.z) {}
 
 vec3& vec3::operator+=(const vec3& other) { 
 	x += other.x;

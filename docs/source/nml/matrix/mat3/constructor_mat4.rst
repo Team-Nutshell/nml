@@ -1,0 +1,31 @@
+:orphan:
+
+mat3: mat3(nlm::mat4 _xxxyxzxwyxyyyzywzxzyzzzwwxwywzww)
+=======================================================
+
+Construct a ([*_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww.x.x*, *_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww.x.y*, *_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww.x.z*], [*_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww.y.x*, *_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww.y.y*, *_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww.y.z*], [*_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww.z.x*, *_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww.z.y*, *_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww.z.z*]) matrix.
+
+:math:`\begin{bmatrix} \_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww.x.x & \_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww.y.x & \_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww.z.x \\ \_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww.x.y & \_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww.y.y & \_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww.z.y \\ \_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww.x.z & \_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww.y.z & \_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww.z.z \end{bmatrix}`
+
+Example
+-------
+
+.. code-block:: cpp
+
+	#include "include/mat3.h"
+	#include "include/mat4.h"
+	#include <iostream>
+
+	int main() {
+		nml::mat4 a(1.0f, 2.0f, 3.0f, 4.0f, 5.0f, 6.0f, 7.0f, 8.0f, 9.0f, 10.0f, 11.0f, 12.0f, 13.0f, 14.0f, 15.0f, 16.0f);
+		nml::mat3 b(a);
+		std::cout << nml::to_string(b) << std::endl;
+
+		return 0;
+	}
+
+Result:
+
+.. code-block::
+
+	[[1.000000, 2.000000, 3.000000], [5.000000, 6.000000, 7.000000], [9.000000, 10.000000, 11.000000]]
