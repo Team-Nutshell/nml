@@ -3,7 +3,7 @@
 vec4: vec4(float* _xyzw)
 ========================
 
-Construct a (\**_xyzw*, \**(_xyzw + 1)*, \**(_xyzw + 2)*, \**(_xyzw + 3)*) vector.
+Construct a vector from a pointer.
 
 :math:`\begin{bmatrix} *\_xyzw \\ *(\_xyzw + 1) \\ *(\_xyzw + 2) \\ *(\_xyzw + 3) \end{bmatrix}`
 

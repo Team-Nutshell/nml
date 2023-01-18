@@ -3,7 +3,7 @@
 quat: quat(float* _abcd)
 ========================
 
-Construct a (\**_abcd*, \**(_abcd + 1)*, \**(_abcd + 2)*, \**(_abcd + 3)*) quaternion.
+Construct a quaternion from a pointer.
 
 :math:`*\_abcd + *(\_abcd + 1)i + *(\_abcd + 1)j + *(\_abcd + 1)k`
 
