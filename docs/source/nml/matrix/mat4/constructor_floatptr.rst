@@ -1,11 +1,11 @@
 :orphan:
 
-mat4: mat4(float* _xxxyxzxwyxyyyzywzxzyzzzwwxwywzww)
-====================================================
+mat4: mat4(float* _ptr)
+=======================
 
 Construct a matrix from a pointer.
 
-:math:`\tiny \begin{bmatrix} *\_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww & *(\_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww + 4) & *(\_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww + 8) & *(\_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww + 12) \\ *(\_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww + 1) & *(\_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww + 5) & *(\_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww + 9) & *(\_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww + 13) \\ *(\_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww + 2) & *(\_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww + 6) & *(\_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww + 10) & *(\_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww + 14) \\ *(\_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww + 3) & *(\_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww + 7) & *(\_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww + 11) & *(\_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww + 15) \end{bmatrix}`
+:math:`\begin{bmatrix} *\_ptr & *(\_ptr + 4) & *(\_ptr + 8) & *(\_ptr + 12) \\ *(\_ptr + 1) & *(\_ptr + 5) & *(\_ptr + 9) & *(\_ptr + 13) \\ *(\_ptr + 2) & *(\_ptr + 6) & *(\_ptr + 10) & *(\_ptr + 14) \\ *(\_ptr + 3) & *(\_ptr + 7) & *(\_ptr + 11) & *(\_ptr + 15) \end{bmatrix}`
 
 Example
 -------

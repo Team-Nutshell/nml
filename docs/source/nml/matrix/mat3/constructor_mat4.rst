@@ -1,11 +1,11 @@
 :orphan:
 
-mat3: mat3(nlm::mat4 _xxxyxzxwyxyyyzywzxzyzzzwwxwywzww)
-=======================================================
+mat3: mat3(nlm::mat4 _mat)
+==========================
 
-Construct a ([*_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww.x.x*, *_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww.x.y*, *_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww.x.z*], [*_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww.y.x*, *_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww.y.y*, *_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww.y.z*], [*_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww.z.x*, *_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww.z.y*, *_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww.z.z*]) matrix.
+Construct a ([*_mat.x.x*, *_mat.x.y*, *_mat.x.z*], [*_mat.y.x*, *_mat.y.y*, *_mat.y.z*], [*_mat.z.x*, *_mat.z.y*, *_mat.z.z*]) matrix.
 
-:math:`\begin{bmatrix} \_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww.x.x & \_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww.y.x & \_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww.z.x \\ \_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww.x.y & \_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww.y.y & \_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww.z.y \\ \_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww.x.z & \_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww.y.z & \_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww.z.z \end{bmatrix}`
+:math:`\begin{bmatrix} \_mat.x.x & \_mat.y.x & \_mat.z.x \\ \_mat.x.y & \_mat.y.y & \_mat.z.y \\ \_mat.x.z & \_mat.y.z & \_mat.z.z \end{bmatrix}`
 
 Example
 -------

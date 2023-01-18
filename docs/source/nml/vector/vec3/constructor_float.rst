@@ -1,11 +1,11 @@
 :orphan:
 
-vec3: vec3(float _xyz)
-======================
+vec3: vec3(float _value)
+========================
 
-Construct a (*_xyz*, *_xyz*, *_xyz*) vector.
+Construct a (*_value*, *_value*, *_value*) vector.
 
-:math:`\begin{bmatrix} \_xyz \\ \_xyz \\ \_xyz \end{bmatrix}`
+:math:`\begin{bmatrix} \_value \\ \_value \\ \_value \end{bmatrix}`
 
 Example
 -------

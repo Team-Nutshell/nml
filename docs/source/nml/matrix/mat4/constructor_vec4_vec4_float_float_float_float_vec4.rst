@@ -1,11 +1,11 @@
 :orphan:
 
-mat4: mat4(nml::vec4 _xxxyxzxw, nml::vec4 _yxyyyzyw, float _zx, float _zy, float _zz, float _zw, nml::vec4 _wxwywzww)
-=====================================================================================================================
+mat4: mat4(nml::vec4 _x, nml::vec4 _y, float _zx, float _zy, float _zz, float _zw, nml::vec4 _w)
+================================================================================================
 
-Construct a ([*_xxxyxzxw.x*, *_xxxyxzxw.y*, *_xxxyxzxw.z*, *_xxxyxzxw.w*], [*_yxyyyzyw.x*, *_yxyyyzyw.y*, *_yxyyyzyw.z*, *_yxyyyzyw.w*], [*_zx*, *_zy*, *_zz*, *_zw*], [*_wxwywzww.x*, *_wxwywzww.y*, *_wxwywzww.z*, *_wxwywzww.w*]) matrix.
+Construct a ([*_x.x*, *_x.y*, *_x.z*, *_x.w*], [*_y.x*, *_y.y*, *_y.z*, *_y.w*], [*_zx*, *_zy*, *_zz*, *_zw*], [*_w.x*, *_w.y*, *_w.z*, *_w.w*]) matrix.
 
-:math:`\begin{bmatrix} \_xxxyxzxw.x & \_yxyyyzyw.x & \_zx & \_wxwywzww.x \\ \_xxxyxzxw.y & \_yxyyyzyw.y & \_zy & \_wxwywzww.y \\ \_xxxyxzxw.z & \_yxyyyzyw.z & \_zz & \_wxwywzww.z \\ \_xxxyxzxw.w & \_yxyyyzyw.w & \_zw & \_wxwywzww.w \end{bmatrix}`
+:math:`\begin{bmatrix} \_x.x & \_y.x & \_zx & \_w.x \\ \_x.y & \_y.y & \_zy & \_w.y \\ \_x.z & \_y.z & \_zz & \_w.z \\ \_x.w & \_y.w & \_zw & \_w.w \end{bmatrix}`
 
 Example
 -------

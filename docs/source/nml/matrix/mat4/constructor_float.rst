@@ -1,11 +1,11 @@
 :orphan:
 
-mat4: mat4(float _xxxyxzxwyxyyyzywzxzyzzzwwxwywzww)
-===================================================
+mat4: mat4(float _value)
+========================
 
-Construct a ([*_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww*, *_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww*, *_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww*, *_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww*], [*_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww*, *_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww*, *_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww*, *_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww*], [*_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww*, *_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww*, *_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww*, *_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww*]) matrix.
+Construct a ([*_value*, *_value*, *_value*, *_value*], [*_value*, *_value*, *_value*, *_value*], [*_value*, *_value*, *_value*, *_value*]) matrix.
 
-:math:`\tiny \begin{bmatrix} \_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww & \_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww & \_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww & \_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww \\ \_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww & \_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww & \_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww & \_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww \\ \_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww & \_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww & \_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww & \_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww \\ \_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww & \_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww & \_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww & \_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww \end{bmatrix}`
+:math:`\begin{bmatrix} \_value & \_value & \_value & \_value \\ \_value & \_value & \_value & \_value \\ \_value & \_value & \_value & \_value \\ \_value & \_value & \_value & \_value \end{bmatrix}`
 
 Example
 -------
