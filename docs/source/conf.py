@@ -7,10 +7,10 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = 'nml - Nutshell Mathematics Library'
-copyright = '2022, Team Nutshell'
+copyright = '2022-2023, Team Nutshell'
 author = 'Team Nutshell'
-release = '1.0.0'
-version = '1.0.0'
+release = '1.1.0'
+version = '1.1.0'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
