@@ -3,7 +3,7 @@
 mat2: mat2(float* _xxxyyxyy)
 ============================
 
-Construct a ([\**_xxxyyxyy*, \**(_xxxyyxyy + 1)*], [\**(_xxxyyxyy + 2)*, \**(_xxxyyxyy + 3)*]) matrix.
+Construct a matrix from a pointer.
 
 :math:`\begin{bmatrix} *\_xxxyyxyy & *(\_xxxyyxyy + 2) \\ *(\_xxxyyxyy + 1) & *(\_xxxyyxyy + 3) \end{bmatrix}`
 
