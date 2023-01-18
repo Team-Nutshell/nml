@@ -1,11 +1,11 @@
 :orphan:
 
-vec2: vec2(float* _xy)
-======================
+vec2: vec2(float* _ptr)
+=======================
 
 Construct a vector from a pointer.
 
-:math:`\begin{bmatrix} *\_xy \\ *(\_xy + 1) \end{bmatrix}`
+:math:`\begin{bmatrix} *\_ptr \\ *(\_ptr + 1) \end{bmatrix}`
 
 Example
 -------

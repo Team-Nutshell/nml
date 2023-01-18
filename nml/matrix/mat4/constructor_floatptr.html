@@ -8,7 +8,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>mat4: mat4(float* _xxxyxzxwyxyyyzywzxzyzzzwwxwywzww) &mdash; nml - Nutshell Mathematics Library 1.0.0 documentation</title>
+  <title>mat4: mat4(float* _ptr) &mdash; nml - Nutshell Mathematics Library 1.0.0 documentation</title>
   
 
   
@@ -201,7 +201,7 @@
     
       <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>mat4: mat4(float* _xxxyxzxwyxyyyzywzxzyzzzwwxwywzww)</li>
+      <li>mat4: mat4(float* _ptr)</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -220,10 +220,10 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="mat4-mat4-float-xxxyxzxwyxyyyzywzxzyzzzwwxwywzww">
-<h1>mat4: mat4(float* _xxxyxzxwyxyyyzywzxzyzzzwwxwywzww)<a class="headerlink" href="#mat4-mat4-float-xxxyxzxwyxyyyzywzxzyzzzwwxwywzww" title="Permalink to this heading">¶</a></h1>
+  <section id="mat4-mat4-float-ptr">
+<h1>mat4: mat4(float* _ptr)<a class="headerlink" href="#mat4-mat4-float-ptr" title="Permalink to this heading">¶</a></h1>
 <p>Construct a matrix from a pointer.</p>
-<p><span class="math notranslate nohighlight">\(\tiny \begin{bmatrix} *\_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww &amp; *(\_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww + 4) &amp; *(\_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww + 8) &amp; *(\_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww + 12) \\ *(\_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww + 1) &amp; *(\_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww + 5) &amp; *(\_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww + 9) &amp; *(\_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww + 13) \\ *(\_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww + 2) &amp; *(\_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww + 6) &amp; *(\_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww + 10) &amp; *(\_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww + 14) \\ *(\_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww + 3) &amp; *(\_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww + 7) &amp; *(\_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww + 11) &amp; *(\_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww + 15) \end{bmatrix}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\begin{bmatrix} *\_ptr &amp; *(\_ptr + 4) &amp; *(\_ptr + 8) &amp; *(\_ptr + 12) \\ *(\_ptr + 1) &amp; *(\_ptr + 5) &amp; *(\_ptr + 9) &amp; *(\_ptr + 13) \\ *(\_ptr + 2) &amp; *(\_ptr + 6) &amp; *(\_ptr + 10) &amp; *(\_ptr + 14) \\ *(\_ptr + 3) &amp; *(\_ptr + 7) &amp; *(\_ptr + 11) &amp; *(\_ptr + 15) \end{bmatrix}\)</span></p>
 <section id="example">
 <h2>Example<a class="headerlink" href="#example" title="Permalink to this heading">¶</a></h2>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;include/mat4.h&quot;</span>

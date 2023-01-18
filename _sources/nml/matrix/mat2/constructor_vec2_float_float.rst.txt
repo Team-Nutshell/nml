@@ -1,11 +1,11 @@
 :orphan:
 
-mat2: mat2(nlm::vec2 _xxxy, float _yx, float _yy)
+mat2: mat2(nlm::vec2 _x, float _yx, float _yy)
 =================================================
 
-Construct a ([*_xxxy.x*, *_xxxy.y*], [*_yx*, *_yy*]) matrix.
+Construct a ([*_x.x*, *_x.y*], [*_yx*, *_yy*]) matrix.
 
-:math:`\begin{bmatrix} \_xxxy.x & \_yx \\ \_xxxy.y & \_yy \end{bmatrix}`
+:math:`\begin{bmatrix} \_x.x & \_yx \\ \_x.y & \_yy \end{bmatrix}`
 
 Example
 -------

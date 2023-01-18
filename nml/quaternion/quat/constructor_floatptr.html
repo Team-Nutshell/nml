@@ -8,7 +8,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>quat: quat(float* _abcd) &mdash; nml - Nutshell Mathematics Library 1.0.0 documentation</title>
+  <title>quat: quat(float* _ptr) &mdash; nml - Nutshell Mathematics Library 1.0.0 documentation</title>
   
 
   
@@ -201,7 +201,7 @@
     
       <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>quat: quat(float* _abcd)</li>
+      <li>quat: quat(float* _ptr)</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -220,10 +220,10 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="quat-quat-float-abcd">
-<h1>quat: quat(float* _abcd)<a class="headerlink" href="#quat-quat-float-abcd" title="Permalink to this heading">¶</a></h1>
+  <section id="quat-quat-float-ptr">
+<h1>quat: quat(float* _ptr)<a class="headerlink" href="#quat-quat-float-ptr" title="Permalink to this heading">¶</a></h1>
 <p>Construct a quaternion from a pointer.</p>
-<p><span class="math notranslate nohighlight">\(*\_abcd + *(\_abcd + 1)i + *(\_abcd + 1)j + *(\_abcd + 1)k\)</span></p>
+<p><span class="math notranslate nohighlight">\(*\_ptr + *(\_ptr + 1)i + *(\_ptr + 2)j + *(\_ptr + 3)k\)</span></p>
 <section id="example">
 <h2>Example<a class="headerlink" href="#example" title="Permalink to this heading">¶</a></h2>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;include/quat.h&quot;</span>

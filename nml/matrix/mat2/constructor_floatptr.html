@@ -8,7 +8,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>mat2: mat2(float* _xxxyyxyy) &mdash; nml - Nutshell Mathematics Library 1.0.0 documentation</title>
+  <title>mat2: mat2(float* _ptr) &mdash; nml - Nutshell Mathematics Library 1.0.0 documentation</title>
   
 
   
@@ -201,7 +201,7 @@
     
       <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>mat2: mat2(float* _xxxyyxyy)</li>
+      <li>mat2: mat2(float* _ptr)</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -220,10 +220,10 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="mat2-mat2-float-xxxyyxyy">
-<h1>mat2: mat2(float* _xxxyyxyy)<a class="headerlink" href="#mat2-mat2-float-xxxyyxyy" title="Permalink to this heading">¶</a></h1>
+  <section id="mat2-mat2-float-ptr">
+<h1>mat2: mat2(float* _ptr)<a class="headerlink" href="#mat2-mat2-float-ptr" title="Permalink to this heading">¶</a></h1>
 <p>Construct a matrix from a pointer.</p>
-<p><span class="math notranslate nohighlight">\(\begin{bmatrix} *\_xxxyyxyy &amp; *(\_xxxyyxyy + 2) \\ *(\_xxxyyxyy + 1) &amp; *(\_xxxyyxyy + 3) \end{bmatrix}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\begin{bmatrix} *\_ptr &amp; *(\_ptr + 2) \\ *(\_ptr + 1) &amp; *(\_ptr + 3) \end{bmatrix}\)</span></p>
 <section id="example">
 <h2>Example<a class="headerlink" href="#example" title="Permalink to this heading">¶</a></h2>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;include/mat2.h&quot;</span>
