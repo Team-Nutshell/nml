@@ -3,7 +3,7 @@
 mat4: mat4(float* _xxxyxzxwyxyyyzywzxzyzzzwwxwywzww)
 ====================================================
 
-Construct a ([\**_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww*, \**(_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww + 1)*, \**(_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww + 2)*, \**(_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww + 3)*], [\**(_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww + 4)*, \**(_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww + 5)*, \**(_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww + 6)*, \**(_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww + 7)*], [\**(_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww + 8)*, \**(_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww + 9)*, \**(_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww + 10)*, \**(_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww + 11)*], [\**(_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww + 12)*, \**(_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww + 13)*, \**(_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww + 14)*, \**(_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww + 15)*]) matrix.
+Construct a matrix from a pointer.
 
 :math:`\tiny \begin{bmatrix} *\_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww & *(\_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww + 4) & *(\_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww + 8) & *(\_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww + 12) \\ *(\_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww + 1) & *(\_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww + 5) & *(\_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww + 9) & *(\_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww + 13) \\ *(\_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww + 2) & *(\_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww + 6) & *(\_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww + 10) & *(\_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww + 14) \\ *(\_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww + 3) & *(\_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww + 7) & *(\_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww + 11) & *(\_xxxyxzxwyxyyyzywzxzyzzzwwxwywzww + 15) \end{bmatrix}`
 

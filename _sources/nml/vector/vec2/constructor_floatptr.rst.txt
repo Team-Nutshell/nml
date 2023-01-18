@@ -3,7 +3,7 @@
 vec2: vec2(float* _xy)
 ======================
 
-Construct a (\**_xy*, \**(_xy + 1)*) vector.
+Construct a vector from a pointer.
 
 :math:`\begin{bmatrix} *\_xy \\ *(\_xy + 1) \end{bmatrix}`
 

@@ -3,7 +3,7 @@
 mat3: mat3(float* _xxxyxzyxyyyzzxzyzz)
 ======================================
 
-Construct a ([*_xxxyxzyxyyyzzxzyzz*, \**(_xxxyxzyxyyyzzxzyzz + 1)*, \**(_xxxyxzyxyyyzzxzyzz + 2)*], [\**(_xxxyxzyxyyyzzxzyzz + 3)*, \**(_xxxyxzyxyyyzzxzyzz + 4)*, \**(_xxxyxzyxyyyzzxzyzz + 5)*], [\**(_xxxyxzyxyyyzzxzyzz + 6)*, \**(_xxxyxzyxyyyzzxzyzz + 7)*, \**(_xxxyxzyxyyyzzxzyzz + 8)*]) matrix.
+Construct a matrix from a pointer.
 
 :math:`\begin{bmatrix} *\_xxxyxzyxyyyzzxzyzz & *(\_xxxyxzyxyyyzzxzyzz + 3) & *(\_xxxyxzyxyyyzzxzyzz + 6) \\ *(\_xxxyxzyxyyyzzxzyzz + 1) & *(\_xxxyxzyxyyyzzxzyzz + 4) & *(\_xxxyxzyxyyyzzxzyzz + 7) \\ *(\_xxxyxzyxyyyzzxzyzz + 2) & *(\_xxxyxzyxyyyzzxzyzz + 5) & *(\_xxxyxzyxyyyzzxzyzz + 8) \end{bmatrix}`
 
