@@ -1,0 +1,293 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>mat2: mat2(float* _xxxyyxyy) &mdash; nml - Nutshell Mathematics Library 1.0.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/custom.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> nml - Nutshell Mathematics Library
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">Table of Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">Getting started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../getting_started/index.html#get-nml">Get nml</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../getting_started/index.html#add-nml-to-a-cmake-project">Add nml to a CMake project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../getting_started/index.html#use-nml">Use nml</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">nml</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../vector/index.html">Vector</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../vector/vec2.html">vec2</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../vector/vec2.html#class-variables">Class variables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../vector/vec2.html#class-functions">Class functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../vector/vec2.html#namespace-functions">Namespace functions</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../vector/vec3.html">vec3</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../vector/vec3.html#class-variables">Class variables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../vector/vec3.html#class-functions">Class functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../vector/vec3.html#namespace-functions">Namespace functions</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../vector/vec4.html">vec4</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../vector/vec4.html#class-variables">Class variables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../vector/vec4.html#class-functions">Class functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../vector/vec4.html#namespace-functions">Namespace functions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html">Matrix</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../mat2.html">mat2</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../mat2.html#class-variables">Class variables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../mat2.html#class-functions">Class functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../mat2.html#namespace-functions">Namespace functions</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../mat3.html">mat3</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../mat3.html#class-variables">Class variables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../mat3.html#class-functions">Class functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../mat3.html#namespace-functions">Namespace functions</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../mat4.html">mat4</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../mat4.html#class-variables">Class variables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../mat4.html#class-functions">Class functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../mat4.html#namespace-functions">Namespace functions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../quaternion/index.html">Quaternion</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../quaternion/quat.html">quat</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../quaternion/quat.html#class-variables">Class variables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../quaternion/quat.html#class-functions">Class functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../quaternion/quat.html#namespace-functions">Namespace functions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">nml - Nutshell Mathematics Library</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>mat2: mat2(float* _xxxyyxyy)</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../_sources/nml/matrix/mat2/constructor_floatptr.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="mat2-mat2-float-xxxyyxyy">
+<h1>mat2: mat2(float* _xxxyyxyy)<a class="headerlink" href="#mat2-mat2-float-xxxyyxyy" title="Permalink to this heading">¶</a></h1>
+<p>Construct a ([**_xxxyyxyy*, **(_xxxyyxyy + 1)*], [**(_xxxyyxyy + 2)*, **(_xxxyyxyy + 3)*]) matrix.</p>
+<p><span class="math notranslate nohighlight">\(\begin{bmatrix} *\_xxxyyxyy &amp; *(\_xxxyyxyy + 2) \\ *(\_xxxyyxyy + 1) &amp; *(\_xxxyyxyy + 3) \end{bmatrix}\)</span></p>
+<section id="example">
+<h2>Example<a class="headerlink" href="#example" title="Permalink to this heading">¶</a></h2>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;include/mat2.h&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;array&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">array</span><span class="o">&lt;</span><span class="kt">float</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="o">&gt;</span><span class="w"> </span><span class="n">a</span><span class="p">{</span><span class="w"> </span><span class="mf">1.0f</span><span class="p">,</span><span class="w"> </span><span class="mf">2.0f</span><span class="p">,</span><span class="w"> </span><span class="mf">3.0f</span><span class="p">,</span><span class="w"> </span><span class="mf">4.0f</span><span class="w"> </span><span class="p">};</span>
+<span class="w">        </span><span class="n">nml</span><span class="o">::</span><span class="n">mat2</span><span class="w"> </span><span class="n">m</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">data</span><span class="p">());</span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">nml</span><span class="o">::</span><span class="n">to_string</span><span class="p">(</span><span class="n">m</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Result:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[[</span><span class="mf">1.000000</span><span class="p">,</span> <span class="mf">2.000000</span><span class="p">],</span> <span class="p">[</span><span class="mf">3.000000</span><span class="p">,</span> <span class="mf">4.000000</span><span class="p">]]</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2022, Team Nutshell.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
