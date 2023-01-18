@@ -1,11 +1,11 @@
 :orphan:
 
-quat: quat(float* _abcd)
-========================
+quat: quat(float* _ptr)
+=======================
 
 Construct a quaternion from a pointer.
 
-:math:`*\_abcd + *(\_abcd + 1)i + *(\_abcd + 1)j + *(\_abcd + 1)k`
+:math:`*\_ptr + *(\_ptr + 1)i + *(\_ptr + 2)j + *(\_ptr + 3)k`
 
 Example
 -------

@@ -1,11 +1,11 @@
 :orphan:
 
-mat2: mat2(nlm::mat3 _xxxyxzyxyyyzzxzyzz)
-=========================================
+mat2: mat2(nlm::mat3 _mat)
+==========================
 
-Construct a ([*_xxxyxzyxyyyzzxzyzz.x.x*, *_xxxyxzyxyyyzzxzyzz.x.y*], [*_xxxyxzyxyyyzzxzyzz.y.x*, *_xxxyxzyxyyyzzxzyzz.y.y*]) matrix.
+Construct a ([*_mat.x.x*, *_mat.x.y*], [*_mat.y.x*, *_mat.y.y*]) matrix.
 
-:math:`\begin{bmatrix} \_xxxyxzyxyyyzzxzyzz.x.x & \_xxxyxzyxyyyzzxzyzz.y.x \\ \_xxxyxzyxyyyzzxzyzz.x.y & \_xxxyxzyxyyyzzxzyzz.y.y \end{bmatrix}`
+:math:`\begin{bmatrix} \_mat.x.x & \_mat.y.x \\ \_mat.x.y & \_mat.y.y \end{bmatrix}`
 
 Example
 -------

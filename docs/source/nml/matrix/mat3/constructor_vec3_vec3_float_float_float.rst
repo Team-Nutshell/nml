@@ -1,11 +1,11 @@
 :orphan:
 
-mat3: mat3(nml::vec3 _xxxyxz, nml::vec3 _yxyyyz, float _zx, float _zy, float _zz)
-=================================================================================
+mat3: mat3(nml::vec3 _x, nml::vec3 _y, float _zx, float _zy, float _zz)
+=======================================================================
 
-Construct a ([*_xxxyxz.x*, *_xxxyxz.y*, *_xxxyxz.z*], [*_yxyyyz.x*, *_yxyyyz.y*, *_yxyyyz.z*], [*_zx*, *_zy*, *_zz*]) matrix.
+Construct a ([*_x.x*, *_x.y*, *_x.z*], [*_y.x*, *_y.y*, *_y.z*], [*_zx*, *_zy*, *_zz*]) matrix.
 
-:math:`\begin{bmatrix} \_xxxyxz.x & \_yxyyyz.x & \_zx \\ \_xxxyxz.y & \_yxyyyz.y & \_zy \\ \_xxxyxz.z & \_yxyyyz.z & \_zz \end{bmatrix}`
+:math:`\begin{bmatrix} \_x.x & \_y.x & \_zx \\ \_x.y & \_y.y & \_zy \\ \_x.z & \_y.z & \_zz \end{bmatrix}`
 
 Example
 -------

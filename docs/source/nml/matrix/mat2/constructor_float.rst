@@ -1,11 +1,11 @@
 :orphan:
 
-mat2: mat2(float _xxxyyxyy)
-===========================
+mat2: mat2(float _value)
+========================
 
-Construct a ([*_xxxyyxyy*, *_xxxyyxyy*], [*_xxxyyxyy*, *_xxxyyxyy*]) matrix.
+Construct a ([*_value*, *_value*], [*_value*, *_value*]) matrix.
 
-:math:`\begin{bmatrix} \_xxxyyxyy & \_xxxyyxyy \\ \_xxxyyxyy & \_xxxyyxyy \end{bmatrix}`
+:math:`\begin{bmatrix} \_value & \_value \\ \_value & \_value \end{bmatrix}`
 
 Example
 -------

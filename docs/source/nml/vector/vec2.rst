@@ -39,11 +39,11 @@ Constructors
 	+============================================================================+============================================+
 	| :doc:`vec2() </nml/vector/vec2/constructor>`                               | Construct a (0.0, 0.0) vector.             |
 	+----------------------------------------------------------------------------+--------------------------------------------+
-	| :doc:`vec2(float _xy) </nml/vector/vec2/constructor_float>`                | Construct a (*_xy*, *_xy*) vector.         |
+	| :doc:`vec2(float _value) </nml/vector/vec2/constructor_float>`             | Construct a (*_value*, *_value*) vector.   |
 	+----------------------------------------------------------------------------+--------------------------------------------+
 	| :doc:`vec2(float _x, float _y) </nml/vector/vec2/constructor_float_float>` | Construct a (*_x*, *_y*) vector.           |
 	+----------------------------------------------------------------------------+--------------------------------------------+
-	| :doc:`vec2(float* _xy) </nml/vector/vec2/constructor_floatptr>`            | Construct a vector from a pointer.         |
+	| :doc:`vec2(float* _ptr) </nml/vector/vec2/constructor_floatptr>`           | Construct a vector from a pointer.         |
 	+----------------------------------------------------------------------------+--------------------------------------------+
 	| :doc:`vec2(nml::vec3 _xyz) </nml/vector/vec2/constructor_vec3>`            | Construct a (*_xyz.x*, *_xyz.y*) vector.   |
 	+----------------------------------------------------------------------------+--------------------------------------------+

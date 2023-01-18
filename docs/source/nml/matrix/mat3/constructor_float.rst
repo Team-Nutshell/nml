@@ -1,11 +1,11 @@
 :orphan:
 
-mat3: mat3(float _xxxyxzyxyyyzzxzyzz)
-=====================================
+mat3: mat3(float _value)
+========================
 
-Construct a ([*_xxxyxzyxyyyzzxzyzz*, *_xxxyxzyxyyyzzxzyzz*, *_xxxyxzyxyyyzzxzyzz*], [*_xxxyxzyxyyyzzxzyzz*, *_xxxyxzyxyyyzzxzyzz*, *_xxxyxzyxyyyzzxzyzz*], [*_xxxyxzyxyyyzzxzyzz*, *_xxxyxzyxyyyzzxzyzz*, *_xxxyxzyxyyyzzxzyzz*]) matrix.
+Construct a ([*_value*, *_value*, *_value*], [*_value*, *_value*, *_value*], [*_value*, *_value*, *_value*]) matrix.
 
-:math:`\begin{bmatrix} \_xxxyxzyxyyyzzxzyzz & \_xxxyxzyxyyyzzxzyzz & \_xxxyxzyxyyyzzxzyzz \\ \_xxxyxzyxyyyzzxzyzz & \_xxxyxzyxyyyzzxzyzz & \_xxxyxzyxyyyzzxzyzz \\ \_xxxyxzyxyyyzzxzyzz & \_xxxyxzyxyyyzzxzyzz & \_xxxyxzyxyyyzzxzyzz \end{bmatrix}`
+:math:`\begin{bmatrix} \_value & \_value & \_value \\ \_value & \_value & \_value \\ \_value & \_value & \_value \end{bmatrix}`
 
 Example
 -------
