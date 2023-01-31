@@ -1,7 +1,7 @@
 :orphan:
 
-quat: quat(float* _ptr)
-=======================
+quat: quat(const float* _ptr)
+=============================
 
 Construct a quaternion from a pointer.
 

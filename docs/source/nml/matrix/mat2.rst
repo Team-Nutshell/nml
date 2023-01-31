@@ -43,17 +43,17 @@ Constructors
 	+----------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------+
 	| :doc:`mat2(float _xx, float _xy, float _yx, float _yy) </nml/matrix/mat2/constructor_float_float_float_float>` | Construct a ([*_xx*, *_xy*], [*_yx*, *_yy*]) matrix.                     |
 	+----------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------+
-	| :doc:`mat2(float _xx, float _xy, nlm::vec2 _y) </nml/matrix/mat2/constructor_float_float_vec2>`                | Construct a ([*_xx*, *_xy*], [*_y.x*, *_y.y*]) matrix.                   |
+	| :doc:`mat2(float _xx, float _xy, nml::vec2 _y) </nml/matrix/mat2/constructor_float_float_vec2>`                | Construct a ([*_xx*, *_xy*], [*_y.x*, *_y.y*]) matrix.                   |
 	+----------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------+
-	| :doc:`mat2(nlm::vec2 _x, float _yx, float _yy) </nml/matrix/mat2/constructor_vec2_float_float>`                | Construct a ([*_x.x*, *_x.y*], [*_yx*, *_yy*]) matrix.                   |
+	| :doc:`mat2(nml::vec2 _x, float _yx, float _yy) </nml/matrix/mat2/constructor_vec2_float_float>`                | Construct a ([*_x.x*, *_x.y*], [*_yx*, *_yy*]) matrix.                   |
 	+----------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------+
-	| :doc:`mat2(nlm::vec2 _x, nlm::vec2 _y) </nml/matrix/mat2/constructor_float_float_float_float>`                 | Construct a ([*_x.x*, *_x.y*], [*_y.x*, *_y.y*]) matrix.                 |
+	| :doc:`mat2(nml::vec2 _x, nml::vec2 _y) </nml/matrix/mat2/constructor_float_float_float_float>`                 | Construct a ([*_x.x*, *_x.y*], [*_y.x*, *_y.y*]) matrix.                 |
 	+----------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------+
-	| :doc:`mat2(float* _ptr) </nml/matrix/mat2/constructor_floatptr>`                                               | Construct a matrix from a pointer.                                       |
+	| :doc:`mat2(const float* _ptr) </nml/matrix/mat2/constructor_floatptr>`                                         | Construct a matrix from a pointer.                                       |
 	+----------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------+
-	| :doc:`mat2(nlm::mat3 _mat) </nml/matrix/mat2/constructor_mat3>`                                                | Construct a ([*_mat.x.x*, *_mat.x.y*], [*_mat.y.x*, *_mat.y.y*]) matrix. |
+	| :doc:`mat2(nml::mat3 _mat) </nml/matrix/mat2/constructor_mat3>`                                                | Construct a ([*_mat.x.x*, *_mat.x.y*], [*_mat.y.x*, *_mat.y.y*]) matrix. |
 	+----------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------+
-	| :doc:`mat2(nlm::mat4 _mat) </nml/matrix/mat2/constructor_mat4>`                                                | Construct a ([*_mat.x.x*, *_mat.x.y*], [*_mat.y.x*, *_mat.y.y*]) matrix. |
+	| :doc:`mat2(nml::mat4 _mat) </nml/matrix/mat2/constructor_mat4>`                                                | Construct a ([*_mat.x.x*, *_mat.x.y*], [*_mat.y.x*, *_mat.y.y*]) matrix. |
 	+----------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------+
 
 Operators
@@ -71,15 +71,15 @@ Operators
 	+----------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
 	| :doc:`nml::mat2& operator-=(const nml::mat2& other) </nml/matrix/mat2/operator_minus_equal_mat2>`  | Substract a *mat2* from the current *mat2*.                                                                        |
 	+----------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
-	| :doc:`nml::mat2& operator*=(const nlm::mat2& other) </nml/matrix/mat2/operator_times_equal_mat2>`  | Multiply the current *mat2* by a *mat2*.                                                                           |
+	| :doc:`nml::mat2& operator*=(const nml::mat2& other) </nml/matrix/mat2/operator_times_equal_mat2>`  | Multiply the current *mat2* by a *mat2*.                                                                           |
 	+----------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
 	| :doc:`nml::mat2& operator*=(const float other) </nml/matrix/mat2/operator_times_equal_float>`      | Multiply the current *mat2* by a scalar.                                                                           |
 	+----------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
 	| :doc:`nml::mat2& operator/=(const float other) </nml/matrix/mat2/operator_divide_equal_float>`     | Divide the current *mat2* by a scalar.                                                                             |
 	+----------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
-	| :doc:`nlm::vec2& operator[](size_t index) </nml/matrix/mat2/operator_brackets_ref>`                | Return a reference to *x* if index is 0 or a reference to *y* if index is 1, else, throw an exception.             |
+	| :doc:`nml::vec2& operator[](size_t index) </nml/matrix/mat2/operator_brackets_ref>`                | Return a reference to *x* if index is 0 or a reference to *y* if index is 1, else, throw an exception.             |
 	+----------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
-	| :doc:`const nlm::vec2& operator[](size_t index) const </nml/matrix/mat2/operator_brackets_value>`  | Return a const reference to *x* if index is 0 or a const reference to *y* if index is 1, else, throw an exception. |
+	| :doc:`const nml::vec2& operator[](size_t index) const </nml/matrix/mat2/operator_brackets_value>`  | Return a const reference to *x* if index is 0 or a const reference to *y* if index is 1, else, throw an exception. |
 	+----------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
 
 Functions

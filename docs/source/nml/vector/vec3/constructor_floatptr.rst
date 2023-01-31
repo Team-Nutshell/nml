@@ -1,7 +1,7 @@
 :orphan:
 
-vec3: vec3(float* _ptr)
-=======================
+vec3: vec3(const float* _ptr)
+=============================
 
 Construct a vector from a pointer.
 
