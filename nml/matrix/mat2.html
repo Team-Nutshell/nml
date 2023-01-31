@@ -281,22 +281,22 @@
 <tr class="row-even"><td><p><a class="reference internal" href="mat2/constructor_float_float_float_float.html"><span class="doc">mat2(float _xx, float _xy, float _yx, float _yy)</span></a></p></td>
 <td><p>Construct a ([<em>_xx</em>, <em>_xy</em>], [<em>_yx</em>, <em>_yy</em>]) matrix.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="mat2/constructor_float_float_vec2.html"><span class="doc">mat2(float _xx, float _xy, nlm::vec2 _y)</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="mat2/constructor_float_float_vec2.html"><span class="doc">mat2(float _xx, float _xy, nml::vec2 _y)</span></a></p></td>
 <td><p>Construct a ([<em>_xx</em>, <em>_xy</em>], [<em>_y.x</em>, <em>_y.y</em>]) matrix.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="mat2/constructor_vec2_float_float.html"><span class="doc">mat2(nlm::vec2 _x, float _yx, float _yy)</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="mat2/constructor_vec2_float_float.html"><span class="doc">mat2(nml::vec2 _x, float _yx, float _yy)</span></a></p></td>
 <td><p>Construct a ([<em>_x.x</em>, <em>_x.y</em>], [<em>_yx</em>, <em>_yy</em>]) matrix.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="mat2/constructor_float_float_float_float.html"><span class="doc">mat2(nlm::vec2 _x, nlm::vec2 _y)</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="mat2/constructor_float_float_float_float.html"><span class="doc">mat2(nml::vec2 _x, nml::vec2 _y)</span></a></p></td>
 <td><p>Construct a ([<em>_x.x</em>, <em>_x.y</em>], [<em>_y.x</em>, <em>_y.y</em>]) matrix.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="mat2/constructor_floatptr.html"><span class="doc">mat2(float* _ptr)</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="mat2/constructor_floatptr.html"><span class="doc">mat2(const float* _ptr)</span></a></p></td>
 <td><p>Construct a matrix from a pointer.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="mat2/constructor_mat3.html"><span class="doc">mat2(nlm::mat3 _mat)</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="mat2/constructor_mat3.html"><span class="doc">mat2(nml::mat3 _mat)</span></a></p></td>
 <td><p>Construct a ([<em>_mat.x.x</em>, <em>_mat.x.y</em>], [<em>_mat.y.x</em>, <em>_mat.y.y</em>]) matrix.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="mat2/constructor_mat4.html"><span class="doc">mat2(nlm::mat4 _mat)</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="mat2/constructor_mat4.html"><span class="doc">mat2(nml::mat4 _mat)</span></a></p></td>
 <td><p>Construct a ([<em>_mat.x.x</em>, <em>_mat.x.y</em>], [<em>_mat.y.x</em>, <em>_mat.y.y</em>]) matrix.</p></td>
 </tr>
 </tbody>
@@ -321,7 +321,7 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="mat2/operator_minus_equal_mat2.html"><span class="doc">nml::mat2&amp; operator-=(const nml::mat2&amp; other)</span></a></p></td>
 <td><p>Substract a <em>mat2</em> from the current <em>mat2</em>.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="mat2/operator_times_equal_mat2.html"><span class="doc">nml::mat2&amp; operator*=(const nlm::mat2&amp; other)</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="mat2/operator_times_equal_mat2.html"><span class="doc">nml::mat2&amp; operator*=(const nml::mat2&amp; other)</span></a></p></td>
 <td><p>Multiply the current <em>mat2</em> by a <em>mat2</em>.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="mat2/operator_times_equal_float.html"><span class="doc">nml::mat2&amp; operator*=(const float other)</span></a></p></td>
@@ -330,10 +330,10 @@
 <tr class="row-even"><td><p><a class="reference internal" href="mat2/operator_divide_equal_float.html"><span class="doc">nml::mat2&amp; operator/=(const float other)</span></a></p></td>
 <td><p>Divide the current <em>mat2</em> by a scalar.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="mat2/operator_brackets_ref.html"><span class="doc">nlm::vec2&amp; operator[](size_t index)</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="mat2/operator_brackets_ref.html"><span class="doc">nml::vec2&amp; operator[](size_t index)</span></a></p></td>
 <td><p>Return a reference to <em>x</em> if index is 0 or a reference to <em>y</em> if index is 1, else, throw an exception.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="mat2/operator_brackets_value.html"><span class="doc">const nlm::vec2&amp; operator[](size_t index) const</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="mat2/operator_brackets_value.html"><span class="doc">const nml::vec2&amp; operator[](size_t index) const</span></a></p></td>
 <td><p>Return a const reference to <em>x</em> if index is 0 or a const reference to <em>y</em> if index is 1, else, throw an exception.</p></td>
 </tr>
 </tbody>

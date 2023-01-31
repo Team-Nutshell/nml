@@ -306,10 +306,10 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="mat3/constructor_vec3_vec3_vec3.html"><span class="doc">mat3(nml::vec3 _x, nml::vec3 _y, nml::vec3 _z)</span></a></p></td>
 <td><p>Construct a ([<em>_x.x</em>, <em>_x.y</em>, <em>_x.z</em>], [<em>_y.x</em>, <em>_y.y</em>, <em>_y.z</em>], [<em>_z.x</em>, <em>_z.y</em>, <em>_z.z</em>]) matrix.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="mat3/constructor_floatptr.html"><span class="doc">mat3(float* _ptr)</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="mat3/constructor_floatptr.html"><span class="doc">mat3(const float* _ptr)</span></a></p></td>
 <td><p>Construct a matrix from a pointer.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="mat3/constructor_mat4.html"><span class="doc">mat3(nlm::mat4 _mat)</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="mat3/constructor_mat4.html"><span class="doc">mat3(nml::mat4 _mat)</span></a></p></td>
 <td><p>Construct a ([<em>_mat.x.x</em>, <em>_mat.x.y</em>, <em>_mat.x.z</em>], [<em>_mat.y.x</em>, <em>_mat.y.y</em>, <em>_mat.y.z</em>], [<em>_mat.z.x</em>, <em>_mat.z.y</em>, <em>_mat.z.z</em>]) matrix.</p></td>
 </tr>
 </tbody>
@@ -334,7 +334,7 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="mat3/operator_minus_equal_mat3.html"><span class="doc">nml::mat3&amp; operator-=(const nml::mat3&amp; other)</span></a></p></td>
 <td><p>Substract a <em>mat3</em> from the current <em>mat3</em>.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="mat3/operator_times_equal_mat3.html"><span class="doc">nml::mat3&amp; operator*=(const nlm::mat3&amp; other)</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="mat3/operator_times_equal_mat3.html"><span class="doc">nml::mat3&amp; operator*=(const nml::mat3&amp; other)</span></a></p></td>
 <td><p>Multiply the current <em>mat3</em> by a <em>mat3</em>.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="mat3/operator_times_equal_float.html"><span class="doc">nml::mat3&amp; operator*=(const float other)</span></a></p></td>
@@ -343,10 +343,10 @@
 <tr class="row-even"><td><p><a class="reference internal" href="mat3/operator_divide_equal_float.html"><span class="doc">nml::mat3&amp; operator/=(const float other)</span></a></p></td>
 <td><p>Divide the current <em>mat3</em> by a scalar.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="mat3/operator_brackets_ref.html"><span class="doc">nlm::vec3&amp; operator[](size_t index)</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="mat3/operator_brackets_ref.html"><span class="doc">nml::vec3&amp; operator[](size_t index)</span></a></p></td>
 <td><p>Return a reference to <em>x</em> if index is 0, a reference to <em>y</em> if index is 1 or a reference to <em>z</em> if index is 2, else, throw an exception.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="mat3/operator_brackets_value.html"><span class="doc">const nlm::vec3&amp; operator[](size_t index) const</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="mat3/operator_brackets_value.html"><span class="doc">const nml::vec3&amp; operator[](size_t index) const</span></a></p></td>
 <td><p>Return a const reference to <em>x</em> if index is 0, a const reference to <em>y</em> if index is 1 or a const reference to <em>z</em> if index is 2, else, throw an exception.</p></td>
 </tr>
 </tbody>
