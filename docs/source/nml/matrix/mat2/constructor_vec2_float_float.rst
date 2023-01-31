@@ -1,7 +1,7 @@
 :orphan:
 
-mat2: mat2(nlm::vec2 _x, float _yx, float _yy)
-=================================================
+mat2: mat2(nml::vec2 _x, float _yx, float _yy)
+==============================================
 
 Construct a ([*_x.x*, *_x.y*], [*_yx*, *_yy*]) matrix.
 

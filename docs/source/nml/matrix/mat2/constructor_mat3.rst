@@ -1,6 +1,6 @@
 :orphan:
 
-mat2: mat2(nlm::mat3 _mat)
+mat2: mat2(nml::mat3 _mat)
 ==========================
 
 Construct a ([*_mat.x.x*, *_mat.x.y*], [*_mat.y.x*, *_mat.y.y*]) matrix.

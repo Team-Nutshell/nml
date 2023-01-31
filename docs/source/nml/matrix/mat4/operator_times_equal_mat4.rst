@@ -1,6 +1,6 @@
 :orphan:
 
-mat4: nml::mat4& operator*=(const nlm::mat4& other)
+mat4: nml::mat4& operator*=(const nml::mat4& other)
 ===================================================
 
 Multiply to the current *mat4* by a *mat4*.

@@ -1,7 +1,7 @@
 :orphan:
 
-mat4: mat4(float* _ptr)
-=======================
+mat4: mat4(const float* _ptr)
+=============================
 
 Construct a matrix from a pointer.
 

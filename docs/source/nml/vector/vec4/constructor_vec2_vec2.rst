@@ -1,6 +1,6 @@
 :orphan:
 
-vec4: vec4(nlm::vec2 _xy, nlm::vec2 _zw)
+vec4: vec4(nml::vec2 _xy, nml::vec2 _zw)
 ========================================
 
 Construct a (*_xy.x*, *_xy.y*, *_zw.x*, *_zw.y*) vector.
