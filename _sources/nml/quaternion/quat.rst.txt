@@ -108,7 +108,7 @@ Operators
 	+-------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------+
 	| :doc:`nml::quat operator-(nml::quat lhs, const nml::quat& rhs) </nml/namespace/nml_operator_minus_quat_quat>`           | Return a *quat* that is the difference between two *quat*.          |
 	+-------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------+
-	| :doc:`nml::quat operator*(nml::quat lhs, const float rhs) </nml/namespace/nml_operator_times_quat_float>`               | Return a *quat* that is the product between two *quat*.             |
+	| :doc:`nml::quat operator*(nml::quat lhs, const nml::quat& rhs) </nml/namespace/nml_operator_times_quat_quat>`           | Return a *quat* that is the product between two *quat*.             |
 	+-------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------+
 	| :doc:`nml::quat operator*(nml::quat lhs, const float rhs) </nml/namespace/nml_operator_times_quat_float>`               | Return a *quat* that is the product between a *quat* and a scalar.  |
 	+-------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------+
