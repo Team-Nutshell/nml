@@ -3,9 +3,9 @@
 nml::quat operator*(nml::quat lhs, const nml::quat& rhs)
 =========================================================
 
-Return a *quat* that is the product between a *quat* and a scalar.
+Return a *quat* that is the product between two *quat*.
 
-The product between a *quat* and a scalar is calculated this way:
+The product between two *quat* is calculated this way:
 
 :math:`(lhs.a + lhs.bi + lhs.cj + lhs.dk) * (rhs.a + rhs.bi + rhs.cj + rhs.dk) =`
 
