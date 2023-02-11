@@ -134,8 +134,8 @@
              
   <section id="nml-quat-operator-nml-quat-lhs-const-nml-quat-rhs">
 <h1>nml::quat operator*(nml::quat lhs, const nml::quat&amp; rhs)<a class="headerlink" href="#nml-quat-operator-nml-quat-lhs-const-nml-quat-rhs" title="Permalink to this heading"></a></h1>
-<p>Return a <em>quat</em> that is the product between a <em>quat</em> and a scalar.</p>
-<p>The product between a <em>quat</em> and a scalar is calculated this way:</p>
+<p>Return a <em>quat</em> that is the product between two <em>quat</em>.</p>
+<p>The product between two <em>quat</em> is calculated this way:</p>
 <p><span class="math notranslate nohighlight">\((lhs.a + lhs.bi + lhs.cj + lhs.dk) * (rhs.a + rhs.bi + rhs.cj + rhs.dk) =\)</span></p>
 <p><span class="math notranslate nohighlight">\(((lhs.a * rhs.a) - (lhs.b * rhs.b) - (lhs.c * rhs.c) - (lhs.d * rhs.d)) +\)</span>
 <span class="math notranslate nohighlight">\(((lhs.a * rhs.b) + (lhs.b * rhs.a) + (lhs.c * rhs.d) - (lhs.d * rhs.c))i +\)</span>
