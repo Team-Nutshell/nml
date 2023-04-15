@@ -10,13 +10,21 @@ The conversion from quaternion to a *mat4* rotation matrix is calculated this wa
 :math:`\begin{bmatrix} a & d & g & 0.0 \\ b & e & h & 0.0 \\ c & f & i & 0.0 \\ 0.0 & 0.0 & 0.0 & 1.0 \end{bmatrix}`
 
 :math:`a = 1.0 - 2.0 * (qua.c^2 + qua.d^2)`
+
 :math:`b = 2.0 * (qua.b * qua.c - qua.a * qua.d)`
+
 :math:`c = 2.0 * (qua.b * qua.d + qua.a * qua.c)`
+
 :math:`d = 2.0 * (qua.b * qua.c + qua.a * qua.d)`
+
 :math:`e = 1.0 - 2.0 * (qua.b^2 + qua.d^2)`
+
 :math:`f = 2.0 * (qua.c * qua.d - qua.a * qua.b)`
+
 :math:`g = 2.0 * (qua.b * qua.d - qua.a * qua.c)`
+
 :math:`h = 1.0 - 2.0 * (qua.b^2 + qua.d^2)`
+
 :math:`i = 1.0 - 2.0 * (qua.b^2 + qua.c^2)`
 
 Example
