@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.0 FATAL_ERROR)
+cmake_minimum_required(VERSION 3.5 FATAL_ERROR)
 set(NAME nml)
 project(${NAME} VERSION 1.0.0 LANGUAGES C CXX)
 
