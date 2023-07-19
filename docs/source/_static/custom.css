@@ -63,18 +63,18 @@ body {
 }
 
 .btn-neutral {
-	color: #c6c7c8;
-	background-color: #2f2d2d;
+	color: #c6c7c8 !important;
+	background-color: #2f2d2d !important;
 }
 
 .btn-neutral:hover {
-	color: #c6c7c8;
-	background-color: #272727;
+	color: #c6c7c8 !important;
+	background-color: #272727 !important;
 }
 
 .btn-neutral:visited {
 	color: #c6c7c8 !important;
-	background-color: #2f2d2d;
+	background-color: #2f2d2d !important;
 }
 
 a {
