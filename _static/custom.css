@@ -26,6 +26,11 @@ body {
 	color: #c6c7c8;
 }
 
+.wy-side-nav-search input[type="text"] {
+	color: #e8e8e8;
+	background-color: #272727;
+}
+
 .wy-menu-vertical li.toctree-l2 a, .wy-menu-vertical li.toctree-l3 a, .wy-menu-vertical li.toctree-l4 a, .wy-menu-vertical li.toctree-l5 a, .wy-menu-vertical li.toctree-l6 a, .wy-menu-vertical li.toctree-l7 a, .wy-menu-vertical li.toctree-l8 a, .wy-menu-vertical li.toctree-l9 a, .wy-menu-vertical li.toctree-l10 a {
 	color: #c6c7c8;
 	background-color: #2f2d2d;
@@ -55,6 +60,21 @@ body {
 
 .wy-menu-vertical li.current > a:hover, .wy-menu-vertical li.on a:hover {
 	background: #2f2d2d;
+}
+
+.btn-neutral {
+	color: #c6c7c8;
+	background-color: #2f2d2d;
+}
+
+.btn-neutral:hover {
+	color: #c6c7c8;
+	background-color: #272727;
+}
+
+.btn-neutral:visited {
+	color: #c6c7c8 !important;
+	background-color: #2f2d2d;
 }
 
 a {
