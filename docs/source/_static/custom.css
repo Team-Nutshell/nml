@@ -14,6 +14,25 @@ body {
 	background: #2f2d2d;
 }
 
+.wy-menu-vertical li.toctree-l2 a, .wy-menu-vertical li.toctree-l3 a, .wy-menu-vertical li.toctree-l4 a, .wy-menu-vertical li.toctree-l5 a, .wy-menu-vertical li.toctree-l6 a, .wy-menu-vertical li.toctree-l7 a, .wy-menu-vertical li.toctree-l8 a, .wy-menu-vertical li.toctree-l9 a, .wy-menu-vertical li.toctree-l10 a {
+	color: #c6c7c8;
+	background-color: #2f2d2d;
+}
+
+.wy-menu-vertical li button.toctree-expand {
+	color: #c6c7c8;
+}
+
+.wy-menu-vertical li.toctree-l1.current > a {
+	border-bottom: 1px solid #272727;
+	border-top: 1px solid #272727;
+}
+
+.wy-menu-vertical li.current > a, .wy-menu-vertical li.on a {
+	color: #999;
+	background: #272727;
+}
+
 a {
 	color: #72b2fb;
 }
