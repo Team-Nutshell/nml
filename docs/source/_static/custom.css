@@ -33,7 +33,7 @@ body {
 
 .wy-menu-vertical li.toctree-l2 a, .wy-menu-vertical li.toctree-l3 a, .wy-menu-vertical li.toctree-l4 a, .wy-menu-vertical li.toctree-l5 a, .wy-menu-vertical li.toctree-l6 a, .wy-menu-vertical li.toctree-l7 a, .wy-menu-vertical li.toctree-l8 a, .wy-menu-vertical li.toctree-l9 a, .wy-menu-vertical li.toctree-l10 a {
 	color: #c6c7c8;
-	background-color: #2f2d2d;
+	background-color: #2f2d2d !important;
 }
 
 .wy-menu-vertical li.toctree-l2 a:hover, .wy-menu-vertical li.toctree-l3 a:hover, .wy-menu-vertical li.toctree-l4 a:hover, .wy-menu-vertical li.toctree-l5 a:hover, .wy-menu-vertical li.toctree-l6 a:hover, .wy-menu-vertical li.toctree-l7 a:hover, .wy-menu-vertical li.toctree-l8 a:hover, .wy-menu-vertical li.toctree-l9 a:hover, .wy-menu-vertical li.toctree-l10 a:hover {
