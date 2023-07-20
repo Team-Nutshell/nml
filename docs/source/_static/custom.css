@@ -6,6 +6,10 @@ body {
 	color: #c6c7c8;
 }
 
+footer {
+	color: #bbb;
+}
+
 .wy-nav-content-wrap {
 	background: #2f2d2d;
 }
@@ -81,6 +85,10 @@ a {
 	color: #72b2fb;
 }
 
+a:visited {
+	color: #c286db;
+}
+
 .rst-content code.literal, .rst-content tt.literal {
 	color: #999999;
 	font-weight: bold;
@@ -103,8 +111,20 @@ a {
 	background-color: #272727;
 }
 
+.rst-content div[class^="highlight"], .rst-content pre.literal-block {
+	border: 0px;
+}
+
 .highlight .c1 {
 	color: #62b950;
+}
+
+.highlight .cp {
+	color: #F2A10B;
+}
+
+.highlight .cpf {
+	color: #6ED2D2;
 }
 
 .highlight .k, .highlight .kv {
