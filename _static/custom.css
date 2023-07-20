@@ -62,6 +62,10 @@ footer {
 	border-top: 1px solid #272727;
 }
 
+.wy-menu-vertical a:visited {
+	color: inherit;
+}
+
 .wy-menu-vertical li.current > a, .wy-menu-vertical li.on a {
 	color: #999;
 	background: #272727;
@@ -69,6 +73,10 @@ footer {
 
 .wy-menu-vertical li.current > a:hover, .wy-menu-vertical li.on a:hover {
 	background: #2f2d2d;
+}
+
+.wy-side-nav-search .wy-dropdown > a:visited, .wy-side-nav-search > a:visited {
+	color: inherit;
 }
 
 .btn-neutral {
