@@ -6,6 +6,14 @@ body {
 	color: #c6c7c8;
 }
 
+hr {
+	border-top: 1px solid #c6c7c8;
+}
+
+footer {
+	color: #bbb;
+}
+
 .wy-nav-content-wrap {
 	background: #2f2d2d;
 }
@@ -34,6 +42,7 @@ body {
 .wy-menu-vertical li.toctree-l2 a, .wy-menu-vertical li.toctree-l3 a, .wy-menu-vertical li.toctree-l4 a, .wy-menu-vertical li.toctree-l5 a, .wy-menu-vertical li.toctree-l6 a, .wy-menu-vertical li.toctree-l7 a, .wy-menu-vertical li.toctree-l8 a, .wy-menu-vertical li.toctree-l9 a, .wy-menu-vertical li.toctree-l10 a {
 	color: #c6c7c8;
 	background-color: #2f2d2d !important;
+	border-right-width: 0;
 }
 
 .wy-menu-vertical li.toctree-l2 a:hover, .wy-menu-vertical li.toctree-l3 a:hover, .wy-menu-vertical li.toctree-l4 a:hover, .wy-menu-vertical li.toctree-l5 a:hover, .wy-menu-vertical li.toctree-l6 a:hover, .wy-menu-vertical li.toctree-l7 a:hover, .wy-menu-vertical li.toctree-l8 a:hover, .wy-menu-vertical li.toctree-l9 a:hover, .wy-menu-vertical li.toctree-l10 a:hover {
@@ -81,6 +90,10 @@ a {
 	color: #72b2fb;
 }
 
+a:visited {
+	color: #c286db;
+}
+
 .rst-content code.literal, .rst-content tt.literal {
 	color: #999999;
 	font-weight: bold;
@@ -99,12 +112,42 @@ a {
 	background-color: #2f2d2d;
 }
 
+html.writer-html5 .rst-content table.docutils th {
+	border: 1px solid #484848;
+}
+
+.rst-content table.docutils td, .wy-table-bordered-all td {
+	border-bottom: 1px solid #484848;
+	border-left: 1px solid #484848;
+	border-right: 1px solid #484848;
+}
+
+.rst-content table.docutils td:first-child, .rst-content table.docutils th:first-child, .rst-content table.field-list td:first-child, .rst-content table.field-list th:first-child, .wy-table td:first-child, .wy-table th:first-child {
+	border-left: 1px solid #484848;
+}
+
+.rst-content table.docutils tbody > tr:last-child td, .wy-table-bordered-all tbody > tr:last-child td {
+	border-bottom: 1px solid #484848;
+}
+
 .rst-content .linenodiv pre, .rst-content div[class^="highlight"] pre, .rst-content pre.literal-block {
 	background-color: #272727;
 }
 
+.rst-content div[class^="highlight"], .rst-content pre.literal-block {
+	border: 0px;
+}
+
 .highlight .c1 {
 	color: #62b950;
+}
+
+.highlight .cp {
+	color: #F2A10B;
+}
+
+.highlight .cpf {
+	color: #6ED2D2;
 }
 
 .highlight .k, .highlight .kv {
