@@ -106,6 +106,7 @@ a:visited {
 	color: #999999;
 	font-weight: bold;
 	background-color: #272727;
+	border-width: 0;
 }
 
 .rst-content table.docutils thead, .rst-content table.field-list thead, .wy-table thead {
