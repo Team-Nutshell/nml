@@ -15,6 +15,8 @@ set(NML_SOURCES
 	src/mat4.cpp
 
 	src/quat.cpp
+
+	src/other.cpp
 )
 set(NML_HEADERS
 	include/vec2.h
@@ -26,6 +28,8 @@ set(NML_HEADERS
 	include/mat4.h
 
 	include/quat.h
+
+	include/other.h
 
 	include/nml.h
 )
