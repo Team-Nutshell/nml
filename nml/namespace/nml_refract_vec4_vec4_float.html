@@ -12,11 +12,11 @@
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/doctools.js"></script>
-        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=58fbf978"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -105,6 +105,10 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../other/index.html">Other</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../other/index.html#namespace-functions">Namespace functions</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -134,14 +138,14 @@
            <div itemprop="articleBody">
              
   <section id="nml-vec4-nml-refract-const-nml-vec4-i-const-nml-vec4-n-float-ior">
-<h1>nml::vec4 nml::refract(const nml::vec4&amp; i, const nml::vec4&amp; n, float ior)<a class="headerlink" href="#nml-vec4-nml-refract-const-nml-vec4-i-const-nml-vec4-n-float-ior" title="Permalink to this heading"></a></h1>
+<h1>nml::vec4 nml::refract(const nml::vec4&amp; i, const nml::vec4&amp; n, float ior)<a class="headerlink" href="#nml-vec4-nml-refract-const-nml-vec4-i-const-nml-vec4-n-float-ior" title="Link to this heading"></a></h1>
 <p>Return the refracted direction between the incident vector <em>i</em>, the normal <em>n</em> and the ratio of indices of refraction <em>ior</em>. <em>n</em> should be normalized.</p>
 <p>The refracted direction between the incident vector <em>i</em>, the normal <em>n</em> and the ratio of indices of refraction <em>ior</em> is calculated this way:</p>
 <p><span class="math notranslate nohighlight">\(k = 1.0 - ior^2 * (1.0 - (\begin{bmatrix} n.x \\ n.y \\ n.z \\ n.w \end{bmatrix} \cdot \begin{bmatrix} i.x \\ i.y \\ i.z \\ i.w \end{bmatrix})^2)\)</span></p>
 <p><span class="math notranslate nohighlight">\(\begin{cases} \begin{bmatrix} 0.0 \\ 0.0 \\ 0.0 \\ 0.0 \end{bmatrix}, &amp; \text{if } k &lt; 0.0 \\ ior * \begin{bmatrix} i.x \\ i.y \\ i.z \\ i.w \end{bmatrix} - (ior * (\begin{bmatrix} n.x \\ n.y \\ n.z \\ n.w \end{bmatrix} \cdot \begin{bmatrix} i.x \\ i.y \\ i.z \\ i.w \end{bmatrix} + \sqrt{k})) * \begin{bmatrix} n.x \\ n.y \\ n.z \\ n.w \end{bmatrix}, &amp; \text{otherwise} \end{cases}\)</span></p>
 <p><strong>The refract function does not normalize the vector n.</strong></p>
 <section id="example">
-<h2>Example<a class="headerlink" href="#example" title="Permalink to this heading"></a></h2>
+<h2>Example<a class="headerlink" href="#example" title="Link to this heading"></a></h2>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;include/vec4.h&quot;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
 

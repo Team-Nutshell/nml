@@ -12,11 +12,11 @@
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/doctools.js"></script>
-        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=58fbf978"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -105,6 +105,10 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../other/index.html">Other</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../other/index.html#namespace-functions">Namespace functions</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -134,13 +138,13 @@
            <div itemprop="articleBody">
              
   <section id="nml-mat4-operator-nml-mat4-lhs-const-float-rhs">
-<h1>nml::mat4 operator*(nml::mat4 lhs, const float rhs)<a class="headerlink" href="#nml-mat4-operator-nml-mat4-lhs-const-float-rhs" title="Permalink to this heading"></a></h1>
+<h1>nml::mat4 operator*(nml::mat4 lhs, const float rhs)<a class="headerlink" href="#nml-mat4-operator-nml-mat4-lhs-const-float-rhs" title="Link to this heading"></a></h1>
 <p>Return a <em>mat4</em> that is the product between a <em>mat4</em> and a scalar.</p>
 <p>The product between a <em>mat4</em> and a scalar is calculated this way:</p>
 <p><span class="math notranslate nohighlight">\(\begin{bmatrix} lhs.x.x &amp; lhs.y.x &amp; lhs.z.x &amp; lhs.w.x \\ lhs.x.y &amp; lhs.y.y &amp; lhs.z.y &amp; lhs.w.y \\ lhs.x.z &amp; lhs.y.z &amp; lhs.z.z &amp; lhs.w.z \\ lhs.x.w &amp; lhs.y.w &amp; lhs.z.w &amp; lhs.w.w \end{bmatrix} * rhs =\)</span></p>
 <p><span class="math notranslate nohighlight">\(\begin{bmatrix} lhs.x.x * rhs &amp; lhs.y.x * rhs &amp; lhs.z.x * rhs &amp; lhs.w.x * rhs \\ lhs.x.y * rhs &amp; lhs.y.y * rhs &amp; lhs.z.y * rhs &amp; lhs.w.y * rhs \\ lhs.x.z * rhs &amp; lhs.y.z * rhs &amp; lhs.z.z * rhs &amp; lhs.w.z * rhs \\ lhs.x.w * rhs &amp; lhs.y.w * rhs &amp; lhs.z.w * rhs &amp; lhs.w.w * rhs \end{bmatrix}\)</span></p>
 <section id="example">
-<h2>Example<a class="headerlink" href="#example" title="Permalink to this heading"></a></h2>
+<h2>Example<a class="headerlink" href="#example" title="Link to this heading"></a></h2>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;include/mat4.h&quot;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
 

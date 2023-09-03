@@ -39,6 +39,10 @@ footer {
 	background-color: #272727;
 }
 
+.wy-nav-top {
+	background: #5d3913;
+}
+
 .wy-menu-vertical li.toctree-l2 a, .wy-menu-vertical li.toctree-l3 a, .wy-menu-vertical li.toctree-l4 a, .wy-menu-vertical li.toctree-l5 a, .wy-menu-vertical li.toctree-l6 a, .wy-menu-vertical li.toctree-l7 a, .wy-menu-vertical li.toctree-l8 a, .wy-menu-vertical li.toctree-l9 a, .wy-menu-vertical li.toctree-l10 a {
 	color: #c6c7c8;
 	background-color: #2f2d2d !important;

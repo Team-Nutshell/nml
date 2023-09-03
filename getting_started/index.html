@@ -12,11 +12,11 @@
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=58fbf978"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -106,6 +106,10 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../nml/other/index.html">Other</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../nml/other/index.html#namespace-functions">Namespace functions</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -135,16 +139,16 @@
            <div itemprop="articleBody">
              
   <section id="getting-started">
-<h1>Getting started<a class="headerlink" href="#getting-started" title="Permalink to this heading"></a></h1>
+<h1>Getting started<a class="headerlink" href="#getting-started" title="Link to this heading"></a></h1>
 <section id="get-nml">
-<h2>Get nml<a class="headerlink" href="#get-nml" title="Permalink to this heading"></a></h2>
+<h2>Get nml<a class="headerlink" href="#get-nml" title="Link to this heading"></a></h2>
 <p>nml is available on <a class="reference external" href="https://github.com/Team-Nutshell/nml">GitHub</a>.</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/Team-Nutshell/nml.git
 </pre></div>
 </div>
 </section>
 <section id="add-nml-to-a-cmake-project">
-<h2>Add nml to a CMake project<a class="headerlink" href="#add-nml-to-a-cmake-project" title="Permalink to this heading"></a></h2>
+<h2>Add nml to a CMake project<a class="headerlink" href="#add-nml-to-a-cmake-project" title="Link to this heading"></a></h2>
 <p>nml can be built as a static library with the library name <code class="docutils literal notranslate"><span class="pre">nml</span></code>.</p>
 <p>Replace <em>&lt;path_to_nml&gt;</em> by the path to the nml source code directory.</p>
 <div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="nb">add_subdirectory</span><span class="p">(</span><span class="s">&lt;path_to_nml&gt;/nml</span><span class="p">)</span>
@@ -155,7 +159,7 @@
 </div>
 </section>
 <section id="use-nml">
-<h2>Use nml<a class="headerlink" href="#use-nml" title="Permalink to this heading"></a></h2>
+<h2>Use nml<a class="headerlink" href="#use-nml" title="Link to this heading"></a></h2>
 <p>In these samples, replace <em>&lt;path_to_nml&gt;</em> by the path to the nml source code directory.</p>
 <p>It is possible to include the entire nml library with one <code class="docutils literal notranslate"><span class="pre">include</span></code>:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;&lt;path_to_nml&gt;/include/nml.h&quot;</span>
