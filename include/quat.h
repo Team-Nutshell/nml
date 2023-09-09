@@ -45,6 +45,8 @@ bool operator!=(const quat& lhs, const quat& rhs);
 // Functions
 quat conjugate(const quat& qua);
 quat normalize(const quat& qua);
+float dot(const quat& a, const quat& b);
+quat slerp(const quat& a, const quat& b, const float interpolationValue);
 
 quat to_quat(const vec3& vec);
 std::string to_string(const quat& qua);

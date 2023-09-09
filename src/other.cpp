@@ -7,3 +7,7 @@ float nml::toRad(const float degrees) {
 float nml::toDeg(const float radians) {
 	return radians * (180.0f / PI);
 }
+
+float nml::lerp(const float a, const float b, const float interpolationValue) {
+	return a + interpolationValue * (b - a);
+}

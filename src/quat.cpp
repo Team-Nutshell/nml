@@ -135,6 +135,35 @@ quat normalize(const quat& qua) {
 	return (qua / l);
 }
 
+float dot(const quat& a, const quat& b) {
+	return ((a.a * b.a) + (a.b * b.b) + (a.c * b.c) + (a.d * b.d));
+}
+
+quat slerp(const quat& a, const quat& b, const float interpolationValue) {
+	quat tmpB = b;
+
+	float aDotb = dot(a, b);
+
+	if (aDotb < 0.0) {
+		tmpB = tmpB * -1.0f;
+		aDotb = -aDotb;
+	}
+
+	if (aDotb > 0.9995) {
+		return nml::normalize(a + interpolationValue * (tmpB - a));
+	}
+
+	const float theta0 = std::acos(aDotb);
+	const float theta = interpolationValue * theta0;
+	const float sinTheta0 = std::sin(theta0);
+	const float sinTheta = std::sin(theta);
+
+	float scaleA = std::cos(theta) - aDotb * (sinTheta / sinTheta0);
+	float scaleB = sinTheta / sinTheta0;
+
+	return (scaleA * a + scaleB * tmpB);
+}
+
 quat to_quat(const vec3& vec) {
 	const float cosHalfPhi = std::cos(vec.x / 2.0f);
 	const float sinHalfPhi = std::sin(vec.x / 2.0f);
