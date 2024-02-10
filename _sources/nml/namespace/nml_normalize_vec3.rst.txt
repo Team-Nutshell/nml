@@ -7,7 +7,7 @@ Return a *vec3* with the same direction as *vec* but with length 1.
 
 The normalization of a *vec3* is calculated this way:
 	
-:math:`norm(\begin{bmatrix} vec.x \\ vec.y \\ vec.z \end{bmatrix}) = \begin{bmatrix} \frac{vec.x}{\left \| vec \right \|} \\ \frac{vec.y}{\left \| vec \right \|} \\ \frac{vec.z}{\left \| vec \right \|} \end{bmatrix}`
+:math:`normalize(\begin{bmatrix} vec.x \\ vec.y \\ vec.z \end{bmatrix}) = \begin{bmatrix} \frac{vec.x}{\left \| vec \right \|} \\ \frac{vec.y}{\left \| vec \right \|} \\ \frac{vec.z}{\left \| vec \right \|} \end{bmatrix}`
 
 Example
 -------

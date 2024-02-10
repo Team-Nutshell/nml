@@ -408,10 +408,13 @@
 <tr class="row-even"><td><p><a class="reference internal" href="../namespace/nml_perspectiverh_float_float_float_float.html"><span class="doc">nml::mat4 perspectiveRH(const float fovY, const float aspectRatio, const float near, const float far)</span></a></p></td>
 <td><p>Return a right-hand perspective projection matrix.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="../namespace/nml_to_mat4_quat.html"><span class="doc">nml::mat4 to_mat4(const quat&amp; qua)</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../namespace/nml_decompose_mat4_vec3_quat_vec3.html"><span class="doc">void nml::decomposeTransform(const nml::mat4&amp; transform, nml::vec3&amp; translation, nml::quat&amp; rotation, nml::vec3&amp; scale)</span></a></p></td>
+<td><p>Decompose a transform matrix into a translation vector, a rotation quaternion and a scale vector.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../namespace/nml_to_mat4_quat.html"><span class="doc">nml::mat4 to_mat4(const quat&amp; qua)</span></a></p></td>
 <td><p>Return a 3D rotation matrix from a quaternion.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="../namespace/nml_to_string_mat4.html"><span class="doc">std::string nml::to_string(const nml::mat4&amp; mat)</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../namespace/nml_to_string_mat4.html"><span class="doc">std::string nml::to_string(const nml::mat4&amp; mat)</span></a></p></td>
 <td><p>Return a <em>mat4</em> as a string under the format “[[<em>x.x</em>, <em>x.y</em>, <em>x.z</em>, <em>x.w</em>], [<em>y.x</em>, <em>y.y</em>, <em>y.z</em>, <em>y.w</em>], [<em>z.x</em>, <em>z.y</em>, <em>z.z</em>, <em>z.w</em>], [<em>w.x</em>, <em>w.y</em>, <em>w.z</em>, <em>w.w</em>]]”.</p></td>
 </tr>
 </tbody>

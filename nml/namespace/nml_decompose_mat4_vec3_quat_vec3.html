@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>nml::vec3 nml::normalize(const nml::vec3&amp; vec) &mdash; nml - Nutshell Mathematics Library 1.1.1 documentation</title>
+  <title>void nml::decomposeTransform(const nml::mat4&amp; transform, nml::vec3&amp; translation, nml::quat&amp; rotation, nml::vec3&amp; scale) &mdash; nml - Nutshell Mathematics Library 1.1.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=b9ddcbf2" />
@@ -129,9 +129,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">nml::vec3 nml::normalize(const nml::vec3&amp; vec)</li>
+      <li class="breadcrumb-item active">void nml::decomposeTransform(const nml::mat4&amp; transform, nml::vec3&amp; translation, nml::quat&amp; rotation, nml::vec3&amp; scale)</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../../_sources/nml/namespace/nml_normalize_vec3.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/nml/namespace/nml_decompose_mat4_vec3_quat_vec3.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -139,31 +139,39 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="nml-vec3-nml-normalize-const-nml-vec3-vec">
-<h1>nml::vec3 nml::normalize(const nml::vec3&amp; vec)<a class="headerlink" href="#nml-vec3-nml-normalize-const-nml-vec3-vec" title="Link to this heading"></a></h1>
-<p>Return a <em>vec3</em> with the same direction as <em>vec</em> but with length 1.</p>
-<p>The normalization of a <em>vec3</em> is calculated this way:</p>
-<p><span class="math notranslate nohighlight">\(normalize(\begin{bmatrix} vec.x \\ vec.y \\ vec.z \end{bmatrix}) = \begin{bmatrix} \frac{vec.x}{\left \| vec \right \|} \\ \frac{vec.y}{\left \| vec \right \|} \\ \frac{vec.z}{\left \| vec \right \|} \end{bmatrix}\)</span></p>
+  <section id="void-nml-decomposetransform-const-nml-mat4-transform-nml-vec3-translation-nml-quat-rotation-nml-vec3-scale">
+<h1>void nml::decomposeTransform(const nml::mat4&amp; transform, nml::vec3&amp; translation, nml::quat&amp; rotation, nml::vec3&amp; scale)<a class="headerlink" href="#void-nml-decomposetransform-const-nml-mat4-transform-nml-vec3-translation-nml-quat-rotation-nml-vec3-scale" title="Link to this heading"></a></h1>
+<p>Decompose a transform matrix into a translation vector, a rotation quaternion and a scale vector.</p>
+<p>The decomposition of a transform matrix into a translation vector, a rotation quaternion and a scale vector is calculated this way:</p>
+<p><span class="math notranslate nohighlight">\(translation = \begin{bmatrix} transform.w.x \\ transform.w.y \\ transform.w.z \end{bmatrix}\)</span></p>
+<p><span class="math notranslate nohighlight">\(rotation.a = \frac{\sqrt{1 + \frac{transform.x.x}{\left \| transform.x \right \|} + \frac{transform.y.y}{\left \| transform.y \right \|} + \frac{transform.z.z}{\left \| transform.z \right \|}}}{2}\)</span></p>
+<p><span class="math notranslate nohighlight">\(rotation.b = \frac{\frac{transform.z.y}{\left \| transform.z \right \|} - \frac{transform.y.z}{\left \| transform.y \right \|}}{4 * rotation.a}\)</span></p>
+<p><span class="math notranslate nohighlight">\(rotation.c = \frac{\frac{transform.x.z}{\left \| transform.x \right \|} - \frac{transform.z.x}{\left \| transform.z \right \|}}{4 * rotation.a}\)</span></p>
+<p><span class="math notranslate nohighlight">\(rotation.d = \frac{\frac{transform.y.x}{\left \| transform.y \right \|} - \frac{transform.x.y}{\left \| transform.x \right \|}}{4 * rotation.a}\)</span></p>
+<p><span class="math notranslate nohighlight">\(scale = \begin{bmatrix} \left \| transform.x \right \| \\ \left \| transform.y \right \| \\ \left \| transform.z \right \| \end{bmatrix}\)</span></p>
 <section id="example">
 <h2>Example<a class="headerlink" href="#example" title="Link to this heading"></a></h2>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;include/vec3.h&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;include/mat4.h&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;include/quat.h&quot;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
 
 <span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">nml</span><span class="o">::</span><span class="n">vec3</span><span class="w"> </span><span class="n">a</span><span class="p">(</span><span class="mf">1.0f</span><span class="p">,</span><span class="w"> </span><span class="mf">2.0f</span><span class="p">,</span><span class="w"> </span><span class="mf">3.0f</span><span class="p">);</span>
-<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">length</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
-<span class="w">        </span><span class="n">nml</span><span class="o">::</span><span class="n">vec3</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nml</span><span class="o">::</span><span class="n">normalize</span><span class="p">(</span><span class="n">a</span><span class="p">);</span>
-<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">nml</span><span class="o">::</span><span class="n">to_string</span><span class="p">(</span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
-<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="n">length</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">        </span><span class="n">nml</span><span class="o">::</span><span class="n">mat4</span><span class="w"> </span><span class="n">transform</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nml</span><span class="o">::</span><span class="n">mat4</span><span class="p">();</span><span class="w"> </span><span class="c1">// Identity</span>
+<span class="w">        </span><span class="n">nml</span><span class="o">::</span><span class="n">vec3</span><span class="w"> </span><span class="n">translation</span><span class="p">;</span>
+<span class="w">        </span><span class="n">nml</span><span class="o">::</span><span class="n">quat</span><span class="w"> </span><span class="n">rotation</span><span class="p">;</span>
+<span class="w">        </span><span class="n">nml</span><span class="o">::</span><span class="n">vec3</span><span class="w"> </span><span class="n">scale</span><span class="p">;</span>
+<span class="w">        </span><span class="n">nml</span><span class="o">::</span><span class="n">decomposeTransform</span><span class="p">(</span><span class="n">transform</span><span class="p">,</span><span class="w"> </span><span class="n">translation</span><span class="p">,</span><span class="w"> </span><span class="n">rotation</span><span class="p">,</span><span class="w"> </span><span class="n">scale</span><span class="p">);</span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Translation: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">nml</span><span class="o">::</span><span class="n">to_string</span><span class="p">(</span><span class="n">translation</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Rotation: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">nml</span><span class="o">::</span><span class="n">to_string</span><span class="p">(</span><span class="n">rotation</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Scale: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">nml</span><span class="o">::</span><span class="n">to_string</span><span class="p">(</span><span class="n">scale</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
 
 <span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 <p>Result:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">3.74166</span>
-<span class="p">[</span><span class="mf">0.267261</span><span class="p">,</span> <span class="mf">0.534522</span><span class="p">,</span> <span class="mf">0.801784</span><span class="p">]</span>
-<span class="mi">1</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Translation</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.000000</span><span class="p">,</span> <span class="mf">0.000000</span><span class="p">,</span> <span class="mf">0.000000</span><span class="p">]</span>
+<span class="n">Rotation</span><span class="p">:</span> <span class="mf">1.000000</span> <span class="o">+</span> <span class="mf">0.000000</span><span class="n">i</span> <span class="o">+</span> <span class="mf">0.000000</span><span class="n">j</span> <span class="o">+</span> <span class="mf">0.000000</span><span class="n">k</span>
+<span class="n">Scale</span><span class="p">:</span> <span class="p">[</span><span class="mf">1.000000</span><span class="p">,</span> <span class="mf">1.000000</span><span class="p">,</span> <span class="mf">1.000000</span><span class="p">]</span>
 </pre></div>
 </div>
 </section>
