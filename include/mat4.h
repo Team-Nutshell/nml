@@ -79,6 +79,7 @@ mat4 orthoLH(const float left, const float right, const float bottom, const floa
 mat4 orthoRH(const float left, const float right, const float bottom, const float top, const float near, const float far);
 mat4 perspectiveLH(const float fovY, const float aspectRatio, const float near, const float far);
 mat4 perspectiveRH(const float fovY, const float aspectRatio, const float near, const float far);
+void decomposeTransform(const mat4& transform, vec3& translation, quat& rotation, vec3& scale);
 
 mat4 to_mat4(const quat& qua);
 std::string to_string(const mat4& mat);
