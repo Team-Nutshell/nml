@@ -145,13 +145,13 @@
 <p>The conversion from quaternion to a <em>mat4</em> rotation matrix is calculated this way:</p>
 <p><span class="math notranslate nohighlight">\(\begin{bmatrix} a &amp; d &amp; g &amp; 0.0 \\ b &amp; e &amp; h &amp; 0.0 \\ c &amp; f &amp; i &amp; 0.0 \\ 0.0 &amp; 0.0 &amp; 0.0 &amp; 1.0 \end{bmatrix}\)</span></p>
 <p><span class="math notranslate nohighlight">\(a = 1.0 - 2.0 * (qua.c^2 + qua.d^2)\)</span></p>
-<p><span class="math notranslate nohighlight">\(b = 2.0 * (qua.b * qua.c - qua.a * qua.d)\)</span></p>
-<p><span class="math notranslate nohighlight">\(c = 2.0 * (qua.b * qua.d + qua.a * qua.c)\)</span></p>
-<p><span class="math notranslate nohighlight">\(d = 2.0 * (qua.b * qua.c + qua.a * qua.d)\)</span></p>
+<p><span class="math notranslate nohighlight">\(b = 2.0 * (qua.b * qua.c + qua.a * qua.d)\)</span></p>
+<p><span class="math notranslate nohighlight">\(c = 2.0 * (qua.b * qua.d - qua.a * qua.c)\)</span></p>
+<p><span class="math notranslate nohighlight">\(d = 2.0 * (qua.b * qua.c - qua.a * qua.d)\)</span></p>
 <p><span class="math notranslate nohighlight">\(e = 1.0 - 2.0 * (qua.b^2 + qua.d^2)\)</span></p>
-<p><span class="math notranslate nohighlight">\(f = 2.0 * (qua.c * qua.d - qua.a * qua.b)\)</span></p>
-<p><span class="math notranslate nohighlight">\(g = 2.0 * (qua.b * qua.d - qua.a * qua.c)\)</span></p>
-<p><span class="math notranslate nohighlight">\(h = 1.0 - 2.0 * (qua.b^2 + qua.d^2)\)</span></p>
+<p><span class="math notranslate nohighlight">\(f = 2.0 * (qua.c * qua.d + qua.a * qua.b)\)</span></p>
+<p><span class="math notranslate nohighlight">\(g = 2.0 * (qua.b * qua.d + qua.a * qua.c)\)</span></p>
+<p><span class="math notranslate nohighlight">\(h = 2.0 * (qua.c * qua.d - qua.a * qua.b)\)</span></p>
 <p><span class="math notranslate nohighlight">\(i = 1.0 - 2.0 * (qua.b^2 + qua.c^2)\)</span></p>
 <section id="example">
 <h2>Example<a class="headerlink" href="#example" title="Link to this heading"></a></h2>
