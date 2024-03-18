@@ -27,6 +27,7 @@ struct vec3 {
 	vec3& operator-=(const vec3& other);
 	vec3& operator*=(const float other);
 	vec3& operator/=(const float other);
+	vec3 operator-() const;
 	float& operator[](size_t index);
 	const float operator[](size_t index) const;
 

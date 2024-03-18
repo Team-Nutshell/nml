@@ -23,6 +23,7 @@ struct quat {
     quat& operator*=(const quat& other);
     quat& operator*=(const float other);
 	quat& operator/=(const float other);
+	quat operator-() const;
     float& operator[](size_t index);
 	const float operator[](size_t index) const;
 

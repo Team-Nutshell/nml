@@ -249,7 +249,6 @@ mat4 orthoLH(const float left, const float right, const float bottom, const floa
 	const float rightMinusLeft = right - left;
 	const float topPlusBottom = top + bottom;
 	const float topMinusBottom = top - bottom;
-	const float farPlusNear = far + near;
 	const float farMinusNear = far - near;
 
 	return mat4(2.0f / rightMinusLeft, 0.0f, 0.0f, 0.0f,
@@ -263,7 +262,6 @@ mat4 orthoRH(const float left, const float right, const float bottom, const floa
 	const float rightMinusLeft = right - left;
 	const float topPlusBottom = top + bottom;
 	const float topMinusBottom = top - bottom;
-	const float farPlusNear = far + near;
 	const float farMinusNear = far - near;
 
 	return mat4(2.0f / rightMinusLeft, 0.0f, 0.0f, 0.0f,

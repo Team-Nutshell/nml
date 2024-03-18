@@ -69,6 +69,8 @@ Operators
 	+---------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------+
 	| :doc:`nml::vec2& operator/=(const float other) </nml/vector/vec2/operator_divide_equal_float>`    | Divide the current *vec2* by a scalar.                                                                 |
 	+---------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------+
+	| :doc:`nml::vec2 operator-() </nml/vector/vec2/operator_minus>`                                    | Return the negative of the current *vec2*.                                                             |
+	+---------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------+
 	| :doc:`float& operator[](size_t index) </nml/vector/vec2/operator_brackets_ref>`                   | Return a reference to *x* if index is 0 or a reference to *y* if index is 1, else, throw an exception. |
 	+---------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------+
 	| :doc:`const float operator[](size_t index) const </nml/vector/vec2/operator_brackets_value>`      | Return the value of *x* if index is 0 or the value of *y* if index is 1, else, throw an exception.     |

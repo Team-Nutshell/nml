@@ -59,6 +59,10 @@ quat& quat::operator/=(const float other) {
 	return *this;
 }
 
+quat quat::operator-() const {
+	return quat(-a, -b, -c, -d);
+}
+
 float& quat::operator[](size_t index) {
 	if (index == 0) { return a; }
 	else if (index == 1) { return b; }

@@ -47,6 +47,10 @@ vec3& vec3::operator/=(const float other) {
 	return *this;
 }
 
+vec3 vec3::operator-() const {
+	return vec3(-x, -y, -z);
+}
+
 float& vec3::operator[](size_t index) {
 	if (index == 0) { return x; }
 	else if (index == 1) { return y; }
