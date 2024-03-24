@@ -1,6 +1,7 @@
 #include "../include/vec3.h"
 #include "../include/vec2.h"
 #include "../include/vec4.h"
+#include "../include/mat4.h"
 #include "../include/quat.h"
 #include <cmath>
 #include <stdexcept>
@@ -144,6 +145,12 @@ vec3 quatToEulerAngles(const quat& qua) {
 	return vec3(std::atan2(2.0f * ((qua.a * qua.b) + (qua.c * qua.d)), 1.0f - (2.0f * ((qua.b * qua.b) + (qua.c * qua.c)))),
 		std::asin(2.0f * ((qua.a * qua.c) - (qua.d * qua.b))),
 		std::atan2(2.0f * ((qua.a * qua.d) + (qua.b * qua.c)), 1.0f - (2.0f * ((qua.c * qua.c) + (qua.d * qua.d)))));
+}
+
+vec3 rotationMatrixToEulerAngles(const mat4& mat) {
+	return vec3(-std::atan2(mat.z.y, mat.z.z),
+		-std::atan2(-mat.z.x, std::sqrt((mat.z.y * mat.z.y) + (mat.z.z * mat.z.z))),
+		-std::atan2(mat.y.x, mat.x.x));
 }
 
 std::string to_string(const vec3& vec) {
