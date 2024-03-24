@@ -143,7 +143,7 @@
 <h1>nml::vec3 nml::rotationMatrixToEulerAngles(const nml::mat4&amp; mat)<a class="headerlink" href="#nml-vec3-nml-rotationmatrixtoeulerangles-const-nml-mat4-mat" title="Link to this heading"></a></h1>
 <p>Return a <em>vec3</em> representing euler angles in radians from a 3D rotation matrix.</p>
 <p>The conversion from a rotation matrix to euler angles is calculated this way:</p>
-<p><span class="math notranslate nohighlight">\(\begin{bmatrix} atan2(mat.z.y, mat.z.z) \\ atan2(-mat.z.x, \sqrt{mat.z.y^2 + mat.z.z^2}) \\ atan2(mat.y.x, mat.x.x) \end{bmatrix}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\begin{bmatrix} -atan2(mat.z.y, mat.z.z) \\ -atan2(-mat.z.x, \sqrt{mat.z.y^2 + mat.z.z^2}) \\ -atan2(mat.y.x, mat.x.x) \end{bmatrix}\)</span></p>
 <section id="example">
 <h2>Example<a class="headerlink" href="#example" title="Link to this heading"></a></h2>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;include/vec3.h&quot;</span>
