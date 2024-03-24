@@ -302,7 +302,7 @@ void decomposeTransform(const mat4& transform, vec3& translation, quat& rotation
 	rotation.d = (baseRotationMat.y.x - baseRotationMat.x.y) / (4.0f * rotation.a);
 }
 
-mat4 to_mat4(const quat& qua) {
+mat4 quatToRotationMatrix(const quat& qua) {
 	const float ab = qua.a * qua.b;
 	const float ac = qua.a * qua.c;
 	const float ad = qua.a * qua.d;

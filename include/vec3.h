@@ -52,8 +52,8 @@ float dot(const vec3& a, const vec3& b);
 vec3 cross(const vec3& a, const vec3& b);
 vec3 reflect(const vec3& i, const vec3& n);
 vec3 refract(const vec3& i, const vec3& n, float ior);
+vec3 quatToEulerAngles(const quat& qua);
 
-vec3 to_vec3(const quat& qua);
 std::string to_string(const vec3& vec);
 
 }

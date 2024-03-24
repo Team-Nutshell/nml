@@ -168,7 +168,7 @@ quat slerp(const quat& a, const quat& b, const float interpolationValue) {
 	return (scaleA * a + scaleB * tmpB);
 }
 
-quat to_quat(const vec3& vec) {
+quat eulerAnglesToQuat(const vec3& vec) {
 	const float cosHalfPhi = std::cos(vec.x / 2.0f);
 	const float sinHalfPhi = std::sin(vec.x / 2.0f);
 	const float cosHalfTheta = std::cos(vec.y / 2.0f);
