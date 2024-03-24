@@ -1,7 +1,7 @@
 :orphan:
 
-nml::mat4 nml::to_mat4(const nml::quat& qua)
-============================================
+nml::mat4 nml::quatToRotationMatrix(const nml::quat& qua)
+=========================================================
 
 Return a 3D rotation matrix from a quaternion.
 
@@ -39,7 +39,7 @@ Example
 	int main() {
 		nml::quat q(1.0f, 1.0f, 1.0f, 1.0f);
 		q = nml::normalize(q);
-		nml::mat4 m = nml::to_mat4(q);
+		nml::mat4 m = nml::quatToRotationMatrix(q);
 		std::cout << nml::to_string(m) << std::endl;
 
 		return 0;

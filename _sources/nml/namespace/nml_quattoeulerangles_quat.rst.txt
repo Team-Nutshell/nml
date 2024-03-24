@@ -1,7 +1,7 @@
 :orphan:
 
-nml::vec3 nml::to_vec3(const nml::quat& qua)
-============================================
+nml::vec3 nml::quatToEulerAngles(const nml::quat& qua)
+======================================================
 
 Return a *vec3* representing euler angles in radians from a quaternion.
 
@@ -21,7 +21,7 @@ Example
 	int main() {
 		nml::quat q(1.0f, 1.0f, 1.0f, 1.0f);
 		q = nml::normalize(q);
-		nml::vec3 v = nml::to_vec3(q);
+		nml::vec3 v = nml::quatToEulerAngles(q);
 		std::cout << nml::to_string(v) << std::endl;
 
 		return 0;

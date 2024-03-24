@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>nml::mat4 nml::to_mat4(const nml::quat&amp; qua) &mdash; nml - Nutshell Mathematics Library 1.1.1 documentation</title>
+  <title>nml::quat nml::eulerAnglesToQuat(const nml::vec3&amp; vec) &mdash; nml - Nutshell Mathematics Library 1.1.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=b9ddcbf2" />
@@ -129,9 +129,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">nml::mat4 nml::to_mat4(const nml::quat&amp; qua)</li>
+      <li class="breadcrumb-item active">nml::quat nml::eulerAnglesToQuat(const nml::vec3&amp; vec)</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../../_sources/nml/namespace/nml_to_mat4_quat.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/nml/namespace/nml_euleranglestoquat_vec3.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -139,38 +139,31 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="nml-mat4-nml-to-mat4-const-nml-quat-qua">
-<h1>nml::mat4 nml::to_mat4(const nml::quat&amp; qua)<a class="headerlink" href="#nml-mat4-nml-to-mat4-const-nml-quat-qua" title="Link to this heading"></a></h1>
-<p>Return a 3D rotation matrix from a quaternion.</p>
-<p>The conversion from quaternion to a <em>mat4</em> rotation matrix is calculated this way:</p>
-<p><span class="math notranslate nohighlight">\(\begin{bmatrix} a &amp; d &amp; g &amp; 0.0 \\ b &amp; e &amp; h &amp; 0.0 \\ c &amp; f &amp; i &amp; 0.0 \\ 0.0 &amp; 0.0 &amp; 0.0 &amp; 1.0 \end{bmatrix}\)</span></p>
-<p><span class="math notranslate nohighlight">\(a = 1.0 - 2.0 * (qua.c^2 + qua.d^2)\)</span></p>
-<p><span class="math notranslate nohighlight">\(b = 2.0 * (qua.b * qua.c + qua.a * qua.d)\)</span></p>
-<p><span class="math notranslate nohighlight">\(c = 2.0 * (qua.b * qua.d - qua.a * qua.c)\)</span></p>
-<p><span class="math notranslate nohighlight">\(d = 2.0 * (qua.b * qua.c - qua.a * qua.d)\)</span></p>
-<p><span class="math notranslate nohighlight">\(e = 1.0 - 2.0 * (qua.b^2 + qua.d^2)\)</span></p>
-<p><span class="math notranslate nohighlight">\(f = 2.0 * (qua.c * qua.d + qua.a * qua.b)\)</span></p>
-<p><span class="math notranslate nohighlight">\(g = 2.0 * (qua.b * qua.d + qua.a * qua.c)\)</span></p>
-<p><span class="math notranslate nohighlight">\(h = 2.0 * (qua.c * qua.d - qua.a * qua.b)\)</span></p>
-<p><span class="math notranslate nohighlight">\(i = 1.0 - 2.0 * (qua.b^2 + qua.c^2)\)</span></p>
+  <section id="nml-quat-nml-euleranglestoquat-const-nml-vec3-vec">
+<h1>nml::quat nml::eulerAnglesToQuat(const nml::vec3&amp; vec)<a class="headerlink" href="#nml-quat-nml-euleranglestoquat-const-nml-vec3-vec" title="Link to this heading"></a></h1>
+<p>Return a quaternion from euler angles.</p>
+<p>The conversion from euler angles to quaternion is calculated this way:</p>
+<p><span class="math notranslate nohighlight">\((\cos(\frac{vec.x}{2.0}) * \cos(\frac{vec.y}{2.0}) * \cos(\frac{vec.z}{2.0}) + \sin(\frac{vec.x}{2.0}) * \sin(\frac{vec.y}{2.0}) * \sin(\frac{vec.z}{2.0})) +\)</span>
+<span class="math notranslate nohighlight">\((\sin(\frac{vec.x}{2.0}) * \cos(\frac{vec.y}{2.0}) * \cos(\frac{vec.z}{2.0}) - \cos(\frac{vec.x}{2.0}) * \sin(\frac{vec.y}{2.0}) * \sin(\frac{vec.z}{2.0}))i +\)</span>
+<span class="math notranslate nohighlight">\((\cos(\frac{vec.x}{2.0}) * \sin(\frac{vec.y}{2.0}) * \cos(\frac{vec.z}{2.0}) + \sin(\frac{vec.x}{2.0}) * \cos(\frac{vec.y}{2.0}) * \sin(\frac{vec.z}{2.0}))j +\)</span>
+<span class="math notranslate nohighlight">\((\cos(\frac{vec.x}{2.0}) * \cos(\frac{vec.y}{2.0}) * \sin(\frac{vec.z}{2.0}) - \sin(\frac{vec.x}{2.0}) * \sin(\frac{vec.y}{2.0}) * \cos(\frac{vec.z}{2.0}))k +\)</span></p>
 <section id="example">
 <h2>Example<a class="headerlink" href="#example" title="Link to this heading"></a></h2>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;include/mat4.h&quot;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;include/quat.h&quot;</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;include/quat.h&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;include/vec3.h&quot;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
 
 <span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">nml</span><span class="o">::</span><span class="n">quat</span><span class="w"> </span><span class="n">q</span><span class="p">(</span><span class="mf">1.0f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0f</span><span class="p">);</span>
-<span class="w">        </span><span class="n">q</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nml</span><span class="o">::</span><span class="n">normalize</span><span class="p">(</span><span class="n">q</span><span class="p">);</span>
-<span class="w">        </span><span class="n">nml</span><span class="o">::</span><span class="n">mat4</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nml</span><span class="o">::</span><span class="n">to_mat4</span><span class="p">(</span><span class="n">q</span><span class="p">);</span>
-<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">nml</span><span class="o">::</span><span class="n">to_string</span><span class="p">(</span><span class="n">m</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">        </span><span class="n">nml</span><span class="o">::</span><span class="n">vec3</span><span class="w"> </span><span class="n">v</span><span class="p">(</span><span class="mf">1.570796f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.000000f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.570796f</span><span class="p">);</span>
+<span class="w">        </span><span class="n">nml</span><span class="o">::</span><span class="n">quat</span><span class="w"> </span><span class="n">q</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nml</span><span class="o">::</span><span class="n">eulerAnglesToQuat</span><span class="p">(</span><span class="n">v</span><span class="p">);</span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">nml</span><span class="o">::</span><span class="n">to_string</span><span class="p">(</span><span class="n">q</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
 
 <span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 <p>Result:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[[</span><span class="mf">0.000000</span><span class="p">,</span> <span class="mf">1.000000</span><span class="p">,</span> <span class="mf">0.000000</span><span class="p">,</span> <span class="mf">0.000000</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.000000</span><span class="p">,</span> <span class="mf">0.000000</span><span class="p">,</span> <span class="mf">1.000000</span><span class="p">,</span> <span class="mf">0.000000</span><span class="p">],</span> <span class="p">[</span><span class="mf">1.000000</span><span class="p">,</span> <span class="mf">0.000000</span><span class="p">,</span> <span class="mf">0.000000</span><span class="p">,</span> <span class="mf">0.000000</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.000000</span><span class="p">,</span> <span class="mf">0.000000</span><span class="p">,</span> <span class="mf">0.000000</span><span class="p">,</span> <span class="mf">1.000000</span><span class="p">]]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">0.500000</span> <span class="o">+</span> <span class="mf">0.500000</span><span class="n">i</span> <span class="o">+</span> <span class="mf">0.500000</span><span class="n">j</span> <span class="o">+</span> <span class="mf">0.500000</span><span class="n">k</span>
 </pre></div>
 </div>
 </section>
