@@ -7,7 +7,7 @@ Return a *vec3* representing euler angles in radians from a 3D rotation matrix.
 
 The conversion from a rotation matrix to euler angles is calculated this way:
 
-:math:`\begin{bmatrix} atan2(mat.z.y, mat.z.z) \\ atan2(-mat.z.x, \sqrt{mat.z.y^2 + mat.z.z^2}) \\ atan2(mat.y.x, mat.x.x) \end{bmatrix}`
+:math:`\begin{bmatrix} -atan2(mat.z.y, mat.z.z) \\ -atan2(-mat.z.x, \sqrt{mat.z.y^2 + mat.z.z^2}) \\ -atan2(mat.y.x, mat.x.x) \end{bmatrix}`
 
 Example
 -------
