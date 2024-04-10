@@ -3,9 +3,9 @@
 quat: quat()
 ============
 
-Construct a (1.0, 0.0, 0.0, 0.0) identity quaternion.
+Construct a (0.0, 0.0, 0.0, 0.0) quaternion.
 
-:math:`1.0 + 0.0i + 0.0j + 0.0k`
+:math:`0.0 + 0.0i + 0.0j + 0.0k`
 
 Example
 -------
@@ -26,4 +26,4 @@ Result:
 
 .. code-block::
 
-	1.000000 + 0.000000i + 0.000000j + 0.000000k
+	0.000000 + 0.000000i + 0.000000j + 0.000000k

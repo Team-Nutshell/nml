@@ -30,7 +30,7 @@ Example
 	#include <iostream>
 
 	int main() {
-		nml::mat4 transform = nml::mat4(); // Identity
+		nml::mat4 transform = nml::mat4::identity();
 		nml::vec3 translation;
 		nml::quat rotation;
 		nml::vec3 scale;
