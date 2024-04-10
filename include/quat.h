@@ -31,6 +31,9 @@ struct quat {
     float length() const;
 
     float* data();
+
+	// Static Functions
+	static quat identity();
 };
 
 // Operators

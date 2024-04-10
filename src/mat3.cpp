@@ -6,7 +6,7 @@
 
 namespace nml {
 
-mat3::mat3(): x(1.0f, 0.0f, 0.0f), y(0.0f, 1.0f, 0.0f), z(0.0f, 0.0f, 1.0f) {}
+mat3::mat3(): x(0.0f), y(0.0f), z(0.0f) {}
 mat3::mat3(float _value): x(_value), y(_value), z(_value) {}
 mat3::mat3(float _xx, float _xy, float _xz, float _yx, float _yy, float _yz, float _zx, float _zy, float _zz): x(_xx, _xy, _xz), y(_yx, _yy, _yz), z(_zx, _zy, _zz) {}
 mat3::mat3(float _xx, float _xy, float _xz, float _yx, float _yy, float _yz, vec3 _z): x(_xx, _xy, _xz), y(_yx, _yy, _yz), z(_z) {}
@@ -91,6 +91,10 @@ float mat3::det() const {
 
 float* mat3::data() {
 	return x.data();
+}
+
+mat3 mat3::identity() {
+	return mat3(1.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 1.0f);
 }
 
 mat3 operator+(mat3 lhs, const mat3& rhs) {

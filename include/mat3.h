@@ -44,6 +44,9 @@ struct mat3 {
 	float det() const;
 
 	float* data();
+
+	// Static Functions
+	static mat3 identity();
 };
 
 // Operators

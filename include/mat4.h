@@ -54,6 +54,9 @@ struct mat4 {
 	float det() const;
 
 	float* data();
+
+	// Static Functions
+	static mat4 identity();
 };
 
 // Operators
