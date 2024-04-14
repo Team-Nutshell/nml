@@ -1,6 +1,6 @@
 :orphan:
 
-mat3: std::array<std::pair<float, vec3>, 3> eigen() const
+mat3: std::array\<std::pair\<float, vec3\>, 3\> eigen() const
 =========================================================
 
 Return three eigenvalues and eigenvectors of the matrix.
