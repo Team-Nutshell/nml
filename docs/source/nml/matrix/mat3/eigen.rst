@@ -5,7 +5,7 @@ mat3: std::array\<std::pair\<float, vec3\>, 3\> eigen() const
 
 Return three eigenvalues and eigenvectors of the matrix.
 
-The method used to calculate these eigenvalues and eigenvector can be found `here <https://www.researchgate.net/publication/344819102_Eigenvalues_and_Eigenvectors_for_33_Symmetric_Matrices_An_Analytical_Approach>`_.
+The method used to calculate these eigenvalues and eigenvectors can be found `here <https://www.researchgate.net/publication/344819102_Eigenvalues_and_Eigenvectors_for_33_Symmetric_Matrices_An_Analytical_Approach>`_.
 
 Example
 -------
