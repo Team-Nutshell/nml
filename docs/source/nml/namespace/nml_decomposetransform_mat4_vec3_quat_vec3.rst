@@ -11,11 +11,11 @@ The decomposition of a transform matrix into a translation vector, a rotation qu
 
 :math:`rotation.a = \frac{\sqrt{1 + \frac{transform.x.x}{\left \| transform.x \right \|} + \frac{transform.y.y}{\left \| transform.y \right \|} + \frac{transform.z.z}{\left \| transform.z \right \|}}}{2}`
 
-:math:`rotation.b = \frac{\frac{transform.z.y}{\left \| transform.z \right \|} - \frac{transform.y.z}{\left \| transform.y \right \|}}{4 * rotation.a}`
+:math:`rotation.b = \frac{\frac{transform.y.z}{\left \| transform.y \right \|} - \frac{transform.z.y}{\left \| transform.z \right \|}}{4 * rotation.a}`
 
-:math:`rotation.c = \frac{\frac{transform.x.z}{\left \| transform.x \right \|} - \frac{transform.z.x}{\left \| transform.z \right \|}}{4 * rotation.a}`
+:math:`rotation.c = \frac{\frac{transform.z.x}{\left \| transform.z \right \|} - \frac{transform.x.z}{\left \| transform.x \right \|}}{4 * rotation.a}`
 
-:math:`rotation.d = \frac{\frac{transform.y.x}{\left \| transform.y \right \|} - \frac{transform.x.y}{\left \| transform.x \right \|}}{4 * rotation.a}`
+:math:`rotation.d = \frac{\frac{transform.x.y}{\left \| transform.x \right \|} - \frac{transform.y.x}{\left \| transform.y \right \|}}{4 * rotation.a}`
 
 :math:`scale = \begin{bmatrix} \left \| transform.x \right \| \\ \left \| transform.y \right \| \\ \left \| transform.z \right \| \end{bmatrix}`
 
