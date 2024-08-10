@@ -19,7 +19,6 @@
         <script src="../../_static/documentation_options.js?v=58fbf978"></script>
         <script src="../../_static/doctools.js?v=9a2dae69"></script>
         <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
-        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" /> 
@@ -142,8 +141,7 @@
   <section id="nml-vec3-nml-quattoeulerangles-const-nml-quat-qua">
 <h1>nml::vec3 nml::quatToEulerAngles(const nml::quat&amp; qua)<a class="headerlink" href="#nml-vec3-nml-quattoeulerangles-const-nml-quat-qua" title="Link to this heading"></a></h1>
 <p>Return a <em>vec3</em> representing euler angles in radians from a quaternion.</p>
-<p>The conversion from quaternion to euler angles is calculated this way:</p>
-<p><span class="math notranslate nohighlight">\(\small \begin{bmatrix} atan2(2.0 * (qua.a * qua.b + qua.c * qua.d), 1.0 - (2.0 * (qua.b^2 + qua.c^2))) \\ asin(2.0 * (qua.a * qua.c - qua.d * qua.b)) \\ atan2(2.0 * (qua.a * qua.d + qua.b * qua.c), 1.0 - (2.0 * (qua.c^2 + qua.d^2))) \end{bmatrix}\)</span></p>
+<p>The conversion from quaternion to euler angles is calculated by <a class="reference internal" href="nml_quattorotationmatrix_quat.html"><span class="doc">converting the quaternion to a rotation matrix</span></a> and <a class="reference internal" href="nml_rotationmatrixtoeulerangles_mat4.html"><span class="doc">converting this rotation matrix to euler angles</span></a>.</p>
 <section id="example">
 <h2>Example<a class="headerlink" href="#example" title="Link to this heading"></a></h2>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;include/vec3.h&quot;</span>
