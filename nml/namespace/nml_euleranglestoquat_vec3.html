@@ -143,10 +143,10 @@
 <h1>nml::quat nml::eulerAnglesToQuat(const nml::vec3&amp; vec)<a class="headerlink" href="#nml-quat-nml-euleranglestoquat-const-nml-vec3-vec" title="Link to this heading"></a></h1>
 <p>Return a quaternion from euler angles.</p>
 <p>The conversion from euler angles to quaternion is calculated this way:</p>
-<p><span class="math notranslate nohighlight">\((\cos(\frac{vec.x}{2.0}) * \cos(\frac{vec.y}{2.0}) * \cos(\frac{vec.z}{2.0}) + \sin(\frac{vec.x}{2.0}) * \sin(\frac{vec.y}{2.0}) * \sin(\frac{vec.z}{2.0})) +\)</span>
-<span class="math notranslate nohighlight">\((\sin(\frac{vec.x}{2.0}) * \cos(\frac{vec.y}{2.0}) * \cos(\frac{vec.z}{2.0}) - \cos(\frac{vec.x}{2.0}) * \sin(\frac{vec.y}{2.0}) * \sin(\frac{vec.z}{2.0}))i +\)</span>
-<span class="math notranslate nohighlight">\((\cos(\frac{vec.x}{2.0}) * \sin(\frac{vec.y}{2.0}) * \cos(\frac{vec.z}{2.0}) + \sin(\frac{vec.x}{2.0}) * \cos(\frac{vec.y}{2.0}) * \sin(\frac{vec.z}{2.0}))j +\)</span>
-<span class="math notranslate nohighlight">\((\cos(\frac{vec.x}{2.0}) * \cos(\frac{vec.y}{2.0}) * \sin(\frac{vec.z}{2.0}) - \sin(\frac{vec.x}{2.0}) * \sin(\frac{vec.y}{2.0}) * \cos(\frac{vec.z}{2.0}))k +\)</span></p>
+<p><span class="math notranslate nohighlight">\((\cos(\frac{vec.x}{2.0}) * \cos(\frac{vec.y}{2.0}) * \cos(\frac{vec.z}{2.0}) - \sin(\frac{vec.x}{2.0}) * \sin(\frac{vec.y}{2.0}) * \sin(\frac{vec.z}{2.0})) +\)</span>
+<span class="math notranslate nohighlight">\((\sin(\frac{vec.x}{2.0}) * \cos(\frac{vec.y}{2.0}) * \cos(\frac{vec.z}{2.0}) + \cos(\frac{vec.x}{2.0}) * \sin(\frac{vec.y}{2.0}) * \sin(\frac{vec.z}{2.0}))i +\)</span>
+<span class="math notranslate nohighlight">\((\cos(\frac{vec.x}{2.0}) * \sin(\frac{vec.y}{2.0}) * \cos(\frac{vec.z}{2.0}) - \sin(\frac{vec.x}{2.0}) * \cos(\frac{vec.y}{2.0}) * \sin(\frac{vec.z}{2.0}))j +\)</span>
+<span class="math notranslate nohighlight">\((\cos(\frac{vec.x}{2.0}) * \cos(\frac{vec.y}{2.0}) * \sin(\frac{vec.z}{2.0}) + \sin(\frac{vec.x}{2.0}) * \sin(\frac{vec.y}{2.0}) * \cos(\frac{vec.z}{2.0}))k +\)</span></p>
 <section id="example">
 <h2>Example<a class="headerlink" href="#example" title="Link to this heading"></a></h2>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;include/quat.h&quot;</span>
