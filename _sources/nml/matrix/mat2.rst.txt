@@ -43,17 +43,17 @@ Constructors
 	+----------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------+
 	| :doc:`mat2(float _xx, float _xy, float _yx, float _yy) </nml/matrix/mat2/constructor_float_float_float_float>` | Construct a ([*_xx*, *_xy*], [*_yx*, *_yy*]) matrix.                     |
 	+----------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------+
-	| :doc:`mat2(float _xx, float _xy, nml::vec2 _y) </nml/matrix/mat2/constructor_float_float_vec2>`                | Construct a ([*_xx*, *_xy*], [*_y.x*, *_y.y*]) matrix.                   |
+	| :doc:`mat2(float _xx, float _xy, const nml::vec2& _y) </nml/matrix/mat2/constructor_float_float_vec2>`         | Construct a ([*_xx*, *_xy*], [*_y.x*, *_y.y*]) matrix.                   |
 	+----------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------+
-	| :doc:`mat2(nml::vec2 _x, float _yx, float _yy) </nml/matrix/mat2/constructor_vec2_float_float>`                | Construct a ([*_x.x*, *_x.y*], [*_yx*, *_yy*]) matrix.                   |
+	| :doc:`mat2(const nml::vec2& _x, float _yx, float _yy) </nml/matrix/mat2/constructor_vec2_float_float>`         | Construct a ([*_x.x*, *_x.y*], [*_yx*, *_yy*]) matrix.                   |
 	+----------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------+
-	| :doc:`mat2(nml::vec2 _x, nml::vec2 _y) </nml/matrix/mat2/constructor_float_float_float_float>`                 | Construct a ([*_x.x*, *_x.y*], [*_y.x*, *_y.y*]) matrix.                 |
+	| :doc:`mat2(const nml::vec2& _x, const nml::vec2& _y) </nml/matrix/mat2/constructor_float_float_float_float>`   | Construct a ([*_x.x*, *_x.y*], [*_y.x*, *_y.y*]) matrix.                 |
 	+----------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------+
 	| :doc:`mat2(const float* _ptr) </nml/matrix/mat2/constructor_floatptr>`                                         | Construct a matrix from a pointer.                                       |
 	+----------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------+
-	| :doc:`mat2(nml::mat3 _mat) </nml/matrix/mat2/constructor_mat3>`                                                | Construct a ([*_mat.x.x*, *_mat.x.y*], [*_mat.y.x*, *_mat.y.y*]) matrix. |
+	| :doc:`mat2(const nml::mat3& _mat) </nml/matrix/mat2/constructor_mat3>`                                         | Construct a ([*_mat.x.x*, *_mat.x.y*], [*_mat.y.x*, *_mat.y.y*]) matrix. |
 	+----------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------+
-	| :doc:`mat2(nml::mat4 _mat) </nml/matrix/mat2/constructor_mat4>`                                                | Construct a ([*_mat.x.x*, *_mat.x.y*], [*_mat.y.x*, *_mat.y.y*]) matrix. |
+	| :doc:`mat2(const nml::mat4& _mat) </nml/matrix/mat2/constructor_mat4>`                                         | Construct a ([*_mat.x.x*, *_mat.x.y*], [*_mat.y.x*, *_mat.y.y*]) matrix. |
 	+----------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------+
 
 Operators

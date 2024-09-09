@@ -47,17 +47,17 @@ Constructors
 	+------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------+
 	| :doc:`vec4(float _x, float _y, float _z, float _w) </nml/vector/vec4/constructor_float_float_float_float>` | Construct a (*_x*, *_y*, *_z*, *_w*) vector.                 |
 	+------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------+
-	| :doc:`vec4(float _x, nml::vec3 _yzw) </nml/vector/vec4/constructor_float_vec3>`                            | Construct a (*_x*, *_yzw.x*, *_yzw.y*, *_yzw.z*) vector.     |
+	| :doc:`vec4(float _x, const nml::vec3& _yzw) </nml/vector/vec4/constructor_float_vec3>`                     | Construct a (*_x*, *_yzw.x*, *_yzw.y*, *_yzw.z*) vector.     |
 	+------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------+
-	| :doc:`vec4(nml::vec3 _xyz, float _w) </nml/vector/vec4/constructor_vec3_float>`                            | Construct a (*_xyz.x*, *_xyz.y*, *_xyz.z*, *_w*) vector.     |
+	| :doc:`vec4(const nml::vec3& _xyz, float _w) </nml/vector/vec4/constructor_vec3_float>`                     | Construct a (*_xyz.x*, *_xyz.y*, *_xyz.z*, *_w*) vector.     |
 	+------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------+
-	| :doc:`vec4(float _x, float _y, nml::vec2 _zw) </nml/vector/vec4/constructor_float_float_vec2>`             | Construct a (*_x*, *_y*, *_zw.x*, *_zw.y*) vector.           |
+	| :doc:`vec4(float _x, float _y, const nml::vec2& _zw) </nml/vector/vec4/constructor_float_float_vec2>`      | Construct a (*_x*, *_y*, *_zw.x*, *_zw.y*) vector.           |
 	+------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------+
-	| :doc:`vec4(float _x, nml::vec2 _yz, float _w) </nml/vector/vec4/constructor_float_vec2_float>`             | Construct a (*_x*, *_yz.x*, *_yz.y*, *_w*) vector.           |
+	| :doc:`vec4(float _x, const nml::vec2& _yz, float _w) </nml/vector/vec4/constructor_float_vec2_float>`      | Construct a (*_x*, *_yz.x*, *_yz.y*, *_w*) vector.           |
 	+------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------+
-	| :doc:`vec4(nml::vec2 _xy, float _z, float _w) </nml/vector/vec4/constructor_vec2_float_float>`             | Construct a (*_xy.x*, *_xy.y*, *_z*, *_w*) vector.           |
+	| :doc:`vec4(const nml::vec2& _xy, float _z, float _w) </nml/vector/vec4/constructor_vec2_float_float>`      | Construct a (*_xy.x*, *_xy.y*, *_z*, *_w*) vector.           |
 	+------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------+
-	| :doc:`vec4(nml::vec2 _xy, nml::vec2 _zw) </nml/vector/vec4/constructor_vec2_vec2>`                         | Construct a (*_xy.x*, *_xy.y*, *_zw.x*, *_zw.y*) vector.     |
+	| :doc:`vec4(const nml::vec2& _xy, const nml::vec2& _zw) </nml/vector/vec4/constructor_vec2_vec2>`           | Construct a (*_xy.x*, *_xy.y*, *_zw.x*, *_zw.y*) vector.     |
 	+------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------+
 	| :doc:`vec4(const float* _ptr) </nml/vector/vec4/constructor_floatptr>`                                     | Construct a vector from a pointer.                           |
 	+------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------+

@@ -45,9 +45,9 @@ Constructors
 	+----------------------------------------------------------------------------+--------------------------------------------+
 	| :doc:`vec2(const float* _ptr) </nml/vector/vec2/constructor_floatptr>`     | Construct a vector from a pointer.         |
 	+----------------------------------------------------------------------------+--------------------------------------------+
-	| :doc:`vec2(nml::vec3 _xyz) </nml/vector/vec2/constructor_vec3>`            | Construct a (*_xyz.x*, *_xyz.y*) vector.   |
+	| :doc:`vec2(const nml::vec3& _xyz) </nml/vector/vec2/constructor_vec3>`     | Construct a (*_xyz.x*, *_xyz.y*) vector.   |
 	+----------------------------------------------------------------------------+--------------------------------------------+
-	| :doc:`vec2(nml::vec4 _xyzw) </nml/vector/vec2/constructor_vec4>`           | Construct a (*_xyzw.x*, *_xyzw.y*) vector. |
+	| :doc:`vec2(const nml::vec4& _xyzw) </nml/vector/vec2/constructor_vec4>`    | Construct a (*_xyzw.x*, *_xyzw.y*) vector. |
 	+----------------------------------------------------------------------------+--------------------------------------------+
 
 Operators

@@ -45,13 +45,13 @@ Constructors
 	+--------------------------------------------------------------------------------------------+-------------------------------------------------------+
 	| :doc:`vec3(float _x, float _y, float _z) </nml/vector/vec3/constructor_float_float_float>` | Construct a (*_x*, *_y*, *_z*) vector.                |
 	+--------------------------------------------------------------------------------------------+-------------------------------------------------------+
-	| :doc:`vec3(float _x, nml::vec2 _yz) </nml/vector/vec3/constructor_float_vec2>`             | Construct a (*_x*, *_yz.x*, *_yz.y*) vector.          |
+	| :doc:`vec3(float _x, const nml::vec2& _yz) </nml/vector/vec3/constructor_float_vec2>`      | Construct a (*_x*, *_yz.x*, *_yz.y*) vector.          |
 	+--------------------------------------------------------------------------------------------+-------------------------------------------------------+
-	| :doc:`vec3(nml::vec2 _xy, float _z) </nml/vector/vec3/constructor_vec2_float>`             | Construct a (*_xy.x*, *_xy.y*, *_z*) vector.          |
+	| :doc:`vec3(const nml::vec2& _xy, float _z) </nml/vector/vec3/constructor_vec2_float>`      | Construct a (*_xy.x*, *_xy.y*, *_z*) vector.          |
 	+--------------------------------------------------------------------------------------------+-------------------------------------------------------+
 	| :doc:`vec3(const float* _ptr) </nml/vector/vec3/constructor_floatptr>`                     | Construct a vector from a pointer.                    |
 	+--------------------------------------------------------------------------------------------+-------------------------------------------------------+
-	| :doc:`vec3(nml::vec4 _xyzw) </nml/vector/vec3/constructor_vec4>`                           | Construct a (*_xyzw.x*, *_xyzw.y*, *_xyzw.z*) vector. |
+	| :doc:`vec3(const nml::vec4& _xyzw) </nml/vector/vec3/constructor_vec4>`                    | Construct a (*_xyzw.x*, *_xyzw.y*, *_xyzw.z*) vector. |
 	+--------------------------------------------------------------------------------------------+-------------------------------------------------------+
 
 Operators

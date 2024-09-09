@@ -1,7 +1,7 @@
 :orphan:
 
-mat3: mat3(nml::mat4 _mat)
-==========================
+mat3: mat3(const nml::mat4& _mat)
+=================================
 
 Construct a ([*_mat.x.x*, *_mat.x.y*, *_mat.x.z*], [*_mat.y.x*, *_mat.y.y*, *_mat.y.z*], [*_mat.z.x*, *_mat.z.y*, *_mat.z.z*]) matrix.
 

@@ -1,7 +1,7 @@
 :orphan:
 
-mat3: mat3(nml::vec3 _x, nml::vec3 _y, nml::vec3 _z)
-====================================================
+mat3: mat3(const nml::vec3& _x, const nml::vec3& _y, const nml::vec3& _z)
+=========================================================================
 
 Construct a ([*_x.x*, *_x.y*, *_x.z*], [*_y.x*, *_y.y*, *_y.z*], [*_z.x*, *_z.y*, *_z.z*]) matrix.
 
