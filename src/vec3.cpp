@@ -4,6 +4,8 @@
 #include "../include/mat4.h"
 #include "../include/quat.h"
 #include <cmath>
+#include <algorithm>
+#include <limits>
 #include <stdexcept>
 
 namespace nml {
@@ -148,9 +150,18 @@ vec3 quatToEulerAngles(const quat& qua) {
 }
 
 vec3 rotationMatrixToEulerAngles(const mat4& mat) {
-	return vec3(-std::atan2(mat.z.y, mat.z.z),
-		-std::atan2(-mat.z.x, std::sqrt((mat.z.y * mat.z.y) + (mat.z.z * mat.z.z))),
-		-std::atan2(mat.y.x, mat.x.x));
+	vec3 eulerAngles;
+	eulerAngles.y = std::asin(std::clamp(mat.z.x, -1.0f, 1.0f));
+	if (std::abs(mat.z.x) < (1.0f - std::numeric_limits<float>::epsilon())) {
+		eulerAngles.x = std::atan2(-mat.z.y, mat.z.z);
+		eulerAngles.z = std::atan2(-mat.y.x, mat.x.x);
+	}
+	else {
+		eulerAngles.x = std::atan2(mat.y.z, mat.y.y);
+		eulerAngles.z = 0.0f;
+	}
+
+	return eulerAngles;
 }
 
 std::string to_string(const vec3& vec) {
