@@ -1,7 +1,7 @@
 :orphan:
 
-vec3: vec3(float _x, nml::vec2 _yz)
-===================================
+vec3: vec3(float _x, const nml::vec2& _yz)
+==========================================
 
 Construct a (*_x*, *_yz.x*, *_yz.y*) vector.
 
