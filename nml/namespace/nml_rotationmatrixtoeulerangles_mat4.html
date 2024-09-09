@@ -144,10 +144,13 @@
 <p>Return a <em>vec3</em> representing euler angles in radians from a 3D rotation matrix.</p>
 <p>The conversion from a rotation matrix to euler angles is calculated this way:</p>
 <p><span class="math notranslate nohighlight">\(eulerAngles.y = asin(clamp(mat.z.z, -1, 1))\)</span></p>
-<p><span class="math notranslate nohighlight">\(if eulerAngles.y \lt (1 - \varepsilon)\)</span></p>
-<p><span class="math notranslate nohighlight">\(eulerAngles.x = atan2(-mat.z.y, mat.z.z) \\ eulerAngles.z = atan2(-mat.y.x, mat.x.x)\)</span></p>
-<p><span class="math notranslate nohighlight">\(else\)</span></p>
-<p><span class="math notranslate nohighlight">\(eulerAngles.x = atan2(mat.y.z, mat.y.y) \\ eulerAngles.z = 0\)</span></p>
+<p>if</p>
+<p><span class="math notranslate nohighlight">\(eulerAngles.y \lt (1 - \varepsilon)\)</span></p>
+<p><span class="math notranslate nohighlight">\(eulerAngles.x = atan2(-mat.z.y, mat.z.z)\)</span></p>
+<p><span class="math notranslate nohighlight">\(eulerAngles.z = atan2(-mat.y.x, mat.x.x)\)</span></p>
+<p>else</p>
+<p><span class="math notranslate nohighlight">\(eulerAngles.x = atan2(mat.y.z, mat.y.y)\)</span></p>
+<p><span class="math notranslate nohighlight">\(eulerAngles.z = 0\)</span></p>
 <section id="example">
 <h2>Example<a class="headerlink" href="#example" title="Link to this heading"></a></h2>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;include/vec3.h&quot;</span>
