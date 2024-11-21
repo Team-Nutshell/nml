@@ -10,7 +10,7 @@ The conversion from euler angles to quaternion is calculated this way:
 :math:`(\cos(\frac{vec.x}{2.0}) * \cos(\frac{vec.y}{2.0}) * \cos(\frac{vec.z}{2.0}) - \sin(\frac{vec.x}{2.0}) * \sin(\frac{vec.y}{2.0}) * \sin(\frac{vec.z}{2.0})) +`
 :math:`(\sin(\frac{vec.x}{2.0}) * \cos(\frac{vec.y}{2.0}) * \cos(\frac{vec.z}{2.0}) + \cos(\frac{vec.x}{2.0}) * \sin(\frac{vec.y}{2.0}) * \sin(\frac{vec.z}{2.0}))i +`
 :math:`(\cos(\frac{vec.x}{2.0}) * \sin(\frac{vec.y}{2.0}) * \cos(\frac{vec.z}{2.0}) - \sin(\frac{vec.x}{2.0}) * \cos(\frac{vec.y}{2.0}) * \sin(\frac{vec.z}{2.0}))j +`
-:math:`(\cos(\frac{vec.x}{2.0}) * \cos(\frac{vec.y}{2.0}) * \sin(\frac{vec.z}{2.0}) + \sin(\frac{vec.x}{2.0}) * \sin(\frac{vec.y}{2.0}) * \cos(\frac{vec.z}{2.0}))k +`
+:math:`(\cos(\frac{vec.x}{2.0}) * \cos(\frac{vec.y}{2.0}) * \sin(\frac{vec.z}{2.0}) + \sin(\frac{vec.x}{2.0}) * \sin(\frac{vec.y}{2.0}) * \cos(\frac{vec.z}{2.0}))k`
 
 Example
 -------

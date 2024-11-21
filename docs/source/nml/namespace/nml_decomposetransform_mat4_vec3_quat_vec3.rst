@@ -9,13 +9,9 @@ The decomposition of a transform matrix into a translation vector, a rotation qu
 
 :math:`translation = \begin{bmatrix} transform.w.x \\ transform.w.y \\ transform.w.z \end{bmatrix}`
 
-:math:`rotation.a = \frac{\sqrt{1 + \frac{transform.x.x}{\left \| transform.x \right \|} + \frac{transform.y.y}{\left \| transform.y \right \|} + \frac{transform.z.z}{\left \| transform.z \right \|}}}{2}`
+:math:`rotationMatrix = \begin{bmatrix} \frac{transform.x}{scale.x} & 0 \\ \frac{transform.y}{scale.y} & 0 \\ \frac{transform.z}{scale.z} & 0 \\ (0, 0, 0) & 1 \end{bmatrix}`
 
-:math:`rotation.b = \frac{\frac{transform.y.z}{\left \| transform.y \right \|} - \frac{transform.z.y}{\left \| transform.z \right \|}}{4 * rotation.a}`
-
-:math:`rotation.c = \frac{\frac{transform.z.x}{\left \| transform.z \right \|} - \frac{transform.x.z}{\left \| transform.x \right \|}}{4 * rotation.a}`
-
-:math:`rotation.d = \frac{\frac{transform.x.y}{\left \| transform.x \right \|} - \frac{transform.y.x}{\left \| transform.y \right \|}}{4 * rotation.a}`
+rotation = :doc:`rotationMatrixToQuat(rotationMatrix) </nml/namespace/nml_rotationmatrixtoquat_mat4>`
 
 :math:`scale = \begin{bmatrix} \left \| transform.x \right \| \\ \left \| transform.y \right \| \\ \left \| transform.z \right \| \end{bmatrix}`
 

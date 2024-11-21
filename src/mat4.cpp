@@ -299,13 +299,8 @@ void decomposeTransform(const mat4& transform, vec3& translation, quat& rotation
 	translation = vec3(transform.w);
 	scale = vec3(transform.x.length(), transform.y.length(), transform.z.length());
 
-	const mat3 baseRotationMat = mat3(vec3(transform.x) / scale.x, vec3(transform.y) / scale.y, vec3(transform.z) / scale.z);
-	const float trace = baseRotationMat.x.x + baseRotationMat.y.y + baseRotationMat.z.z;
-	const float S = std::sqrt(1.0f + trace) * 2.0f;
-	rotation.a = S / 4.0f;
-	rotation.b = (baseRotationMat.y.z - baseRotationMat.z.y) / S;
-	rotation.c = (baseRotationMat.z.x - baseRotationMat.x.z) / S;
-	rotation.d = (baseRotationMat.x.y - baseRotationMat.y.x) / S;
+	const mat4 rotationMatrix = mat4(vec4(vec3(transform.x) / scale.x, 0.0f), vec4(vec3(transform.y) / scale.y, 0.0f), vec4(vec3(transform.z) / scale.z, 0.0f), vec4(0.0f, 0.0f, 0.0f, 1.0f));
+	rotation = rotationMatrixToQuat(rotationMatrix);
 }
 
 mat4 quatToRotationMatrix(const quat& qua) {
