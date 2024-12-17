@@ -25,7 +25,7 @@ if
 
 else if
 
-:math:`(mat.x.x \gt mat.y.y) && (mat.x.x \gt mat.z.z)`
+:math:`(mat.x.x \gt mat.y.y) \&\& (mat.x.x \gt mat.z.z)`
 
 :math:`S = \sqrt{1 + mat.x.x - mat.y.y - mat.z.z} * 2`
 
