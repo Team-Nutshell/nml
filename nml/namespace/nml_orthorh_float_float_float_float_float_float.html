@@ -7,7 +7,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>nml::mat4 orthoRH(const float left, const float right, const float bottom, const float top, const float near, const float far) &mdash; nml - Nutshell Mathematics Library 1.1.1 documentation</title>
-      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=11b553de" />
 
@@ -136,7 +136,7 @@
              
   <section id="nml-mat4-orthorh-const-float-left-const-float-right-const-float-bottom-const-float-top-const-float-near-const-float-far">
 <h1>nml::mat4 orthoRH(const float left, const float right, const float bottom, const float top, const float near, const float far)<a class="headerlink" href="#nml-mat4-orthorh-const-float-left-const-float-right-const-float-bottom-const-float-top-const-float-near-const-float-far" title="Link to this heading"></a></h1>
-<p>Return a right-hand orthographic projection matrix.</p>
+<p>Return a right-hand orthographic projection matrix, for the [0, 1] depth range.</p>
 <p>The right-hand orthographic projection matrix is calculated this way:</p>
 <p><span class="math notranslate nohighlight">\(\begin{bmatrix} \frac{2.0}{right - left} &amp; 0.0 &amp; 0.0 &amp; -\frac{right + left}{right - left} \\ 0.0 &amp; \frac{2.0}{top - bottom} &amp; 0.0 &amp; -\frac{top + bottom}{top - bottom} \\ 0.0 &amp; 0.0 &amp; \frac{-1.0}{far - near} &amp; -\frac{near}{far - near} \\ 0.0 &amp; 0.0 &amp; 0.0 &amp; 1.0 \end{bmatrix}\)</span></p>
 <section id="example">

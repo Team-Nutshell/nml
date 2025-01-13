@@ -3,7 +3,7 @@
 nml::mat4 orthoLH(const float left, const float right, const float bottom, const float top, const float near, const float far)
 ==============================================================================================================================
 
-Return a left-hand orthographic projection matrix.
+Return a left-hand orthographic projection matrix, for the [0, 1] depth range.
 
 The left-hand orthographic projection matrix is calculated this way:
 
