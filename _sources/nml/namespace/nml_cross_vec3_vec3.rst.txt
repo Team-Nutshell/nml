@@ -3,9 +3,9 @@
 nml::vec3 nml::cross(const nml::vec3& a, const nml::vec3& b)
 ============================================================
 
-Return the dot product between two *vec3*.
+Return the cross product between two *vec3*.
 
-The dot product of two *vec3* is calculated this way:
+The cross product of two *vec3* is calculated this way:
 
 :math:`\begin{bmatrix} a.x \\ a.y \\ a.z \end{bmatrix} \times \begin{bmatrix} b.x \\ b.y \\ b.z \end{bmatrix} = \begin{bmatrix} a.y * b.z - a.z * b.y \\ a.z * b.x - a.x * b.z \\ a.x * b.y - a.y * b.x \end{bmatrix}`
 
