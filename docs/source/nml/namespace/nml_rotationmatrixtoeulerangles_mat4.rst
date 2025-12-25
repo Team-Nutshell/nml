@@ -9,19 +9,7 @@ The conversion from a rotation matrix to euler angles is calculated this way:
 
 :math:`eulerAngles.y = asin(clamp(mat.z.z, -1, 1))`
 
-if
-
-:math:`eulerAngles.y \lt (1 - \varepsilon)`
-
-:math:`eulerAngles.x = atan2(-mat.z.y, mat.z.z)`
-
-:math:`eulerAngles.z = atan2(-mat.y.x, mat.x.x)`
-
-else
-
-:math:`eulerAngles.x = atan2(mat.y.z, mat.y.y)`
-
-:math:`eulerAngles.z = 0`
+:math:`\begin{cases}eulerAngles.x = atan2(-mat.z.y, mat.z.z) \\ eulerAngles.z = atan2(-mat.y.x, mat.x.x), & if (eulerAngles.y \lt (1 - \varepsilon)) \\ eulerAngles.x = atan2(mat.y.z, mat.y.y) \\ eulerAngles.z = 0, & otherwise\end{cases}`
 
 Example
 -------
