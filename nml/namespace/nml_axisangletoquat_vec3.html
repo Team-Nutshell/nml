@@ -138,7 +138,7 @@
 <h1>nml::quat nml::axisAngleToQuat(const nml::vec3&amp; axis, float angle)<a class="headerlink" href="#nml-quat-nml-axisangletoquat-const-nml-vec3-axis-float-angle" title="Link to this heading"></a></h1>
 <p>Return a quaternion from an axis and an angle.</p>
 <p>The conversion from an axis and and angle to a quaternion is calculated this way:</p>
-<p><span class="math notranslate nohighlight">\(cos(\frac{angle}{2}) + (axis.x*sin(\frac{angle}{2}))i + (axis.y*sin(\frac{angle}{2}))j + (axis.z*sin(\frac{angle}{2}))k\)</span></p>
+<p><span class="math notranslate nohighlight">\(normalize(cos(\frac{angle}{2}) + (axis.x*sin(\frac{angle}{2}))i + (axis.y*sin(\frac{angle}{2}))j + (axis.z*sin(\frac{angle}{2}))k)\)</span></p>
 <section id="example">
 <h2>Example<a class="headerlink" href="#example" title="Link to this heading"></a></h2>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;include/quat.h&quot;</span>

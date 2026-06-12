@@ -7,7 +7,7 @@ Return a quaternion from an axis and an angle.
 
 The conversion from an axis and and angle to a quaternion is calculated this way:
 
-:math:`cos(\frac{angle}{2}) + (axis.x*sin(\frac{angle}{2}))i + (axis.y*sin(\frac{angle}{2}))j + (axis.z*sin(\frac{angle}{2}))k`
+:math:`normalize(cos(\frac{angle}{2}) + (axis.x*sin(\frac{angle}{2}))i + (axis.y*sin(\frac{angle}{2}))j + (axis.z*sin(\frac{angle}{2}))k)`
 
 Example
 -------
