@@ -222,7 +222,7 @@ quat rotationMatrixToQuat(const mat4& mat) {
 	return quaternion;
 }
 
-quat axisAngleToQuat(const vec3& axis, float angle) {
+quat axisAngleToQuat(const float angle, const vec3& axis) {
 	const float factor = std::sin(angle / 2.0f);
 	
 	return normalize(quat(std::cos(angle / 2.0f), axis.x * factor, axis.y * factor, axis.z * factor));

@@ -54,7 +54,7 @@ float dot(const quat& a, const quat& b);
 quat slerp(const quat& a, const quat& b, const float interpolationValue);
 quat eulerAnglesToQuat(const vec3& vec);
 quat rotationMatrixToQuat(const mat4& mat);
-quat axisAngleToQuat(const vec3& axis, float angle);
+quat axisAngleToQuat(const float angle, const vec3& axis);
 
 std::string to_string(const quat& qua);
 
