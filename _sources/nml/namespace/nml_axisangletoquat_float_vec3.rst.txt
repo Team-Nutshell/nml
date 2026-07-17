@@ -1,7 +1,7 @@
 :orphan:
 
-nml::quat nml::axisAngleToQuat(const nml::vec3& axis, float angle)
-==================================================================
+nml::quat nml::axisAngleToQuat(const float angle, const nml::vec3& axis)
+========================================================================
 
 Return a quaternion from an axis and an angle.
 
@@ -21,7 +21,7 @@ Example
 
 	int main() {
 		nml::vec3 axis = nml::vec3(1.0f, 0.0f, 0.0f);
-		nml::quat q = nml::axisAngleToQuat(axis, nml::toRad(10.0f));
+		nml::quat q = nml::axisAngleToQuat(nml::toRad(10.0f), axis);
 		std::cout << nml::to_string(q) << std::endl;
 
 		return 0;
